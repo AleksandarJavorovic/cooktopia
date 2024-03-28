@@ -46,8 +46,14 @@ body {
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: #222;
+    background: gray;
     color: white;
+    transition:0.5s;
+}
+
+.btn-gray:hover {
+    color:gray;
+    transition:0.5s;
 }
 
 .text-black {
