@@ -8,6 +8,8 @@ body {
     height: calc(100vh - 164px);
     color: #555;
     font-family: 'Lato';
+    margin:0;
+    overflow-x:hidden;
 }
 
 /* from Bulma */
@@ -56,6 +58,50 @@ body {
     border: 1px solid black !important;
 }
 
+/* Footer */
+
+.footer{
+    background:white;
+    padding:10px 0px;
+    text-align:center;
+}
+    
+.footer .row{
+    width:100%;
+    margin:1% 0%;
+    padding:0.6% 0%;
+    color:black;
+    font-size:0.8em;
+    justify-content: center;
+    gap: 20px;
+}
+    
+.footer .row a{
+    text-decoration:none;
+    color:black;
+    transition:0.5s;
+}
+    
+.footer .row a:hover{
+    color:gray;
+    text-decoration: underline;
+}
+    
+.footer .row ul{
+    width:100%;
+}
+    
+.footer .row ul li{
+    display:inline-block;
+    margin:0px 30px;
+}
+    
+.footer .row a i{
+    font-size:1.5em;
+    margin:0% 1%;
+}
+    
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -77,5 +123,20 @@ body {
 
     .header-container {
         padding-top: 164px;
+    }
+}
+
+@media (max-width:720px){
+    .footer{
+    text-align:left;
+    padding:5%;
+    }
+    .footer .row ul li{
+    display:block;
+    margin:10px 0px;
+    text-align:left;
+    }
+    .footer .row a i{
+    margin:0% 3%;
     }
 }
