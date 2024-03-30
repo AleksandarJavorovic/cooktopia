@@ -52,7 +52,7 @@ body {
 }
 
 .btn-gray:hover {
-    color:gray;
+    color:gray !important;
     transition:0.5s;
 }
 
@@ -132,6 +132,15 @@ body {
     }
 }
 
+/* smaller navbar icons */
+@media (max-width:500px) {
+    .smaller-icons {
+        font-size: 0.8em;
+    }
+}
+
+
+/* footer styles */
 @media (max-width:720px){
     .footer{
     text-align:left;
