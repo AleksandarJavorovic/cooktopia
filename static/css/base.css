@@ -74,6 +74,12 @@ body {
     z-index: -1;
 }
 
+a.category-badge > span.badge:hover {
+    background: #e82543 !important;
+    color: #fff !important;
+    transition: 0.5s;
+}
+
 /* Footer */
 
 .footer{
