@@ -17,24 +17,10 @@
                 Knives
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item">By Price</a>
-                <a href="" class="dropdown-item ">By Rating</a>
-                <a href="" class="dropdown-item ">By Category</a>
-                <a href="" class="dropdown-item ">By Brand</a>
-                <a href="" class="dropdown-item">All Knives</a>
-            </div>
-        </li>
-
-        <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link mr-5 text-black btn-gray" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Hatchets
-            </a>
-            <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item">By Price</a>
-                <a href="" class="dropdown-item ">By Rating</a>
-                <a href="" class="dropdown-item ">By Category</a>
-                <a href="" class="dropdown-item ">By Brand</a>
-                <a href="" class="dropdown-item">All Hatchets</a>
+                <a href="{% url 'products' %}?category=knife,meat_chopper,knife_set" class="dropdown-item">All Knives</a>
+                <a href="{% url 'products' %}?category=knife" class="dropdown-item">Chef's Knife</a>
+                <a href="{% url 'products' %}?category=meat_chopper" class="dropdown-item ">Meat Chopper</a>
+                <a href="{% url 'products' %}?category=knife_set" class="dropdown-item ">Knife Sets</a>
             </div>
         </li>
 
@@ -43,11 +29,9 @@
                 Pans
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item">By Price</a>
-                <a href="" class="dropdown-item ">By Rating</a>
-                <a href="" class="dropdown-item ">By Category</a>
-                <a href="" class="dropdown-item ">By Brand</a>
-                <a href="" class="dropdown-item">All Pans</a>
+                <a href="{% url 'products' %}?category=cast_iron_pan,stainless_steel_pan" class="dropdown-item">All Pans</a>
+                <a href="{% url 'products' %}?category=cast_iron_pan" class="dropdown-item">Cast Iron</a>
+                <a href="{% url 'products' %}?category=stainless_steel_pan" class="dropdown-item ">Stainless Steel</a>
             </div>
         </li>
 
@@ -56,23 +40,19 @@
                 Pots
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item">By Price</a>
-                <a href="" class="dropdown-item ">By Rating</a>
-                <a href="" class="dropdown-item ">By Category</a>
-                <a href="" class="dropdown-item ">By Brand</a>
-                <a href="" class="dropdown-item">All Pots</a>
+                <a href="{% url 'products' %}?category=cast_iron_pot,stainless_steel_pot" class="dropdown-item">All Pots</a>
+                <a href="{% url 'products' %}?category=cast_iron_pot" class="dropdown-item">Cast Iron</a>
+                <a href="{% url 'products' %}?category=stainless_steel_pot" class="dropdown-item ">Stainless Steel</a>
             </div>
         </li>
 
         <li class="nav-item dropdown">
             <a class="logo-font font-weight-bold nav-link mr-5 text-black btn-gray" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Special Deals
+                Accessories
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
                 <a href="" class="dropdown-item">By Price</a>
                 <a href="" class="dropdown-item ">By Rating</a>
-                <a href="" class="dropdown-item ">By Category</a>
-                <a href="" class="dropdown-item">All Products</a>
             </div>
         </li>
     </ul>
