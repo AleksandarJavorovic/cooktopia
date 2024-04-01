@@ -54,9 +54,9 @@
             <img src="/static/images/cooktopia-logo-small.webp" alt="cooktopia logo">
           </a>
         </div>
+        <!-- Search Bar -->
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-          <!-- Search Bar -->
-          <form method="GET" action="">
+          <form method="GET" action="{% url 'products' %}">
             <div class="input-group w-100">
               <input class="form-control border-top-0 border-black rounded-0" type="text" name="q" placeholder="Search...">
               <div class="input-group-append">
@@ -69,6 +69,7 @@
             </div>
           </form>
         </div>
+        <!-- My account, wishlist, shopping bag -->
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
           <ul class="list-inline list-unstylied text-center text-lg-right my-0">
             <!-- My Account -->
@@ -110,7 +111,7 @@
                         {% if grand_total %}
                             ${{ grand_total|floatformat:2 }}
                         {% else %}
-                            $0.00
+                            €0.00
                         {% endif %}
                     </p>
                 </div>
