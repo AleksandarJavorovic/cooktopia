@@ -35,6 +35,11 @@ body {
     min-width: 260px;
 }
 
+.btn-red {
+    background: #e82543;
+    color: white;
+}
+
 .btn-black {
     background: black;
     color: white;

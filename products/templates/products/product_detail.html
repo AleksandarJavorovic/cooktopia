@@ -28,18 +28,18 @@
             </div>
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="product-details-container mb-5 mt-md-5">
-                    <p class="mb-0">{{ product.name }}</p>
+                    <p class="mb-0 text-black font-weight-bold">{{ product.name }}</p>
                     <p class="mb-0">{{ product.brand }}</p>
-                    <p class="lead mb-0 text-left font-weight-bold">€{{ product.price }}</p>
+                    <p class="lead mb-0 text-left font-weight-bold text-black">€{{ product.price }}</p>
                     {% if product.category %}
                         <p class="small mt-1 mb-0">
-                            <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
+                            <a class="text-black" href="{% url 'products' %}?category={{ product.category.name }}">
                                 <i class="fas fa-tag mr-1"></i>{{ product.category.display_name }}
                             </a>
                         </p>
                     {% endif %}
                     {% if product.rating %}
-                        <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+                        <small class="text-muted text-black"><i class="fas fa-star mr-1" style="color: #FFD43B;"></i>{{ product.rating }} / 5</small>
                     {% else %}
                         <small class="text-muted">No Rating</small>
                     {% endif %}
@@ -84,7 +84,7 @@
                                     </span>
                                     <span class="text-uppercase">Continue Shopping</span>
                                 </a>
-                                <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag">
+                                <input type="submit" class="btn btn-red rounded-0 text-uppercase mt-5" value="Add to Bag">
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         </div>
