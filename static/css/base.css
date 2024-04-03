@@ -81,6 +81,10 @@ body {
     background: #e82543 !important;
 }
 
+.bag-state {
+    color: #39BDB0!important;
+}
+
 .overlay {
     height: 100%;
     width: 100%;
