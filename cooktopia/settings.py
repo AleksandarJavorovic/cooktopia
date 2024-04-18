@@ -27,8 +27,7 @@ SECRET_KEY = 'django-insecure-!lkh6ltjgqcf)-ifp+%$&#losky4qoi$1w)g9adta9dt^a333f
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-aleksandarjav-cooktopia-p8y6r1x9lvb.ws-eu110.gitpod.io',
-                 'https://cooktopia-3a5b4620860d.herokuapp.com/']
+ALLOWED_HOSTS = ['8000-aleksandarjav-cooktopia-p8y6r1x9lvb.ws-eu110.gitpod.io', 'cooktopia-3a5b4620860d.herokuapp.com']
 
 
 # Application definition
