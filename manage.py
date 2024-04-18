@@ -20,3 +20,5 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+SECRET_KEY = 'gh@=%!d_52gvy!me9pf!mlq#srx+9jpbq1)#b0al9#os-91^d+'
