@@ -382,12 +382,14 @@ input[name='q']::placeholder {
     }
 
     .btn.btn-outline-black.rounded-0,
-    .btn.btn-red.rounded-0 {
+    .btn.btn-red.rounded-0,
+    .btn.btn-black.rounded-0 {
         padding: .275rem .275rem;
     }
 
     .btn.btn-outline-black.rounded-0.btn-lg,
-    .btn.btn-red.rounded-0.btn-lg {
+    .btn.btn-red.rounded-0.btn-lg,
+    .btn.btn-black.rounded-0.btn-lg {
         padding: .275rem .275rem;
         font-size: .75rem;
     }
@@ -403,6 +405,17 @@ input[name='q']::placeholder {
 
 
 @media (max-width:720px){
+    /* Keep Shoping and Secure Checkout buttons */
+    .btn-keep {
+        padding-right: 0px !important;
+        padding-left: 2px !important;
+    }
+    
+    .btn-secure {
+        padding-left: 0px !important;
+        padding-right: 2px !important;
+    }
+
     /* footer styles */
     .footer{
         text-align:left;
