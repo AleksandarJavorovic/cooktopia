@@ -1,5 +1,11 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
+        <!-- Home button on smaller screens -->
+        <li class="nav-item d-block d-md-none">
+            <a class="logo-font font-weight-bold nav-link mr-5 text-black btn-gray" href="{% url 'home' %}" id="home-link">
+                Home
+            </a>
+        </li>
         <li class="nav-item dropdown btn-gray">
             <a class="logo-font font-weight-bold nav-link mr-5 text-black btn-gray" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 All Products

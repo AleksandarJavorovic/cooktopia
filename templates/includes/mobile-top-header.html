@@ -53,8 +53,8 @@
 </li>
 <!-- Shopping Bag -->
 <li class="list-inline-item">
-    <a class="{% if grand_total %} bag-state text-primary font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none" href="{% url 'view_shopping_bag' %}">
-        <div class="text-center">
+    <a class="{% if grand_total %} bag-state font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none" href="{% url 'view_shopping_bag' %}">
+        <div class="text-center btn-gray">
             <div><i class="fas fa-shopping-bag fa-lg"></i></div>
             <p class="my-0">
                 {% if grand_total %}
