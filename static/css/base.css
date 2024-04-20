@@ -25,6 +25,10 @@ body {
     text-transform: uppercase;
 }
 
+.text-shadow {
+    text-shadow: 2px 2px 5px black;
+}
+
 .main-logo-link {
     width: fit-content;
 }
@@ -330,8 +334,8 @@ input[name='q']::placeholder {
   }
 }
 
-/* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
+    /* fixed top navbar only on medium and up */
     .fixed-top-desktop-only {
         position: fixed;
         top: 0;
@@ -345,26 +349,79 @@ input[name='q']::placeholder {
     }
 }
 
-/* smaller navbar icons */
-@media (max-width:500px) {
-    .smaller-icons {
-        font-size: 0.8em;
+
+/* pad the top a bit when navbar is collapsed on mobile */
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 116px;
+    }
+
+    body {
+        height: calc(100vh - 116px);
+    }
+
+    .display-4.logo-font.text-white {
+        font-size: 2rem;
+    }
+
+    .nav-link {
+        padding: 0.15rem;
+    }
+
+    .nav-link i.fa-lg {
+        font-size: 1rem;
+    }
+
+    .navbar-toggler {
+        padding: .6rem .6rem;
+        font-size: 1rem;
+    }
+
+    #delivery-banner h4 {
+        font-size: .85rem;
+    }
+
+    .btn.btn-outline-black.rounded-0,
+    .btn.btn-black.rounded-0 {
+        padding: .375rem .375rem;
+    }
+
+    .btn.btn-outline-black.rounded-0.btn-lg,
+    .btn.btn-black.rounded-0.btn-lg {
+        padding: .375rem .375rem;
+        font-size: .75rem;
+    }
+
+    .qty_input {
+        padding-right: 5px;
+    }
+
+    .increment-qty, .decrement-qty {
+        padding: .25rem .5rem !important;
     }
 }
 
 
-/* footer styles */
 @media (max-width:720px){
+    /* footer styles */
     .footer{
-    text-align:left;
-    padding:5%;
+        text-align:left;
+        padding:5%;
     }
     .footer .row ul li{
-    display:block;
-    margin:10px 0px;
-    text-align:left;
+        display:block;
+        margin:10px 0px;
+        text-align:left;
     }
     .footer .row a i{
-    margin:0% 3%;
+        margin:0% 3%;
+    }
+}
+
+
+/* smaller navbar icons */
+@media (max-width:500px) {
+    .smaller-icons {
+        font-size: 0.8em;
     }
 }
