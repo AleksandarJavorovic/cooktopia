@@ -45,8 +45,10 @@
                     </div>
                     <div class="col-12 col-md-6 order-md-first">
                         <p class="text-muted mt-3 text-center text-md-left">
+                            <!-- Empty Products Page -->
                             {% if search_term or current_categories or current_sorting != 'None_None' %}
-                                <span class="small"><a href="{% url 'products' %}" class="text-black"><i class="fa-solid fa-left-long"></i> Back to All Products</a> | </span>
+                            <span class="small d-md-none"><a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-sm btn-keep">  <i class="fas fa-chevron-left"></i> To All Products</a> | </span>
+                            <span class="small d-none d-md-inline-block"><a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-md btn-keep">  <i class="fas fa-chevron-left"></i> To All Products</a> | </span>
                             {% endif %}
                             {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
                         </p>
