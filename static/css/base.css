@@ -437,4 +437,12 @@ input[name='q']::placeholder {
     .smaller-icons {
         font-size: 0.8em;
     }
+
+    .btt-button {
+        height: 32px;
+        width: 32px;
+        position: fixed;
+        bottom: 10px;
+        right: 5px;
+    }
 }
