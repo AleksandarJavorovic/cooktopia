@@ -31,6 +31,7 @@ def add_to_wishlist(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     user_profile = UserProfile.objects.get(user=request.user)
 
+    
     if Wishlist.objects.filter(user_profile=user_profile,product=product).exists():
         Wishlist.objects.get(user_profile=user_profile,product=product).delete()
         messages.success(
@@ -43,3 +44,4 @@ def add_to_wishlist(request, product_id):
             f'{wishlist_item.product.name} added to Wishlist successfully!'
         )
     return HttpResponseRedirect(request.META["HTTP_REFERER"])
+        
