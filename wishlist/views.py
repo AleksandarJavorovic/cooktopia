@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render, get_object_or_404, redirect, reverse
+from django.contrib import messages
 
 from products.models import Product
 from .models import Wishlist
@@ -18,7 +19,23 @@ def wishlist(request):
     user_wishlist = Wishlist.objects.filter(user_profile=user_profile)
 
     return render(
-        request, 'wishlist/wishlist.html', {'user_wishlist': user_wishlist}
-    )
+        request, 'wishlist/wishlist.html', {'user_wishlist': user_wishlist})
+
+
+@login_required
+def add_to_wishlist(request, product_id):
+    product = get_object_or_404(Product, pk=product_id)
+    user_profile = UserProfile.objects.get(user=request.user)
+
+    if Wishlist.objects.filter(user_profile=user_profile,product=product).exists():
+        Wishlist.objects.delete(user_profile=user_profile, product=product)
+    else:
+        wishlist_item = Wishlist.objects.create(
+            user_profile=user_profile, product=product)
+        messages.success(
+            request,
+            f'{wishlist_item.product.name} added to Wishlist successfully!'
+        )
+    return HttpResponseRedirect(request.META["HTTP_REFERER"])
 
 

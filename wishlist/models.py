@@ -5,7 +5,7 @@ from products.models import Product
 
 class Wishlist(models.Model): 
     '''
-    Wishlist model, for users to save their favourite items for later purchase
+    Wishlist model, for users to keep track of their favourite items for later purchase
     '''
     user_profile = models.ForeignKey(UserProfile, on_delete=models.CASCADE,
                                      null=False, blank=False,
