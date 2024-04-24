@@ -1,10 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block extra_css %}
-    <link rel="stylesheet" href="{% static 'products/css/ratings.css' %}">
-{% endblock %}
-
 {% block page_header %}
     <div class="container header-container pt-0">
         <div class="row">
@@ -132,6 +128,7 @@
 							<input type="radio" name="rating" id="rating2" value="1" required /><label for="rating2" title="1"></label>
 							<input type="radio" name="rating" id="rating1" value="0.5" required /><label for="rating1" title="0.5" class="half"></label>
 						</div>
+                        <br>
                         Review Title:
                         <input type="text" class="form-control rounded-0" name="subject">
                         <br>
