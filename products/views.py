@@ -7,6 +7,8 @@ from .models import Product, Category, ReviewRating
 
 from .forms import ProductForm, ReviewRatingForm
 
+from checkout.models import Order, OrderLineItem
+
 
 def all_products(request):
     '''
@@ -72,9 +74,13 @@ def product_detail(request, product_id):
     '''
 
     product = get_object_or_404(Product, pk=product_id)
+    order = get_object_or_404(Order, pk=product_id)
+    orderlineitems = get_object_or_404(OrderLineItem, order=order)
 
     context = {
         'product': product,
+        'order': order,
+        'orderlineitems': orderlineitems,
     }
 
     return render(request, 'products/product_detail.html', context)
@@ -152,6 +158,9 @@ def delete_product(request, product_id):
 
 @login_required
 def submit_review(request, product_id):
+    '''
+    A view to submit the review/rating
+    '''
     url = request.META.get('HTTP_REFERER')
     if request.method == 'POST':
         try:

@@ -137,7 +137,11 @@
                         <textarea name="review" rows="4" class="form-control rounded-0 border-black" placeholder="Write something about the product..."></textarea>
                         <br>
                         {% if user.is_authenticated %}
-                            <input type="submit" value="Submit Review" class="btn btn-red rounded-0 text-uppercase">
+                            {% if item in order.orderlineitems.all %}
+                                <input type="submit" value="Submit Review" class="btn btn-primary">
+                            {% else %}
+                                <p>You must purchase this product to post a review.</p>
+                            {% endif %}
                         {% else %}
                             <p>You must be logged in to post a review. <span><a href="{% url 'account_login' %}?next={{ request.path }}">Login To Review</a></span></p>
                         {% endif %}
@@ -147,6 +151,17 @@
             <hr class="w-75">
             <div class="container col-md-9">
                 <h3>Customer Reviews </h3>
+                <div class="card mb-3 rounded-0">
+                    <div class="card-header d-flex justify-content-between align-items-center pb-0 pt-0">
+                        <p>Test User</p>
+                        <p>Date: 01.05.2024.</p>
+                    </div>
+                    <div class="card-body">
+                      <h6 class="card-title">Success card title</h6>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                    <div class="card-footer pb-0 pt-0">Rating:5/5</div>
+                </div>
             </div>
         </div>
     </div>
