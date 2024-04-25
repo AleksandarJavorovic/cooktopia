@@ -3,12 +3,12 @@
     display: none;
 }
   
-  .rate {
+.rate {
     display: inline-block;;
     border: 0;
 }
   
-  .rate > label {
+.rate > label {
     float: right;
 }
   

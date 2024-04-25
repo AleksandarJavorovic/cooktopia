@@ -108,9 +108,10 @@
         <!-- Review/Rating Section -->
         <div class="row">
             <div class="container col-md-9">
-                <form action="">
+                <form action="{% url 'submit_review' product.id %}" method="POST">
+                {% csrf_token %}
                     <header>
-                        <h3 class="logo-font">Write your review</h3>
+                        <h3 class="">Leave your review</h3>
                     </header>
                     <div>
                         Rate the product:
@@ -130,15 +131,22 @@
 						</div>
                         <br>
                         Review Title:
-                        <input type="text" class="form-control rounded-0" name="subject">
+                        <input type="text" class="form-control rounded-0 border-black" name="subject" placeholder="e.g. The best Product ever :D...">
                         <br>
                         Review:
-                        <textarea name="review" rows="4" class="form-control rounded-0"></textarea>
+                        <textarea name="review" rows="4" class="form-control rounded-0 border-black" placeholder="Write something about the product..."></textarea>
                         <br>
-                        <input type="submit" value="Submit Review" class="btn btn-red rounded-0 text-uppercase">
+                        {% if user.is_authenticated %}
+                            <input type="submit" value="Submit Review" class="btn btn-red rounded-0 text-uppercase">
+                        {% else %}
+                            <p>You must be logged in to post a review. <span><a href="{% url 'account_login' %}?next={{ request.path }}">Login To Review</a></span></p>
+                        {% endif %}
                     </div>
                 </form>
-                <br>
+            </div>
+            <hr class="w-75">
+            <div class="container col-md-9">
+                <h3>Customer Reviews </h3>
             </div>
         </div>
     </div>
