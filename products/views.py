@@ -8,6 +8,7 @@ from .models import Product, Category, ReviewRating
 from .forms import ProductForm, ReviewRatingForm
 
 from checkout.models import Order, OrderLineItem
+from profiles.models import UserProfile
 
 
 def all_products(request):
@@ -68,19 +69,20 @@ def all_products(request):
     return render(request, 'products/products.html', context)
 
 
+
 def product_detail(request, product_id):
-    '''
-    A view to render product details
-    '''
+    """
+    A view to render product details and handle review submission
+    """
 
     product = get_object_or_404(Product, pk=product_id)
-    order = get_object_or_404(Order, pk=product_id)
-    orderlineitems = get_object_or_404(OrderLineItem, order=order)
+    # order = get_object_or_404(Order, pk=product_id)
+    # orderlineitems = order.orderlineitems.all()
 
     context = {
         'product': product,
-        'order': order,
-        'orderlineitems': orderlineitems,
+        # 'order': order,
+        # 'orderlineitems': orderlineitems,
     }
 
     return render(request, 'products/product_detail.html', context)

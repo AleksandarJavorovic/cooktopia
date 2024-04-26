@@ -285,6 +285,10 @@ input[name='q']::placeholder {
     border-radius: 0;
 }
 
+/* Comment Section */
+.text-mini {
+    font-size: 0.8rem;
+}
 
 /* Footer */
 
