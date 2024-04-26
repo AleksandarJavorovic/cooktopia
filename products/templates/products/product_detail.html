@@ -107,7 +107,7 @@
         <hr class="w-75">
         <!-- Review/Rating Section -->
         <div class="row">
-            <div class="container col-md-9">
+            <div class="container col-md-9 text-black">
                 <form action="{% url 'submit_review' product.id %}" method="POST">
                 {% csrf_token %}
                     <header>
@@ -131,10 +131,10 @@
 						</div>
                         <br>
                         Review Title:
-                        <input type="text" class="form-control rounded-0" name="subject" placeholder="e.g. The best Product ever :D...">
+                        <input type="text" class="form-control rounded-0 border-black" name="subject" placeholder="e.g. The best Product ever :D...">
                         <br>
                         Review:
-                        <textarea name="review" rows="4" class="form-control rounded-0" placeholder="Write something about the product..."></textarea>
+                        <textarea name="review" rows="4" class="form-control rounded-0 border-black" placeholder="Write something about the product..."></textarea>
                         <br>
                         {% if user.is_authenticated %}
                             <input type="submit" value="Submit Review" class="btn btn-red rounded-0 text-uppercase">
@@ -151,20 +151,18 @@
             </div>
             <hr class="w-75">
             <!-- Comment Section -->
-            <div class="container col-md-9 w-75 mb-3">
+            <div class="container col-md-9 w-75 mb-3 text-black">
                 <h3 class="text-uppercase">Customer Reviews</h3>
-                <div class="w-75">
+                <div class="w-75 border-black mt-3">
                     <div class=" d-flex justify-content-between pl-3">
-                        <div>
+                        <div class="pt-1 pb-1">
                             <span class="font-weight-bold h6">@Test User, Very Nice Pot</span>
                             <span class="text-muted font-italic text-mini">25.05.2025.</span>
                         </div>
-                        <div class="">
-                            Rating: 5/5
-                        </div>
+                        <div class="pr-3 pt-1">Rating: 5/5</div>
                     </div>
-                    <hr class="mt-0 ml-0">
-                    <div class="">
+                    <hr class="mt-0 ml-0 hr-black">
+                    <div class="pl-3">
                         <p>
                             Bootstrap sets basic global display, typography, and link styles. When more control is needed, check out the textual utility classes.
                         </p>

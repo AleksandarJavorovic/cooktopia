@@ -290,6 +290,10 @@ input[name='q']::placeholder {
     font-size: 0.8rem;
 }
 
+.hr-black {
+    border-top: 1px solid black;
+}
+
 /* Footer */
 
 .footer{
