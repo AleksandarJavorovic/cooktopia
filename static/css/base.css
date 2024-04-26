@@ -294,6 +294,10 @@ input[name='q']::placeholder {
     border-top: 1px solid black;
 }
 
+.no-underline:hover{
+    text-decoration: none;
+}
+
 /* Footer */
 
 .footer{

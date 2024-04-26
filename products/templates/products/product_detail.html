@@ -104,10 +104,9 @@
                 </div>
             </div>
         </div>
-        <hr class="w-75">
         <!-- Review/Rating Section -->
         <div class="row">
-            <div class="container col-md-9 text-black">
+            <div class="container col-12 col-md-9 text-black">
                 <form action="{% url 'submit_review' product.id %}" method="POST">
                 {% csrf_token %}
                     <header>
@@ -144,30 +143,35 @@
                                 <p>You must purchase this product to post a review.</p>
                             {% endif %} -->
                         {% else %}
-                            <p>You must be logged in to post a review. <span><a href="{% url 'account_login' %}?next={{ request.path }}">Login To Review</a></span></p>
+                            <p>You must be logged in to post a review. <span><a class="text-info no-underline" href="{% url 'account_login' %}?next={{ request.path }}">Login To Review</a></span></p>
                         {% endif %}
                     </div>
                 </form>
             </div>
-            <hr class="w-75">
             <!-- Comment Section -->
-            <div class="container col-md-9 w-75 mb-3 text-black">
+            <div class="container col-12 col-md-9 w-75 mb-3 text-black">
                 <h3 class="text-uppercase">Customer Reviews</h3>
-                <div class="w-75 border-black mt-3">
-                    <div class=" d-flex justify-content-between pl-3">
-                        <div class="pt-1 pb-1">
-                            <span class="font-weight-bold h6">@Test User, Very Nice Pot</span>
-                            <span class="text-muted font-italic text-mini">25.05.2025.</span>
+                {% if reviews %}
+                    {% for review in reviews %}
+                        <div class="w-md-75 border-black mt-3">
+                            <div class=" d-flex justify-content-between pl-3">
+                                <div class="pt-1 pb-1">
+                                    <span class="font-weight-bold h6">@{{ review.user}}, {{ review.subject }}</span>
+                                    <span class="text-muted font-italic text-mini">{{ review.created_on}}</span>
+                                </div>
+                                <div class="pr-3 pt-1">Rating: {{ review.rating}}/5</div>
+                            </div>
+                            <hr class="mt-0 ml-0 hr-black">
+                            <div class="pl-3">
+                                <p>
+                                    {{ review.review }}
+                                </p>
+                            </div>
                         </div>
-                        <div class="pr-3 pt-1">Rating: 5/5</div>
-                    </div>
-                    <hr class="mt-0 ml-0 hr-black">
-                    <div class="pl-3">
-                        <p>
-                            Bootstrap sets basic global display, typography, and link styles. When more control is needed, check out the textual utility classes.
-                        </p>
-                    </div>
-                </div>
+                    {% endfor %}
+                {% else %}
+                    <p class="">There are no reviews for this product yet.</p>
+                {% endif %}
             </div>
         </div>
     </div>

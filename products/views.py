@@ -78,9 +78,11 @@ def product_detail(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     # order = get_object_or_404(Order, pk=product_id)
     # orderlineitems = order.orderlineitems.all()
+    reviews = ReviewRating.objects.filter(product_id=product_id).all()
 
     context = {
         'product': product,
+        'reviews': reviews,
         # 'order': order,
         # 'orderlineitems': orderlineitems,
     }
