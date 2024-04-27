@@ -10,6 +10,10 @@ from .forms import ProductForm, ReviewRatingForm
 from checkout.models import Order, OrderLineItem
 from profiles.models import UserProfile
 
+from django.contrib.auth import get_user_model
+
+User = get_user_model()
+
 
 def all_products(request):
     '''
@@ -69,6 +73,8 @@ def all_products(request):
     return render(request, 'products/products.html', context)
 
 
+    return render(request, 'products/product_detail.html', context)
+
 
 def product_detail(request, product_id):
     """
@@ -76,15 +82,11 @@ def product_detail(request, product_id):
     """
 
     product = get_object_or_404(Product, pk=product_id)
-    # order = get_object_or_404(Order, pk=product_id)
-    # orderlineitems = order.orderlineitems.all()
     reviews = ReviewRating.objects.filter(product_id=product_id).all()
 
     context = {
         'product': product,
         'reviews': reviews,
-        # 'order': order,
-        # 'orderlineitems': orderlineitems,
     }
 
     return render(request, 'products/product_detail.html', context)
