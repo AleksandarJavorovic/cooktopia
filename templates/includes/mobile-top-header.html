@@ -44,9 +44,9 @@
 </li>
 <!-- Wishlist -->
 <li class="list-inline-item">
-    <a href="" class="text-black nav-link d-block d-lg-none">
+    <a href="{% url 'wishlist' %}" class="text-black nav-link d-block d-lg-none">
         <div class="text-center">
-            <i class="fas fa-heart fa-lg"></i>
+            <i class="fas fa-heart fa-lg text-black"></i>
             <p class="my-0">Wishlist</p>
         </div>
     </a>
@@ -55,7 +55,7 @@
 <li class="list-inline-item">
     <a class="{% if grand_total %} bag-state font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none" href="{% url 'view_shopping_bag' %}">
         <div class="text-center btn-gray">
-            <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+            <div><i class="fa fa-shopping-bag fa-lg"></i></div>
             <p class="my-0">
                 {% if grand_total %}
                     ${{ grand_total|floatformat:2 }}
