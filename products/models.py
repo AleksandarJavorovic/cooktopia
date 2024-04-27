@@ -42,6 +42,7 @@ class ReviewRating(models.Model):
     rating = models.FloatField()
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
+    already_commented = models.BooleanField(default=False)
 
     def __str__(self):
         return self.subject

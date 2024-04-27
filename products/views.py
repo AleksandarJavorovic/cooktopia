@@ -9,6 +9,7 @@ from .forms import ProductForm, ReviewRatingForm
 
 from checkout.models import Order, OrderLineItem
 from profiles.models import UserProfile
+from django.contrib.auth.models import User
 
 from django.contrib.auth import get_user_model
 
@@ -83,10 +84,16 @@ def product_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
     reviews = ReviewRating.objects.filter(product_id=product_id).all()
+    already_commented = False
 
+    if request.user.is_authenticated:
+        already_commented = ReviewRating.objects.filter(product_id=product_id, user=request.user).exists()
+    
+    
     context = {
         'product': product,
         'reviews': reviews,
+        'already_commented': already_commented
     }
 
     return render(request, 'products/product_detail.html', context)
@@ -184,6 +191,7 @@ def submit_review(request, product_id):
                 data.review = form.cleaned_data['review']
                 data.product_id = product_id
                 data.user_id = request.user.id
+                data.already_commented = True
                 data.save()
                 messages.success(request, 'Thank you! Your review has been submitted.')
                 return redirect(url)

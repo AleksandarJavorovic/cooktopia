@@ -138,8 +138,12 @@
                         <textarea name="review" rows="4" class="form-control rounded-0 border-black" placeholder="Write something about the product..."></textarea>
                         <br>
                         {% if user.is_authenticated %}
-                            {% if orderlineitems %}
-                                <input type="submit" value="Submit Review" class="btn btn-red rounded-0 text-uppercase">
+                            {% if product.already_bought %}
+                                {% if already_commented == True %}
+                                    <input type="submit" value="Update Review" class="btn btn-red rounded-0 text-uppercase">
+                                {% else %}
+                                    <input type="submit" value="Submit Review" class="btn btn-red rounded-0 text-uppercase">
+                                {% endif %}
                             {% else %}
                                 <p>You must purchase this product to post a review.</p>
                             {% endif %}
