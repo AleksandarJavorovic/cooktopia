@@ -88,7 +88,6 @@ def product_detail(request, product_id):
 
     if request.user.is_authenticated:
         already_commented = ReviewRating.objects.filter(product_id=product_id, user=request.user).exists()
-        print(already_commented)
     
     all_items = OrderLineItem.objects.filter(order__user_profile__user=request.user)
 
