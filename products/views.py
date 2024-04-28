@@ -88,12 +88,20 @@ def product_detail(request, product_id):
 
     if request.user.is_authenticated:
         already_commented = ReviewRating.objects.filter(product_id=product_id, user=request.user).exists()
+        print(already_commented)
     
+    all_items = OrderLineItem.objects.filter(order__user_profile__user=request.user)
+
+    already_bought = False
+    for item in all_items:
+        if product == item.product:
+            already_bought = True
     
     context = {
         'product': product,
         'reviews': reviews,
-        'already_commented': already_commented
+        'already_commented': already_commented,
+        'already_bought': already_bought,
     }
 
     return render(request, 'products/product_detail.html', context)
