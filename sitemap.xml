@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://cooktopia-3a5b4620860d.herokuapp.com/</loc>
+  <lastmod>2024-04-28T23:46:56+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://cooktopia-3a5b4620860d.herokuapp.com/accounts/signup/</loc>
+  <lastmod>2024-04-28T23:46:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cooktopia-3a5b4620860d.herokuapp.com/accounts/login/</loc>
+  <lastmod>2024-04-28T23:46:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cooktopia-3a5b4620860d.herokuapp.com/accounts/login/?next=/wishlist/</loc>
+  <lastmod>2024-04-28T23:46:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cooktopia-3a5b4620860d.herokuapp.com/shopping_bag/</loc>
+  <lastmod>2024-04-28T23:46:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cooktopia-3a5b4620860d.herokuapp.com/products/</loc>
+  <lastmod>2024-04-28T23:46:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cooktopia-3a5b4620860d.herokuapp.com/products/?sort=price&amp;direction=asc</loc>
+  <lastmod>2024-04-28T23:46:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cooktopia-3a5b4620860d.herokuapp.com/products/?sort=rating&amp;direction=desc</loc>
+  <lastmod>2024-04-28T23:46:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cooktopia-3a5b4620860d.herokuapp.com/products/?sort=category&amp;direction=asc</loc>
+  <lastmod>2024-04-28T23:46:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cooktopia-3a5b4620860d.herokuapp.com/products/?sort=brand&amp;direction=asc</loc>
+  <lastmod>2024-04-28T23:46:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cooktopia-3a5b4620860d.herokuapp.com/products/?category=chefs_knife,meat_choppers,knife_sets</loc>
+  <lastmod>2024-04-28T23:46:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cooktopia-3a5b4620860d.herokuapp.com/products/?category=chefs_knife</loc>
+  <lastmod>2024-04-28T23:46:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cooktopia-3a5b4620860d.herokuapp.com/products/?category=meat_choppers</loc>
+  <lastmod>2024-04-28T23:46:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cooktopia-3a5b4620860d.herokuapp.com/products/?category=knife_sets</loc>
+  <lastmod>2024-04-28T23:46:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cooktopia-3a5b4620860d.herokuapp.com/products/?category=cast_iron_pans,stainless_steel_pans</loc>
+  <lastmod>2024-04-28T23:46:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cooktopia-3a5b4620860d.herokuapp.com/products/?category=cast_iron_pans</loc>
+  <lastmod>2024-04-28T23:46:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cooktopia-3a5b4620860d.herokuapp.com/products/?category=stainless_steel_pans</loc>
+  <lastmod>2024-04-28T23:46:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cooktopia-3a5b4620860d.herokuapp.com/products/?category=cast_iron_pots,stainless_steel_pots</loc>
+  <lastmod>2024-04-28T23:46:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cooktopia-3a5b4620860d.herokuapp.com/products/?category=cast_iron_pots</loc>
+  <lastmod>2024-04-28T23:46:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cooktopia-3a5b4620860d.herokuapp.com/products/?category=stainless_steel_pots</loc>
+  <lastmod>2024-04-28T23:46:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cooktopia-3a5b4620860d.herokuapp.com/products/?category=cutting_boards,honing_steels</loc>
+  <lastmod>2024-04-28T23:46:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cooktopia-3a5b4620860d.herokuapp.com/products/?category=cutting_boards</loc>
+  <lastmod>2024-04-28T23:46:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cooktopia-3a5b4620860d.herokuapp.com/products/?category=honing_steels</loc>
+  <lastmod>2024-04-28T23:46:56+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://cooktopia-3a5b4620860d.herokuapp.com/accounts/password/reset/</loc>
+  <lastmod>2024-04-28T23:46:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cooktopia-3a5b4620860d.herokuapp.com/accounts/signup/?next=%2Fwishlist%2F</loc>
+  <lastmod>2024-04-28T23:46:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cooktopia-3a5b4620860d.herokuapp.com/accounts/login/?next=/wishlist/add_to_wishlist/3/</loc>
+  <lastmod>2024-04-28T23:46:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cooktopia-3a5b4620860d.herokuapp.com/accounts/login/?next=/wishlist/add_to_wishlist/4/</loc>
+  <lastmod>2024-04-28T23:46:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cooktopia-3a5b4620860d.herokuapp.com/accounts/login/?next=/wishlist/add_to_wishlist/7/</loc>
+  <lastmod>2024-04-28T23:46:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cooktopia-3a5b4620860d.herokuapp.com/accounts/login/?next=/wishlist/add_to_wishlist/8/</loc>
+  <lastmod>2024-04-28T23:46:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cooktopia-3a5b4620860d.herokuapp.com/accounts/login/?next=/wishlist/add_to_wishlist/9/</loc>
+  <lastmod>2024-04-28T23:46:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cooktopia-3a5b4620860d.herokuapp.com/accounts/login/?next=/wishlist/add_to_wishlist/10/</loc>
+  <lastmod>2024-04-28T23:46:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cooktopia-3a5b4620860d.herokuapp.com/accounts/login/?next=/wishlist/add_to_wishlist/11/</loc>
+  <lastmod>2024-04-28T23:46:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cooktopia-3a5b4620860d.herokuapp.com/accounts/login/?next=/wishlist/add_to_wishlist/12/</loc>
+  <lastmod>2024-04-28T23:46:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cooktopia-3a5b4620860d.herokuapp.com/accounts/login/?next=/wishlist/add_to_wishlist/1/</loc>
+  <lastmod>2024-04-28T23:46:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cooktopia-3a5b4620860d.herokuapp.com/accounts/login/?next=/wishlist/add_to_wishlist/2/</loc>
+  <lastmod>2024-04-28T23:46:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cooktopia-3a5b4620860d.herokuapp.com/accounts/login/?next=/wishlist/add_to_wishlist/5/</loc>
+  <lastmod>2024-04-28T23:46:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cooktopia-3a5b4620860d.herokuapp.com/accounts/login/?next=/wishlist/add_to_wishlist/6/</loc>
+  <lastmod>2024-04-28T23:46:56+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://cooktopia-3a5b4620860d.herokuapp.com/accounts/login/?next=%2Fwishlist%2F</loc>
+  <lastmod>2024-04-28T23:46:56+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://cooktopia-3a5b4620860d.herokuapp.com/accounts/signup/?next=%2Fwishlist%2Fadd_to_wishlist%2F3%2F</loc>
+  <lastmod>2024-04-28T23:46:56+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://cooktopia-3a5b4620860d.herokuapp.com/accounts/signup/?next=%2Fwishlist%2Fadd_to_wishlist%2F4%2F</loc>
+  <lastmod>2024-04-28T23:46:56+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://cooktopia-3a5b4620860d.herokuapp.com/accounts/signup/?next=%2Fwishlist%2Fadd_to_wishlist%2F7%2F</loc>
+  <lastmod>2024-04-28T23:46:56+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://cooktopia-3a5b4620860d.herokuapp.com/accounts/signup/?next=%2Fwishlist%2Fadd_to_wishlist%2F8%2F</loc>
+  <lastmod>2024-04-28T23:46:56+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://cooktopia-3a5b4620860d.herokuapp.com/accounts/signup/?next=%2Fwishlist%2Fadd_to_wishlist%2F9%2F</loc>
+  <lastmod>2024-04-28T23:46:56+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://cooktopia-3a5b4620860d.herokuapp.com/accounts/signup/?next=%2Fwishlist%2Fadd_to_wishlist%2F10%2F</loc>
+  <lastmod>2024-04-28T23:46:56+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://cooktopia-3a5b4620860d.herokuapp.com/accounts/signup/?next=%2Fwishlist%2Fadd_to_wishlist%2F11%2F</loc>
+  <lastmod>2024-04-28T23:46:56+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://cooktopia-3a5b4620860d.herokuapp.com/accounts/signup/?next=%2Fwishlist%2Fadd_to_wishlist%2F12%2F</loc>
+  <lastmod>2024-04-28T23:46:56+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://cooktopia-3a5b4620860d.herokuapp.com/accounts/signup/?next=%2Fwishlist%2Fadd_to_wishlist%2F1%2F</loc>
+  <lastmod>2024-04-28T23:46:56+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://cooktopia-3a5b4620860d.herokuapp.com/accounts/signup/?next=%2Fwishlist%2Fadd_to_wishlist%2F2%2F</loc>
+  <lastmod>2024-04-28T23:46:56+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://cooktopia-3a5b4620860d.herokuapp.com/accounts/signup/?next=%2Fwishlist%2Fadd_to_wishlist%2F5%2F</loc>
+  <lastmod>2024-04-28T23:46:56+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://cooktopia-3a5b4620860d.herokuapp.com/accounts/signup/?next=%2Fwishlist%2Fadd_to_wishlist%2F6%2F</loc>
+  <lastmod>2024-04-28T23:46:56+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://cooktopia-3a5b4620860d.herokuapp.com/accounts/login/?next=%2Fwishlist%2Fadd_to_wishlist%2F3%2F</loc>
+  <lastmod>2024-04-28T23:46:56+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://cooktopia-3a5b4620860d.herokuapp.com/accounts/login/?next=%2Fwishlist%2Fadd_to_wishlist%2F4%2F</loc>
+  <lastmod>2024-04-28T23:46:56+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://cooktopia-3a5b4620860d.herokuapp.com/accounts/login/?next=%2Fwishlist%2Fadd_to_wishlist%2F7%2F</loc>
+  <lastmod>2024-04-28T23:46:56+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://cooktopia-3a5b4620860d.herokuapp.com/accounts/login/?next=%2Fwishlist%2Fadd_to_wishlist%2F8%2F</loc>
+  <lastmod>2024-04-28T23:46:56+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://cooktopia-3a5b4620860d.herokuapp.com/accounts/login/?next=%2Fwishlist%2Fadd_to_wishlist%2F9%2F</loc>
+  <lastmod>2024-04-28T23:46:56+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://cooktopia-3a5b4620860d.herokuapp.com/accounts/login/?next=%2Fwishlist%2Fadd_to_wishlist%2F10%2F</loc>
+  <lastmod>2024-04-28T23:46:56+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://cooktopia-3a5b4620860d.herokuapp.com/accounts/login/?next=%2Fwishlist%2Fadd_to_wishlist%2F11%2F</loc>
+  <lastmod>2024-04-28T23:46:56+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://cooktopia-3a5b4620860d.herokuapp.com/accounts/login/?next=%2Fwishlist%2Fadd_to_wishlist%2F12%2F</loc>
+  <lastmod>2024-04-28T23:46:56+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://cooktopia-3a5b4620860d.herokuapp.com/accounts/login/?next=%2Fwishlist%2Fadd_to_wishlist%2F1%2F</loc>
+  <lastmod>2024-04-28T23:46:56+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://cooktopia-3a5b4620860d.herokuapp.com/accounts/login/?next=%2Fwishlist%2Fadd_to_wishlist%2F2%2F</loc>
+  <lastmod>2024-04-28T23:46:56+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://cooktopia-3a5b4620860d.herokuapp.com/accounts/login/?next=%2Fwishlist%2Fadd_to_wishlist%2F5%2F</loc>
+  <lastmod>2024-04-28T23:46:56+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://cooktopia-3a5b4620860d.herokuapp.com/accounts/login/?next=%2Fwishlist%2Fadd_to_wishlist%2F6%2F</loc>
+  <lastmod>2024-04-28T23:46:56+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+
+
+</urlset>

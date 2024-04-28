@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /shopping_bag/
+Sitemap: https://cooktopia-3a5b4620860d.herokuapp.com/sitemap.xml
