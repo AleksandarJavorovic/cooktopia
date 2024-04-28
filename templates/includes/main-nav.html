@@ -11,11 +11,11 @@
                 All Products
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
+                <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
                 <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
                 <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
                 <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
                 <a href="{% url 'products' %}?sort=brand&direction=asc" class="dropdown-item ">By Brand</a>
-                <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
             </div>
         </li>
 
@@ -24,10 +24,10 @@
                 Knives
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="{% url 'products' %}?category=knife,meat_chopper,knife_set" class="dropdown-item">All Knives</a>
-                <a href="{% url 'products' %}?category=knife" class="dropdown-item">Chef's Knife</a>
-                <a href="{% url 'products' %}?category=meat_chopper" class="dropdown-item ">Meat Chopper</a>
-                <a href="{% url 'products' %}?category=knife_set" class="dropdown-item ">Knife Sets</a>
+                <a href="{% url 'products' %}?category=chefs_knife,meat_choppers,knife_sets" class="dropdown-item">All Knives</a>
+                <a href="{% url 'products' %}?category=chefs_knife" class="dropdown-item">Chef's Knife</a>
+                <a href="{% url 'products' %}?category=meat_choppers" class="dropdown-item ">Meat Choppers</a>
+                <a href="{% url 'products' %}?category=knife_sets" class="dropdown-item ">Knife Sets</a>
             </div>
         </li>
 
@@ -36,9 +36,9 @@
                 Pans
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="{% url 'products' %}?category=cast_iron_pan,stainless_steel_pan" class="dropdown-item">All Pans</a>
-                <a href="{% url 'products' %}?category=cast_iron_pan" class="dropdown-item">Cast Iron</a>
-                <a href="{% url 'products' %}?category=stainless_steel_pan" class="dropdown-item ">Stainless Steel</a>
+                <a href="{% url 'products' %}?category=cast_iron_pans,stainless_steel_pans" class="dropdown-item">All Pans</a>
+                <a href="{% url 'products' %}?category=cast_iron_pans" class="dropdown-item">Cast Iron</a>
+                <a href="{% url 'products' %}?category=stainless_steel_pans" class="dropdown-item ">Stainless Steel</a>
             </div>
         </li>
 
@@ -47,9 +47,9 @@
                 Pots
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="{% url 'products' %}?category=cast_iron_pot,stainless_steel_pot" class="dropdown-item">All Pots</a>
-                <a href="{% url 'products' %}?category=cast_iron_pot" class="dropdown-item">Cast Iron</a>
-                <a href="{% url 'products' %}?category=stainless_steel_pot" class="dropdown-item ">Stainless Steel</a>
+                <a href="{% url 'products' %}?category=cast_iron_pots,stainless_steel_pots" class="dropdown-item">All Pots</a>
+                <a href="{% url 'products' %}?category=cast_iron_pots" class="dropdown-item">Cast Iron</a>
+                <a href="{% url 'products' %}?category=stainless_steel_pots" class="dropdown-item ">Stainless Steel</a>
             </div>
         </li>
 
@@ -58,8 +58,9 @@
                 Accessories
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="" class="dropdown-item">By Price</a>
-                <a href="" class="dropdown-item ">By Rating</a>
+                <a href="{% url 'products' %}?category=cutting_boards,honing_steels" class="dropdown-item">All Accessories</a>
+                <a href="{% url 'products' %}?category=cutting_boards" class="dropdown-item">Cutting Boards</a>
+                <a href="{% url 'products' %}?category=honing_steels" class="dropdown-item ">Honing Steel</a>
             </div>
         </li>
     </ul>
