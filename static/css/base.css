@@ -298,6 +298,14 @@ input[name='q']::placeholder {
     text-decoration: none;
 }
 
+/* Mailchimp */
+#mc_embed_signup {
+    background: white;
+    clear: left;
+    font: 14px Lato, sans-serif;
+  }
+
+
 /* Footer */
 
 .footer{
