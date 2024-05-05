@@ -5,11 +5,13 @@ html {
 body {
     background: url('/static/images/cooktopia-background.webp') no-repeat left center fixed;
     background-size: cover;
-    height: calc(100vh - 164px);
+    /* height: calc(100vh - 164px); */
     color: #555;
     font-family: 'Lato';
     margin: 0;
-    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* from Bulma */
@@ -305,13 +307,22 @@ input[name='q']::placeholder {
     font: 14px Lato, sans-serif;
   }
 
+/* No content footer fixing */
+.wishlist-container,
+.bag-container,
+.products-container,
+.account-container {
+    flex-grow: 1;
+}
+
 
 /* Footer */
 
-.footer{
+.footer {
     background: whitesmoke;
     padding:10px 0px;
     text-align:center;
+    margin-top: auto;
 }
     
 .footer .row{

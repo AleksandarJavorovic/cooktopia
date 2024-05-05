@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ['8000-aleksandarjav-cooktopia-p8y6r1x9lvb.ws-eu110.gitpod.io', 'cooktopia-3a5b4620860d.herokuapp.com']
+ALLOWED_HOSTS = ['8000-aleksandarjav-cooktopia-p8y6r1x9lvb.ws-eu111.gitpod.io', 'cooktopia-3a5b4620860d.herokuapp.com']
 
 
 # Application definition
