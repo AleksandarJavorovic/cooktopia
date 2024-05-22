@@ -141,6 +141,7 @@
                         {% if user.is_authenticated %}
                             {% if already_bought %}
                                 {% if already_commented == True %}
+                                    <p class="text-muted">(Re-Comment/Rate if you wish and press Update Review, your previous comment will be updated.)</p>
                                     <input type="submit" value="Update Review" class="btn btn-red rounded-0 text-uppercase">
                                 {% else %}
                                     <input type="submit" value="Submit Review" class="btn btn-red rounded-0 text-uppercase">
