@@ -11,7 +11,8 @@ Our target customers are anyone in need of functional, modern, high-quality prod
 ## Table of Contents
 
 - [UI/UX](#uiux)
-    - [Agile](#agile)
+    - [Agile Development](#agile-development)
+      - [MoSCoW Prioratization](#moscow-prioratization)
     - [Wireframes](#wireframes)
     - [Site Goals](#site-goals)
     - [5 Planes of UX](#5-planes-of-ux)
@@ -61,6 +62,24 @@ Our target customers are anyone in need of functional, modern, high-quality prod
 
 The design of the site is pretty simplistic yet modern I would say, with the easy-to-see navbar presenting the products the site is offering. The site follows a mostly black-and-white theme, where the fancy shade of red was used for some detailing.
 
-The main background shows to the first time visitor what the site is about, and that the site is for those who cook with passion and expect nothing but quality.
+The main background shows the first-time visitor what the site is about, and that the site is for those who cook with passion and expect nothing but quality.
+
+### Agile Development
+
+The site is developed according to the Agile Methodology, where the GitHub Project feature was used to utilize the Kanban board for this purpose.
+
+While developing, I chose one issue to work on from the "Todo" column of the Kanban board and moved it into the "In Progress" column.
+
+After I was done with the issue by fulfilling all the acceptance criteria, I moved the issue into the "Done" Column.
+
+#### MoSCoW Prioratization
+
+I chose to follow the MoSCoW Prioritization method to label my issues(user stories/features):
+  - Must Have
+  - Should Have
+  - Could Have
+  - Won't Have
+
+The Must Have having the highest priority, next being Should Have and then Could Have, Won't Have presenting the features not being implemented at this point and time.
 
 
