@@ -15,8 +15,7 @@ Our target customers are anyone in need of functional, modern, high-quality prod
       - [MoSCoW Prioratization](#moscow-prioratization)
     - [Wireframes](#wireframes)
     - [Site Goals](#site-goals)
-    - [5 Planes of UX](#5-planes-of-ux)
-    - [Visual Design Choices](#visual-design-choices)
+    - [Design Choices](#design-choices)
 
 - [User Stories](#user-stories)
 
@@ -64,6 +63,8 @@ The design of the site is pretty simplistic yet modern I would say, with the eas
 
 The main background shows the first-time visitor what the site is about, and that the site is for those who cook with passion and expect nothing but quality.
 
+The site is fully responsive, making it easy to use on phones as well as on PCs.
+
 ### Agile Development
 
 The site is developed according to the Agile Methodology, where the GitHub Project feature was used to utilize the Kanban board for this purpose.
@@ -89,3 +90,17 @@ The Must Have having the highest priority, next being Should Have and then Could
 CookTopia is an e-commerce site offering a variety of kitchenware. It is currently focused on knives, pots, pans, and a few extra accessories. Customers are able to pay with cards thanks to the implemented Stripe payment system and get the products delivered to their door.
 
 CookTopia is still in the growing phase with the intention of expanding the range of products offered, focusing on modern design, functionality, and above everything, high quality of products.
+
+### Design Choices
+
+#### Color Scheme
+
+The site uses a kind of minimalistic approach, using black and white throughout the site, gray for some hover effects, and a fancy shade of red for some extra details such as within the logo itself.
+
+![Design Colors](static/images/design-colors.png)
+
+#### Font and Icons
+
+Font used is [Lato](https://fonts.google.com/specimen/Lato?query=Lato), from Google Fonts, which is a versatile, open-source humanist sans-serif font family that has gained immense popularity for its warmth, legibility, and multilingual support across print and digital mediums.
+
+Icons used are from the [Font Awesome](https://fontawesome.com/icons) free packet of icons.
