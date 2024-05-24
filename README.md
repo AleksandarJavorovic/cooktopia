@@ -1,6 +1,8 @@
 # CookTopia
 
-CookTopia is an imaginary e-commerce site, selling modern, functional kitchenware.
+CookTopia is an imaginary e-commerce site, selling modern, functional kitchenware. Currently e-store is specialised in selling knives, pots, pans and some extra accesories with intention of future scope expanding.
+
+Our target customers are anyone wanting functional, modern, high-quality products.
 
 [CookTopia live project here.](https://cooktopia-3a5b4620860d.herokuapp.com/)
 
