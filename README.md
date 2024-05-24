@@ -1,8 +1,8 @@
 # CookTopia
 
-CookTopia is an imaginary e-commerce site, selling modern, functional kitchenware. Currently e-store is specialised in selling knives, pots, pans and some extra accesories with intention of future scope expanding.
+CookTopia is an imaginary e-commerce site, selling modern, functional kitchenware. Currently, the e-store specializes in selling knives, pots, pans, and some extra accessories with the intention of expanding the scope.
 
-Our target customers are anyone wanting functional, modern, high-quality products.
+Our target customers are anyone in need of functional, modern, high-quality products for domestic or professional use.
 
 [CookTopia live project here.](https://cooktopia-3a5b4620860d.herokuapp.com/)
 
@@ -56,3 +56,11 @@ Our target customers are anyone wanting functional, modern, high-quality product
     - [References/Documentation/Tutorials](#referencesdocumentationtutorials)
     - [Media and Styling](#media-and-styling)
     - [Content/Data](#contentdata)
+
+## UI/UX
+
+The design of the site is pretty simplistic yet modern I would say, with the easy-to-see navbar presenting the products the site is offering. The site follows a mostly black-and-white theme, where the fancy shade of red was used for some detailing.
+
+The main background shows to the first time visitor what the site is about, and that the site is for those who cook with passion and expect nothing but quality.
+
+
