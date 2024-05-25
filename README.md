@@ -85,6 +85,181 @@ The Must Have having the highest priority, next being Should Have and then Could
 
 ### Wireframes
 
+I have created wireframes within [Balsamiq](https://balsamiq.com/) to get initial idea of how the site will look like.
+
+- #### Mobile and Tablet
+  
+
+    <details>
+    <summary>Home Page
+    </summary>
+
+    ![Home Page](static/images/wireframes/home-page-mobile.png)
+    </details>
+
+    <details>
+    <summary>Shop
+    </summary>
+
+    ![Shop](static/images/wireframes/shop-page-mobile.png)
+    </details>
+
+    <details>
+    <summary>Product
+    </summary>
+
+    ![Product](static/images/wireframes/product-page-mobile.png)
+    </details>
+
+    <details>
+    <summary>Shopping Bag
+    </summary>
+
+    ![Shopping Bag](static/images/wireframes/shopping-bag-mobile.png)
+    </details>
+
+    <details>
+    <summary>Shopping Bag Empty
+    </summary>
+
+    ![Shopping Bag Empty](static/images/wireframes/shopping-bag-empty-mobile.png)
+    </details>
+
+    <details>
+    <summary>Checkout
+    </summary>
+
+    ![Checkout](static/images/wireframes/checkout-mobile.png)
+    </details>
+
+    <details>
+    <summary>Order Confirmed
+    </summary>
+
+    ![Order Confirmed](static/images/wireframes/order-confirm-mobile.png)
+    </details>
+
+    <details>
+    <summary>Profile Details
+    </summary>
+
+    ![Profile Details](static/images/wireframes/profile-details-mobile.png)
+    </details>
+
+    <details>
+    <summary>Sign Up
+    </summary>
+
+    ![Sign Up](static/images/wireframes/signup-mobile.png)
+    </details>
+
+    <details>
+    <summary>Sign In
+    </summary>
+
+    ![Sign In](static/images/wireframes/signin-mobile.png)
+    </details>
+
+    <details>
+    <summary>Sign Out
+    </summary>
+
+    ![Sign Out](static/images/wireframes/signout-mobile.png)
+    </details>
+
+    <details>
+    <summary>Wishlist
+    </summary>
+
+    ![Wishlist](static/images/wireframes/wishlist-mobile.png)
+    </details>
+
+- #### Desktop
+
+    <details>
+    <summary>Home Page
+    </summary>
+
+    ![Home Page](static/images/wireframes/home-page-desktop.png)
+    </details>
+
+    <details>
+    <summary>Shop
+    </summary>
+
+    ![Shop](static/images/wireframes/shop-page-desktop.png)
+    </details>
+
+    <details>
+    <summary>Product
+    </summary>
+
+    ![Product](static/images/wireframes/product-page-desktop.png)
+    </details>
+
+    <details>
+    <summary>Shopping Bag
+    </summary>
+
+    ![Shopping Bag](static/images/wireframes/shopping-bag-desktop.png)
+    </details>
+
+    <details>
+    <summary>Shopping Bag Empty
+    </summary>
+
+    ![Shopping Bag Empty](static/images/wireframes/shopping-bag-empty-desktop.png)
+    </details>
+
+    <details>
+    <summary>Checkout
+    </summary>
+
+    ![Checkout](static/images/wireframes/checkout-desktop.png)
+    </details>
+
+    <details>
+    <summary>Order Confirmed
+    </summary>
+
+    ![Order Confirmed](static/images/wireframes/order-confirm-desktop.png)
+    </details>
+
+    <details>
+    <summary>Profile Details
+    </summary>
+
+    ![Profile Details](static/images/wireframes/profile-details-desktop.png)
+    </details>
+
+    <details>
+    <summary>Sign Up
+    </summary>
+
+    ![Sign Up](static/images/wireframes/signup-desktop.png)
+    </details>
+
+    <details>
+    <summary>Sign In
+    </summary>
+
+    ![Sign In](static/images/wireframes/signin-desktop.png)
+    </details>
+
+    <details>
+    <summary>Sign Out
+    </summary>
+
+    ![Sign Out](static/images/wireframes/signout-desktop.png)
+    </details>
+
+    <details>
+    <summary>Wishlist
+    </summary>
+
+    ![Wishlist](static/images/wireframes/wishlist-desktop.png)
+    </details>
+
 ### Site Goals
 
 CookTopia is an e-commerce site offering a variety of kitchenware. It is currently focused on knives, pots, pans, and a few extra accessories. Customers are able to pay with cards thanks to the implemented Stripe payment system and get the products delivered to their door.
