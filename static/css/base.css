@@ -315,6 +315,11 @@ input[name='q']::placeholder {
     flex-grow: 1;
 }
 
+/* small text */
+.small-text {
+    font-size: 0.8rem;
+}
+
 
 /* Footer */
 
