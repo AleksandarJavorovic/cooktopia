@@ -293,13 +293,13 @@ CookTopia is still in the growing phase with the intention of expanding the rang
 
 #### Color Scheme
 
-The site uses a kind of minimalistic approach, using black and white throughout the site, gray for some hover effects, and a fancy shade of red for some extra details such as within the logo itself.
+The site uses a kind of minimalistic approach, using black and white throughout the the site, gray for some hover effects, and a fancy shade of red for some extra details such as within the logo itself, delivery banner, and some buttons.
 
 ![Design Colors](static/images/design-colors.png)
 
 #### Font and Icons
 
-Font used is [Lato](https://fonts.google.com/specimen/Lato?query=Lato), from Google Fonts, which is a versatile, open-source humanist sans-serif font family that has gained immense popularity for its warmth, legibility, and multilingual support across print and digital mediums.
+The font used is [Lato](https://fonts.google.com/specimen/Lato?query=Lato), from Google Fonts, which is a versatile, open-source humanist sans-serif font family that has gained immense popularity for its warmth, legibility, and multilingual support across print and digital mediums.
 
 Icons used are from the [Font Awesome](https://fontawesome.com/icons) free packet of icons.
 

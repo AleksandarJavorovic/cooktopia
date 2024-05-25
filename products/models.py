@@ -28,6 +28,10 @@ class Product(models.Model):
     image = models.ImageField(null=True, blank=True)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     already_bought = models.BooleanField(default=False)
+    material = models.CharField(max_length=254, null=True, blank=True)
+    diametar = models.CharField(max_length=254, null=True, blank=True)
+    volume = models.CharField(max_length=254, null=True, blank=True)
+    country_of_origin = models.CharField(max_length=254, null=True, blank=True)
 
 
     def __str__(self):
