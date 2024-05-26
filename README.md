@@ -328,4 +328,42 @@ The custom models made for this project were:
 
 ## Features
 
-### 
+### Home Page
+
+![Home Page](static/images/features/1-home-page.png)
+
+- The landing page consists of Navbar, Main Section where we can find Shop Now button which takes us to the list of all products present at the site, Newsletter sign up option from MailChimp as well as Footer at the bottom of the page.
+
+### Navbar
+- Desktop
+
+![Navbar-Desktop](static/images/features/2-navbar-desktop.png)
+
+- Mobile-Collapsed
+
+![Navbar-Mobile-Collapsed](static/images/features/3-navbar-mobile-collapsed.png)
+
+- Mobile-Open
+
+![Navbar-Mobile-Open](static/images/features/4-navbar-mobile-open.png)
+
+- Navbar is fully responsive. Here we can find:
+  - Logo, which acts as a Home button
+  - Search Bar
+  - My Account Icon
+  - Wishlist Icon
+  - Shopping Bag Icon, with total amount under it
+  - Burger Icon on small and medium screens
+  - Home button for smaller and medium screens
+
+### Footer
+
+- Desktop
+
+![Footer-Desktop](static/images/features/5-footer-desktop.png)
+
+- Mobile
+
+![Footer-Mobile](static/images/features/6-footer-mobile.png)
+
+- Footer is pretty simple and self explanatory.
