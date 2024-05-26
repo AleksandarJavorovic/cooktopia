@@ -325,3 +325,7 @@ The custom models made for this project were:
  - Product(extended BoutiqueAdo's model)
  - ReviewRating
  - Wishlist
+
+## Features
+
+### 
