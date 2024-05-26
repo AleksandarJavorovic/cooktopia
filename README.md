@@ -20,8 +20,7 @@ Our target customers are anyone in need of functional, modern, high-quality prod
 
 - [Database Design](#database-design)
     - [Database Model](#database-model)
-    - [Custom Model](#custom-model)
-    - [CRUD](#crud)
+    - [Custom Models](#custom-models)
 
 - [SEO and Marketing](#seo-and-marketing)
 
@@ -289,6 +288,8 @@ CookTopia is an e-commerce site offering a variety of kitchenware. It is current
 
 CookTopia is still in the growing phase with the intention of expanding the range of products offered, focusing on modern design, functionality, and above everything, high quality of products.
 
+Simply said the goal is to become the final destination for those searching for high-quality kitchenware products.
+
 ### Design Choices
 
 #### Color Scheme
@@ -303,3 +304,26 @@ The font used is [Lato](https://fonts.google.com/specimen/Lato?query=Lato), from
 
 Icons used are from the [Font Awesome](https://fontawesome.com/icons) free packet of icons.
 
+#### Images
+
+Images used for the products are taken artistically for a nice presentation, with an attempt to bring the practicality of the products closer to the customers.
+
+## Database Design
+
+### Database Model
+
+The database model or so-called ERD(entity relationship diagram) was created to visualize the connection between models within the project. The diagram was created using Drawsql.app, here is the link to the diagram itself: [CookTopia-ERD](https://drawsql.app/teams/alexs-team-145/diagrams/cooktopia).
+
+<details>
+<summary>CookTopia - ERD
+</summary>
+
+![CookTopia - ERD](static/images/erd/cooktopia-erd.png)
+</details>
+
+### Custom Models
+
+The custom models made for this project were:
+ - Product(extended BoutiqueAdo's model)
+ - ReviewRating
+ - Wishlist
