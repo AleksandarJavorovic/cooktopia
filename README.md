@@ -22,11 +22,9 @@ Our target customers are anyone in need of functional, modern, high-quality prod
     - [Database Model](#database-model)
     - [Custom Models](#custom-models)
 
-- [SEO and Marketing](#seo-and-marketing)
-
 - [Features](#features)
-    - [Existing Features](#existing-features)
-    - [Future Features](#possible-future-features)
+
+- [SEO and Marketing](#seo-and-marketing)
 
 - [Technologies Used](#technologies-used)
     - [Work Environments and Hosting](#work-environments-and-hosting)
