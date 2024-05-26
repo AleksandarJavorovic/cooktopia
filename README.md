@@ -23,6 +23,14 @@ Our target customers are anyone in need of functional, modern, high-quality prod
     - [Custom Models](#custom-models)
 
 - [Features](#features)
+    - [Home Page](#home-page)
+    - [Navbar](#navbar)
+    - [Footer](#footer)
+    - [My Account](#my-account)
+    - [Product Management](#product-management)
+    - [My Profile](#my-profile)
+    - [Wishlist](#wishlist)
+    - [Shopping Bag](#shopping-bag)
 
 - [SEO and Marketing](#seo-and-marketing)
 
@@ -79,6 +87,8 @@ I chose to follow the MoSCoW Prioritization method to label my issues(user stori
 
 The Must Have having the highest priority, next being Should Have and then Could Have, Won't Have presenting the features not being implemented at this point and time.
 
+[Back to Top](#table-of-contents)
+
 ### User Stories
 | User Story | Priority |
 |------------|------------------|
@@ -102,6 +112,8 @@ The Must Have having the highest priority, next being Should Have and then Could
 | As a ***customer***, I can ***rate the product I already bought***, so that ***I can leave positive/negative feedback***. | **SHOULD HAVE** |
 | As a ***customer***, I can ***see if there are any special offers/deals***, so that ***I can enjoy the discounted price and save some money***. | **WON'T HAVE** |
 | As a ***admin***, I can ***perform CRUD operations***, so that ***I can manipulate the site as desired***. | **MUST HAVE** |
+
+[Back to Top](#table-of-contents)
 
 ### Wireframes
 
@@ -280,6 +292,8 @@ I have created wireframes within [Balsamiq](https://balsamiq.com/) to get initia
     ![Wishlist](static/images/wireframes/wishlist-desktop.png)
     </details>
 
+[Back to Top](#table-of-contents)
+
 ### Site Goals
 
 CookTopia is an e-commerce site offering a variety of kitchenware. It is currently focused on knives, pots, pans, and a few extra accessories. Customers are able to pay with cards thanks to the implemented Stripe payment system and get the products delivered to their door.
@@ -287,6 +301,8 @@ CookTopia is an e-commerce site offering a variety of kitchenware. It is current
 CookTopia is still in the growing phase with the intention of expanding the range of products offered, focusing on modern design, functionality, and above everything, high quality of products.
 
 Simply said the goal is to become the final destination for those searching for high-quality kitchenware products.
+
+[Back to Top](#table-of-contents)
 
 ### Design Choices
 
@@ -305,6 +321,8 @@ Icons used are from the [Font Awesome](https://fontawesome.com/icons) free packe
 #### Images
 
 Images used for the products are taken artistically for a nice presentation, with an attempt to bring the practicality of the products closer to the customers.
+
+[Back to Top](#table-of-contents)
 
 ## Database Design
 
@@ -326,6 +344,8 @@ The custom models made for this project were:
  - ReviewRating
  - Wishlist
 
+[Back to Top](#table-of-contents)
+
 ## Features
 
 ### Home Page
@@ -333,6 +353,8 @@ The custom models made for this project were:
 ![Home Page](static/images/features/1-home-page.png)
 
 - The landing page consists of Navbar, Main Section where we can find Shop Now button which takes us to the list of all products present at the site, Newsletter sign up option from MailChimp as well as Footer at the bottom of the page.
+
+[Back to Top](#table-of-contents)
 
 ### Navbar
 - Desktop
@@ -356,6 +378,8 @@ The custom models made for this project were:
   - Burger Icon on small and medium screens
   - Home button for smaller and medium screens
 
+[Back to Top](#table-of-contents)
+
 ### Footer
 
 - Desktop
@@ -366,4 +390,71 @@ The custom models made for this project were:
 
 ![Footer-Mobile](static/images/features/6-footer-mobile.png)
 
-- Footer is pretty simple and self explanatory.
+- The Footer is pretty simple and self explanatory.
+- The Footer is present at every page.
+- The Links towards the social networks are being opened within the new tab as good UX practices.
+
+[Back to Top](#table-of-contents)
+
+### My Account
+
+- Not Authenticated
+
+![My Account Not Authenticated](static/images/features/7-my-account-logedout.png)
+
+- Authenticated
+
+![My Account Authenticated](static/images/features/8-my-account-logedin.png)
+
+- My Account section is a drop-down with few different options for the authenticated and not authenticated user as well as Product Managment Tab for the admins.
+
+[Back to Top](#table-of-contents)
+
+### Product Management
+
+![Product Management 1](static/images/features/9-product-management-1.png)
+![Product Management 2](static/images/features/10-product-management-2.png)
+
+- Product Management is a page available to the admins, which enables them to add the products to the e-store.
+
+[Back to Top](#table-of-contents)
+
+### My Profile
+
+![My Profile](static/images/features/11-my-profile.png)
+
+- This page consist of 2 sections:
+  - Delivery Informations, which is there to store personal info about the users, address, number, country...
+  - Order History, contains all of the previous orders, if there are any.
+
+[Back to Top](#table-of-contents)
+
+### Wishlist
+
+- Empty
+
+![Wishlist Empty](static/images/features/12-wishlist-empty.png)
+
+- Not Empty
+
+![Wishlist Not Empty](static/images/features/13-wishlist-populated.png)
+
+- Wishlist is an feature coming handy for storing desired items for some future purchase. The products can be removed from the wishlist as well by clicking on the heart icon.
+
+[Back to Top](#table-of-contents)
+
+### Shopping Bag
+
+- Empty
+
+![Shopping Bag Empty](static/images/features/14-shopping-bag-empty.png)
+
+- Not Empty
+
+![Shopping Bag Empty](static/images/features/15-shopping-bag-populated.png)
+
+- Shopping Bag is a page, where we can see details of the added items.
+- We are also able to directly change the quantity of item/s to buy or completely remove them if needed.
+- We can also continue shopping by clicking on the Keep Shopping button or proceed to Secure Checkout by pressing the aforementioned button.
+
+[Back to Top](#table-of-contents)
