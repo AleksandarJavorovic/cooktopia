@@ -41,8 +41,9 @@ Our target customers are anyone in need of functional, modern, high-quality prod
     - [Password Reset](#password-reset)
     - [Additional Features](#additional-features)
     - [404 Page](#404-page)
+    - [Future Features](#future-features)
 
-- [SEO and Marketing](#seo-and-marketing)
+- [Business Model](#business-model)
 
 - [Technologies Used](#technologies-used)
     - [Work Environments and Hosting](#work-environments-and-hosting)
@@ -643,10 +644,6 @@ The custom models made for this project were:
 
 ![Product Badges](static/images/features/39-product-badges.png)
 
-- MailChimp Subscription
-
-![MailChimp Subscription](static/images/features/35-mailchimp-successfull.png)
-
 [Back to Top](#table-of-contents)
 
 ### 404 Page
@@ -664,3 +661,26 @@ The custom models made for this project were:
 - About Us Page, could be used to describe CookTopia as a reliable provider of high-quality kitchenware.
 
 - Some kind of counter where the staff, as well as customers, can see the most sold items.
+
+[Back to Top](#table-of-contents)
+
+### Business Model
+
+- The Site CookTopia is an e-commerce store, operating on the principles of Business to Customer model(B2C). For the sake of practicality, the site is designed so that both authenticated and non-authenticated users can make purchases.
+
+[Back to Top](#table-of-contents)
+
+#### Marketing Strategy
+
+- Social Media Marketing (Facebook)
+- The main task of this page on the social network Facebook is to inform others about our new products, as well as place targeted advertising.
+
+![Facebook Marketing](static/images/marketing/facebook-page-1.png)
+![Facebook Marketing](static/images/marketing/facebook-page-2.png)
+
+- Newsletter Marketing (Mailchimp)
+- At the Home Page is the Mailchimp newsletter form, where the customers can subscribe and get informed about the new arrivals.
+
+![Mailchimp Marketing](static/images/features/35-mailchimp-successfull.png)
+
+[Back to Top](#table-of-contents)
