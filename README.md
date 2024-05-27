@@ -31,6 +31,9 @@ Our target customers are anyone in need of functional, modern, high-quality prod
     - [My Profile](#my-profile)
     - [Wishlist](#wishlist)
     - [Shopping Bag](#shopping-bag)
+    - [Secure Checkout](#secure-checkout)
+    - [Thank You Page](#thank-you-page)
+    - [Search Bar](#search-bar)
 
 - [SEO and Marketing](#seo-and-marketing)
 
@@ -485,7 +488,23 @@ The custom models made for this project were:
 
 - After the successfully placed order, the customer is taken to the Thank You Page, where once again he/she is being presented with the order summery.
 - At the bottom is the Checkout Other Products button in case the customer wants to keep on searching through the site.
+- The Customer is also being informed that the confirmation e-mail has been sent to the provided e-mail address.
 
 ![Thank You Page](static/images/features/19-thankyou-page.png)
+
+[Back to Top](#table-of-contents)
+
+### Search Bar
+- No Search Criteria, in case someone clicks on search without typing in anything, the toast message will pop out.
+
+![Search Bar](static/images/toasts/13-no-search-criteria.png)
+
+- No Matching, the look of the search page in case there are no matches. With the small line of text saying:"0 Products found for..."
+
+![Search Bar](static/images/features/20-search-no-products.png)
+
+- Products Found, the look of the search page in case at least 1 product has been founded, in this case the line informs us that:"3 Products found for..."
+
+![Search Bar](static/images/features/21-search-with-products.png)
 
 [Back to Top](#table-of-contents)
