@@ -34,6 +34,9 @@ Our target customers are anyone in need of functional, modern, high-quality prod
     - [Secure Checkout](#secure-checkout)
     - [Thank You Page](#thank-you-page)
     - [Search Bar](#search-bar)
+    - [All Products Page](#all-products-page)
+    - [Product Page](#product-page)
+    - [Review Section](#review-section)
 
 - [SEO and Marketing](#seo-and-marketing)
 
@@ -540,5 +543,40 @@ The custom models made for this project were:
 
 - Edit button takes the Admin to the Product Management page, in case some changes need to be done.
 - Delete button, deletes the product from the e-store.
+
+[Back to Top](#table-of-contents)
+
+### Product Page
+
+- This page contains all info about the product as well as Review/Comment section under the Product.
+- The info about the Product from the All Products page is extended, and here we have added Description and Product Info.
+- Under the Product Info, we have:
+  - Material
+  - Diametar
+  - Volume
+  - Country of Origin
+
+![Product Page](static/images/features/24-detailed-view-product.png)
+
+[Back to Top](#table-of-contents)
+
+### Review Section
+
+- This section can be found under the Product Info on the Product Page.
+- In case the customer is authenticated and the given product is already in his order history, meaning he/she has already bought the product, the customer can leave a review.
+
+![Review Section](static/images/features/25-review-section-detailed-product.png)
+
+- Authenticated, but the product is not in the order history
+
+![Review Section](static/images/features/26-no-reviews-yet.png)
+
+- Authenticated, the product is in the order history
+
+![Review Section](static/images/features/27-no-reviews-bought-already.png)
+
+- Not Authenticated
+
+![Review Section](static/images/features/42-review-logedout.png)
 
 [Back to Top](#table-of-contents)
