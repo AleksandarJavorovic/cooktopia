@@ -453,8 +453,39 @@ The custom models made for this project were:
 
 ![Shopping Bag Empty](static/images/features/15-shopping-bag-populated.png)
 
-- Shopping Bag is a page, where we can see details of the added items.
+- Shopping Bag is a page, where we can see details of the added items and cost of the planned purchase.
 - We are also able to directly change the quantity of item/s to buy or completely remove them if needed.
 - We can also continue shopping by clicking on the Keep Shopping button or proceed to Secure Checkout by pressing the aforementioned button.
+
+[Back to Top](#table-of-contents)
+
+### Secure Checkout
+
+- Checkout consists of 2 sections:
+  - Left Side, where we need to enter personal and delivery details, as well as payment details at the bottom
+  - Right Side, where we have Order Summary once again to ensure everything is as desired.
+
+![Secure Checkout](static/images/features/16-checkout.png)
+
+- Payment Details, here we need to enter the card number, date of expiration and bic/swift code.
+
+![Secure Checkout Buttons](static/images/features/177-checkout-buttons-2.png)
+
+- Here is an example of the testing the payment process, provided by Stripe. For this testing to work the month must be the present one or any month in the future.
+
+![Secure Checkout Buttons Test](static/images/features/17-checkout-buttons.png)
+
+- Loading process/making payment, symbolically presented with a loading symbol, letting the customer know that the order is being processed.
+
+![Secure Checkout Loading](static/images/features/18-checkout-loading.png)
+
+[Back to Top](#table-of-contents)
+
+### Thank You Page
+
+- After the successfully placed order, the customer is taken to the Thank You Page, where once again he/she is being presented with the order summery.
+- At the bottom is the Checkout Other Products button in case the customer wants to keep on searching through the site.
+
+![Thank You Page](static/images/features/19-thankyou-page.png)
 
 [Back to Top](#table-of-contents)
