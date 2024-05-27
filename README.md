@@ -39,6 +39,8 @@ Our target customers are anyone in need of functional, modern, high-quality prod
     - [Review Section](#review-section)
     - [Authentication](#authentication)
     - [Password Reset](#password-reset)
+    - [Additional Features](#additional-features)
+    - [404 Page](#404-page)
 
 - [SEO and Marketing](#seo-and-marketing)
 
@@ -621,8 +623,36 @@ The custom models made for this project were:
 
 ![Password Change](static/images/features/33-password-change.png)
 
-- Password Changed, the page the customer lands to after the customer types in new passwords 2 times and clicks on the `Change Password` button.
+- Password Changed, the page the customer lands on after the customer types in new passwords 2 times and clicks on the `Change Password` button.
 
 ![Password Changed](static/images/features/34-password-changed.png)
+
+[Back to Top](#table-of-contents)
+
+### Additional Features
+
+- Successful Registration 
+
+![Successful Registration](static/images/features/37-successfully-registered.png)
+
+- Registration E-Mail Confirmation, the page the user lands on after clicking on the confirmation link within the registration confirmation e-mail.
+
+![Registration Confirmation](static/images/features/38-confirm-email.png)
+
+- Product Badges, cards/links preseting groups of products, can be found at pages as Knives, Pots, Pans, and Accessories.
+
+![Product Badges](static/images/features/39-product-badges.png)
+
+- MailChimp Subscription
+
+![MailChimp Subscription](static/images/features/35-mailchimp-successfull.png)
+
+[Back to Top](#table-of-contents)
+
+### 404 Page
+
+- The page that is rendered in case the user tries to open a non-existing page or simply appends `/404` to the address of the site.
+
+![Password Changed](static/images/features/40-error-404-page.png)
 
 [Back to Top](#table-of-contents)
