@@ -37,6 +37,8 @@ Our target customers are anyone in need of functional, modern, high-quality prod
     - [All Products Page](#all-products-page)
     - [Product Page](#product-page)
     - [Review Section](#review-section)
+    - [Authentication](#authentication)
+    - [Password Reset](#password-reset)
 
 - [SEO and Marketing](#seo-and-marketing)
 
@@ -578,5 +580,49 @@ The custom models made for this project were:
 - Not Authenticated
 
 ![Review Section](static/images/features/42-review-logedout.png)
+
+[Back to Top](#table-of-contents)
+
+### Authentication
+
+- Depending on the status of the site user, different options will be rendered.
+- Not Authenticated users will see the option to Log In or Register
+- Authenticated users will have the option to Logout
+- The pages to Sign Up, Sign In, and Sign Out are pretty self-explanatory.
+
+- Sign Up
+
+![Sign Up](static/images/features/29-signup.png)
+
+- Sign In
+
+![Sign In](static/images/features/30-signin.png)
+
+- Sign Out
+
+![Sign Out](static/images/features/28-signout.png)
+
+[Back to Top](#table-of-contents)
+
+### Password Reset
+
+- In case the customer forgets the password, there is a feature for password recovery.
+- It can be accessed from the Sign In Page, by clicking the `Forgot Password?` link.
+
+- Password Reset Form
+
+![Password Reset Form](static/images/features/31-forgot-password.png)
+
+- Password Reseted, the info customer gets after he clicks `Reset My Password` button. At this moment the e-mail to reset the password is being sent to the customer.
+
+![Password Reseted](static/images/features/32-password-reseted.png)
+
+- Password Change, the page customer is redirected to from the password reset e-mail.
+
+![Password Change](static/images/features/33-password-change.png)
+
+- Password Changed, the page the customer lands to after the customer types in new passwords 2 times and clicks on the `Change Password` button.
+
+![Password Changed](static/images/features/34-password-changed.png)
 
 [Back to Top](#table-of-contents)
