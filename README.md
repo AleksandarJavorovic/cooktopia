@@ -508,3 +508,37 @@ The custom models made for this project were:
 ![Search Bar](static/images/features/21-search-with-products.png)
 
 [Back to Top](#table-of-contents)
+
+### All Products Page
+
+- By clicking on the All Products drop-down menu, we can choose to open the All Products page, sorting by one of the given criteria.
+- Similarly we can open one of the other sections, be it a Knives, Pans, Pots or Accessories.
+
+![All Products Drop-Down](static/images/features/22-allproducts-toggle-open.png)
+
+- All Products Page, lists all of the present products at the site, with possibility of sorting the products by:
+  - Price
+  - Rating
+  - Name
+  - Brand
+  - Category
+
+![All Products Page](static/images/features/41-all-products-page.png)
+
+- Under the picture of each product is a small section, where we can find:
+  - Product Name
+  - Brand
+  - Price in €
+  - Badge, representing the group of products
+  - Rating
+  - Edit/Delte Buttons (only for admins)
+  - Add To Bag button
+  - Quantity Button
+  - Heart Icon, acting as add to wishlist button
+
+![All Products Page Closed Up View](static/images/features/23-closeup-view-allproducts.png)
+
+- Edit button takes the Admin to the Product Management page, in case some changes need to be done.
+- Delete button, deletes the product from the e-store.
+
+[Back to Top](#table-of-contents)
