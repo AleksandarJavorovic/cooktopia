@@ -44,6 +44,14 @@ Our target customers are anyone in need of functional, modern, high-quality prod
     - [Future Features](#future-features)
 
 - [Business Model](#business-model)
+    - [Marketing Strategy](#marketing-strategy)
+        - [Social Media Marketing](#social-media-marketing)
+        - [Newsletter Marketing](#newsletter-marketing)
+    - [Search Engine Optimization](#search-engine-optimization)
+        - [Keywords](#keywords)
+        - [Meta Tags](#meta-tags)
+        - [Sitemap.xml](#sitemapxml)
+        - [Robots.txt](#robotstxt)
 
 - [Technologies Used](#technologies-used)
     - [Work Environments and Hosting](#work-environments-and-hosting)
@@ -670,17 +678,40 @@ The custom models made for this project were:
 
 [Back to Top](#table-of-contents)
 
-#### Marketing Strategy
+### Marketing Strategy
 
-- Social Media Marketing (Facebook)
+#### Social Media Marketing
 - The main task of this page on the social network Facebook is to inform others about our new products, as well as place targeted advertising.
 
 ![Facebook Marketing](static/images/marketing/facebook-page-1.png)
 ![Facebook Marketing](static/images/marketing/facebook-page-2.png)
 
-- Newsletter Marketing (Mailchimp)
+#### Newsletter Marketing
 - At the Home Page is the Mailchimp newsletter form, where the customers can subscribe and get informed about the new arrivals.
 
 ![Mailchimp Marketing](static/images/features/35-mailchimp-successfull.png)
+
+[Back to Top](#table-of-contents)
+
+### Search Engine Optimization
+
+#### Keywords
+
+- I tested several long-tail keywords using the websites [Wordtracker](https://www.wordtracker.com/), [Moz](https://moz.com/). Most keywords showed low volume and competition.
+
+![Keyword](static/images/marketing/moz-key-research.png)
+
+#### Meta Tags
+
+- In the head of base.html, under the Meta Tags section `<meta name="description"` ... and `<meta name="keywords"` ... tags were included.
+
+#### Sitemap.xml
+
+- I created a sitemap.xml file using [XML-Sitemaps](https://www.xml-sitemaps.com/), for the SEO improvements.
+
+#### Robots.txt
+
+- I created robots.txt file.
+- The file instructs search engines which directories not to crawl and index. It also links to the sitemap. The existence of this file signals a level of quality to search engines and so improves SEO ranking as a result.
 
 [Back to Top](#table-of-contents)
