@@ -656,3 +656,11 @@ The custom models made for this project were:
 ![Password Changed](static/images/features/40-error-404-page.png)
 
 [Back to Top](#table-of-contents)
+
+### Future Features
+
+- A blog could be added, as a way of presenting the products to future customers to help them decide if the given product is the right one for them.
+
+- About Us Page, could be used to describe CookTopia as a reliable provider of high-quality kitchenware.
+
+- Some kind of counter where the staff, as well as customers, can see the most sold items.
