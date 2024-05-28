@@ -82,10 +82,10 @@ Our target customers are anyone in need of functional, modern, high-quality prod
     - [Clone](#clone)
     - [Download ZIP](#download-as-zip)
 
-- [Source Credits](#source-credits)
-    - [References/Documentation/Tutorials](#referencesdocumentationtutorials)
-    - [Media and Styling](#media-and-styling)
-    - [Content/Data](#contentdata)
+- [Credits](#credits)
+    - [Code](#code)
+    - [Media](#media)
+    - [Acknowledgements](#acknowledgements)
 
 ## UI/UX
 
@@ -1189,12 +1189,19 @@ else:
 - [Review and Rating System](https://www.youtube.com/watch?v=3KCBN7WJXMY&list=PLFNQLcwO1GaY3dy2i6F5vQ60YGDRUD-bX), this video was used for inspiration to create review section within the project.
 - Many code bugs were solved thanks to CI Slack channels.
 
+[Back to Top](#table-of-contents)
+
 ### Media
 
 - Images used for this project are from [Unsplash](https://unsplash.com/).
+- [XXXLutz](https://www.xxxlutz.de/) was used as inspiration while planing the look of the site.
+
+[Back to Top](#table-of-contents)
 
 ### Acknowledgements
 
 - I want to say to my wife:"Thank you for all your love and support. <3"
 - I want to thank to my mentor Mitko Bachvarov for tips and suggestions.
 - I want to thank to our tutors at CI Tutor Support for all their help.
+
+[Back to Top](#table-of-contents)
