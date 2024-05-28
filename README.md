@@ -879,6 +879,7 @@ A live version of the site is deployed to [Heroku](https://www.heroku.com/) and 
     ````
       os.environ["DEVELOPMENT"] = 'False'
     ````
+- Allow Heroku as host: In `settings.py` add `ALLOWED_HOSTS = ['app-name.herokuapp.com', 'localhost']`
 - All the dependencies were stored in the requirements.txt file with the command `pip3 freeze --local > requirements.txt`.
 - The start command for the application `web: gunicorn cooktopia.wsgi:application` was stored in a Procfile.
 
@@ -959,6 +960,133 @@ A live version of the site is deployed to [Heroku](https://www.heroku.com/) and 
 
 [Back to Top](#table-of-contents)
 
+### Amazon - AWS Hosting
+
+- This project uses [AWS](https://aws.amazon.com) to store media and static files online, because Heroku doesn't persist this type of data.
+
+- Once you've created an AWS account and logged-in, follow these series of steps to get your project connected.
+- Make sure you're on the **AWS Management Console** page.
+
+#### S3 Bucket
+
+- Search for **S3**.
+- Create a new bucket, give it a name (matching your Heroku app name), and choose the region closest to you.
+- Uncheck **Block all public access**, and acknowledge that the bucket will be public (required for it to work on Heroku).
+- From **Object Ownership**, make sure to have **ACLs enabled**, and **Bucket owner preferred** selected.
+- From the **Properties** tab, turn on static website hosting, and type `index.html` and `error.html` in their respective fields, then click `Save`.
+- From the **Permissions** tab, paste in the following CORS configuration:
+
+	```shell
+	[
+		{
+			"AllowedHeaders": [
+				"Authorization"
+			],
+			"AllowedMethods": [
+				"GET"
+			],
+			"AllowedOrigins": [
+				"*"
+			],
+			"ExposeHeaders": []
+		}
+	]
+	```
+
+- Copy your **ARN** string.
+- From the **Bucket Policy** tab, select the **Policy Generator** link, and use the following steps:
+	- Policy Type: **S3 Bucket Policy**
+	- Effect: **Allow**
+	- Principal: `*`
+	- Actions: **GetObject**
+	- Amazon Resource Name (ARN): **paste-your-ARN-here**
+	- Click `Add Statement`
+	- Click `Generate Policy`
+	- Copy the entire Policy, and paste it into the **Bucket Policy Editor**
+
+		```shell
+		{
+			"Version": "2012-10-17",
+      "Id": "Policy111111111111",
+      "Statement": [
+				{
+					"Sid": "Stmt11111111111",
+          "Effect": "Allow",
+          "Principal": "*",
+          "Action": "s3:GetObject",
+          "Resource": "arn:aws:s3:::bucket-name/*"
+				}
+			]
+		}
+		```
+
+	- Before you click "Save", add `/*` to the end of the Resource key in the Bucket Policy Editor (like above).
+	- Click `Save`.
+- From the **Access Control List (ACL)** section, click `Edit` and enable **List** for **Everyone (public access)**, and accept the warning box.
+	- If the edit button is disabled, you need to change the **Object Ownership** section above to **ACLs enabled**.
+
+[Back to Top](#table-of-contents)
+
+#### IAM
+
+From the AWS Services Menu, search for and open **IAM** (Identity and Access Management).
+Once on the IAM page, follow these steps:
+
+- From **User Groups**, click `Create New Group`.
+	- Suggested Name: **manage-cooktopia** (manage + the project name)
+- Tags are optional, but you must click it to get to the **review policy** page.
+- From **User Groups**, select your newly created group, and go to the **Permissions** tab.
+- Open the **Add Permissions** dropdown, and click `Attach Policies`.
+- Select the policy, then click `Add Permissions` at the bottom when finished.
+- From the **JSON** tab, select the **Import Managed Policy** link.
+	- Search for **S3**, select the `AmazonS3FullAccess` policy, and then **Import**.
+	- You'll need your ARN from the S3 Bucket copied again, which is pasted into "Resources" key on the Policy.
+
+		```shell
+		{
+			"Version": "2012-10-17",
+			"Statement": [
+				{
+					"Effect": "Allow",
+					"Action": "s3:*",
+					"Resource": [
+						"arn:aws:s3:::bucket-name",
+						"arn:aws:s3:::bucket-name/*"
+					]
+				}
+			]
+		}
+		```
+	
+	- Click `Review Policy`.
+	- Suggested Name: `cooktopia-policy` (site name-policy)
+	- Click **Create Policy**.
+- From **User Groups**, click your `manage-cooktopia`.
+- Click `Attach Policy`.
+- Search for the policy you've just created ("cooktopia-policy") and select it, then **Attach Policy**.
+- From **User Groups**, click `Add User`.
+	- Suggested Name: `cooktopia-staticfiles-user ` (site name + staticfiles-user)
+- For "Select AWS Access Type", select **Programmatic Access**.
+- Select the group to add your new user to: `manage-cooktopia`
+- Tags are optional, but you must click it to get to the **review user** page.
+- Click `Create User` once done.
+- You should see a button to **Download .csv**, so click it to save a copy on your system.
+	- **IMPORTANT**: once you pass this page, you cannot come back to download it again, so do it immediately!
+	- This contains the user's **Access key ID** and **Secret access key**.
+	- `AWS_ACCESS_KEY_ID` = **Access key ID**
+	- `AWS_SECRET_ACCESS_KEY` = **Secret access key**
+
+[Back to Top](#table-of-contents)
+
+#### Final Setup
+
+- The `DISABLE_COLLECTSTATIC` within Heroku Config Vars can be removed now, as AWS will handle the static files from now on.
+- Back within **S3**, create a new folder called: `media`.
+- Select any existing media images for your project to prepare them for being uploaded into the new folder.
+- Under **Manage Public Permissions**, select **Grant public read access to this object(s)**.
+- No further settings are required, so click **Upload**.
+
+[Back to Top](#table-of-contents)
 
 ## Development
 
