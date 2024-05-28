@@ -44,22 +44,19 @@ Our target customers are anyone in need of functional, modern, high-quality prod
     - [Future Features](#future-features)
 
 - [Business Model](#business-model)
-    - [Marketing Strategy](#marketing-strategy)
-        - [Social Media Marketing](#social-media-marketing)
-        - [Newsletter Marketing](#newsletter-marketing)
-    - [Search Engine Optimization](#search-engine-optimization)
-        - [Keywords](#keywords)
-        - [Meta Tags](#meta-tags)
-        - [Sitemap.xml](#sitemapxml)
-        - [Robots.txt](#robotstxt)
+- [Marketing Strategy](#marketing-strategy)
+    - [Social Media Marketing](#social-media-marketing)
+    - [Newsletter Marketing](#newsletter-marketing)
+- [Search Engine Optimization](#search-engine-optimization)
+    - [Keywords](#keywords)
+    - [Meta Tags](#meta-tags)
+    - [Sitemap.xml](#sitemapxml)
+    - [Robots.txt](#robotstxt)
 
 - [Technologies Used](#technologies-used)
-    - [Work Environments and Hosting](#work-environments-and-hosting)
-    - [Python Libraries](#python-libraries)
-    - [Django Libraries](#django-libraries)
-    - [Payment processing](#payment-processing)
-    - [Emails/Newsletter](#emailsnewsletter)
-    - [SEO/Marketing](#seomarketing)
+    - [Languages](#languages)
+    - [Frameworks and Libraries](#frameworks-and-libraries)
+    - [Tools](#tools)
 
 - [Testing](#testing)
     - [Test Guide](#test-guide)
@@ -670,6 +667,8 @@ The custom models made for this project were:
 
 - Some kind of counter where the staff, as well as customers, can see the most sold items.
 
+- The sales page could be used to introduce the discount possibilities.
+
 [Back to Top](#table-of-contents)
 
 ### Business Model
@@ -683,13 +682,30 @@ The custom models made for this project were:
 #### Social Media Marketing
 - The main task of this page on the social network Facebook is to inform others about our new products, as well as place targeted advertising.
 
-![Facebook Marketing](static/images/marketing/facebook-page-1.png)
-![Facebook Marketing](static/images/marketing/facebook-page-2.png)
+  <details>
+  <summary>Facebook Marketing First
+  </summary>
+
+  ![Facebook Marketing First](static/images/marketing/facebook-page-1.png)
+  </details>
+
+  <details>
+  <summary>Facebook Marketing Second
+  </summary>
+
+  ![Facebook Marketing Second](static/images/marketing/facebook-page-2.png)
+  </details>
+
 
 #### Newsletter Marketing
 - At the Home Page is the Mailchimp newsletter form, where the customers can subscribe and get informed about the new arrivals.
 
-![Mailchimp Marketing](static/images/features/35-mailchimp-successfull.png)
+  <details>
+  <summary>Mailchimp Marketing
+  </summary>
+
+  ![Mailchimp Marketing](static/images/features/35-mailchimp-successfull.png)
+  </details>
 
 [Back to Top](#table-of-contents)
 
@@ -699,7 +715,27 @@ The custom models made for this project were:
 
 - I tested several long-tail keywords using the websites [Wordtracker](https://www.wordtracker.com/), [Moz](https://moz.com/). Most keywords showed low volume and competition.
 
-![Keyword](static/images/marketing/moz-key-research.png)
+  <details>
+  <summary>Keyword - Moz
+  </summary>
+
+  ![Keyword Moz](static/images/marketing/moz-key-research.png)
+  </details>
+
+  <details>
+  <summary>Keyword - Wordtracker First
+  </summary>
+
+  ![Keyword Wordtracker First](static/images/marketing/wordtracker-1.png)
+  </details>
+
+  <details>
+  <summary>Keyword - Wordtracker Second
+  </summary>
+
+  ![Keyword Wordtracker Second](static/images/marketing/wordtracker-2.png)
+  </details>
+
 
 #### Meta Tags
 
@@ -712,6 +748,63 @@ The custom models made for this project were:
 #### Robots.txt
 
 - I created robots.txt file.
+
+  <details>
+  <summary>Robots.txt
+  </summary>
+
+  ![Robots.txt](static/images/marketing/robots-txt.png)
+  </details>
+
 - The file instructs search engines which directories not to crawl and index. It also links to the sitemap. The existence of this file signals a level of quality to search engines and so improves SEO ranking as a result.
+
+[Back to Top](#table-of-contents)
+
+## Technologies Used
+
+### Languages
+
+- HTML
+- CSS
+- Python
+- Javascript
+
+[Back to Top](#table-of-contents)
+
+### Frameworks and Libraries
+
+- [Django v3.2](https://docs.djangoproject.com/en/4.2/releases/3.2/) developement framework
+- [Bootstrap v4.6](https://getbootstrap.com/docs/4.6/getting-started/introduction/) for template rendering
+- [AllAuth v0.41](https://django-allauth.readthedocs.io/) for authentication
+- [django-crispy-forms v1.14.0](https://pypi.org/project/crispy-bootstrap4/) for form rendering
+- [boto3 v1.34.86](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html) for AWS CRUD with Python scripts
+- [dj-database-url v0.5.0](https://pypi.org/project/dj-database-url/) for DATABASE_URL
+- [django-countries v7.2.1](https://pypi.org/project/django-countries/) for country field rendering in checkout form
+- [django-storages v1.14.2](https://django-storages.readthedocs.io/en/latest/) for handling static and media files
+- [gunicorn v22.0.0](https://docs.djangoproject.com/en/4.2/howto/deployment/wsgi/gunicorn/) apure-Python WSGI server for UNIX
+- [oauthlib v3.2.2](https://pypi.org/project/oauthlib/) OAuth request-signing logic
+- [psycopg2 v2.9.9](https://pypi.org/project/psycopg2/) s PostgreSQL database adapter for Python
+- [Stripe v9.1.0](https://stripe.com/en-ie) for payment system
+
+[Back to Top](#table-of-contents)
+
+### Tools
+
+- [Balsamiq](https://balsamiq.com/) used to create wireframes
+- [Drawsql.app](https://drawsql.app/) used to create ERD
+- [GitPod](https://gitpod.io/) used as IDE
+- [Git](https://git-scm.com/) used for version control
+- [GitHub](https://github.com/) used for online storage of codebase and projects tool
+- [Heroku](https://heroku.com/) used for site hosting
+- [AWS - Amazon Web Services (S3)](https://aws.amazon.com/) used to host static and media files
+- [Image Resizer](https://www.simpleimageresizer.com/) used for handling the images(resizing, cropping, formating...)
+- [Favicon](https://favicon.io/) used to create favicon
+- [Amiresponsive](https://ui.dev/amiresponsive) used to create a mockup image of the CookTopia site
+- [Perplexity AI](https://www.perplexity.ai/) used for debugging and problem solving
+- [Slack](https://slack.com/) used for connecting as well as debugging and problem-solving during development
+- [Mailchimp](https://mailchimp.com/) used for newsletter subscription service
+- [Gmail](https://mail.google.com/) used for real e-mail sending
+- [XML Sitemaps](https://www.xml-sitemaps.com/) used to generate sitemap.xml file
+- [Privacy Policy Generator](https://www.privacypolicygenerator.info/) used to create policy
 
 [Back to Top](#table-of-contents)
