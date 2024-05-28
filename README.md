@@ -75,6 +75,7 @@ Our target customers are anyone in need of functional, modern, high-quality prod
         - [IAM](#iam)
         - [Final Setup](#final-setup)
     - [Stripe](#stripe)
+    - [Google Mail API](#google-mail-api)
 
 - [Development](#development)
     - [Fork](#fork)
@@ -1117,8 +1118,8 @@ Once on the IAM page, follow these steps:
 - Setup a Gmail Account that will be used to hold and store the emails for your project.
 - Log In and navigate to **Settings** -> **See All Settings** -> **Accounts and Import** -> **Other Google Account settings**
 - Activate 2-Step Verification
-- Once verified access **App Passwords** -> **Other** -> enter a name for the password.
-- Click **Create** -> copy the 16 digit password that is generated.
+- Once verified access **App Passwords** -> enter a name for the password.(e.g. Django-Project Name)
+- Click `Create` -> copy the 16 digit password that is generated.
 - In your `settings.py` add the following Email Settings:
 ````
 # Sending Emails
@@ -1136,6 +1137,44 @@ else:
 ````  
 - Add `EMAIL_HOST_PASS`, `EMAIL_HOST_USER` to your Heroku Config Vars.
 
+[Back to Top](#table-of-contents)
+
 ## Development
+
+### Fork
+
+- A fork is a copy of a repository. Forking a repository allows you to freely experiment with changes without affecting the original project.
+
+- To fork a project, follow next steps:
+
+  - Log into GitHub and click on repository to download: [CookTopia](https://github.com/AleksandarJavorovic/cooktopia)
+  - Click the `Fork` button in the top right-hand corner
+  - Select a different owner, if desired
+  - Click `Create Fork`
+  - The repo is now in your chosen account
+
+[Back to Top](#table-of-contents)
+
+### Clone
+
+- Changes made to a cloned repository will affect the original one if the branch to push to isn't changed.
+
+- To clone, follow the steps under:
+
+  - Navigate to the main page of the repostitory (this could be a forked instance)
+  - Click on the `Code` dropdown menu above the list of files
+  - Choose a method to copy the URL for the repository: either via `HTTPS`, by using an `SSH key`, or by using `GitHub CLI`
+  - In your work environment, open Git Bash and change current directory to target location for cloned repository
+  - Type ``git clone`` followed by the copied URL and press enter `Enter`
+
+[Back to Top](#table-of-contents)
+
+### Download as ZIP
+
+- Log In to GitHub and click on repository to download: [CookTopia](https://github.com/AleksandarJavorovic/cooktopia)
+- Click on the `Code` dropdown menu and click `Download Zip` file
+- Once downloaded, extract ZIP file and use in your local IDE
+
+[Back to Top](#table-of-contents)
 
 ## Credits
