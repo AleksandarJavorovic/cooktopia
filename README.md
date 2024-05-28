@@ -66,6 +66,15 @@ Our target customers are anyone in need of functional, modern, high-quality prod
     - [Unfixed Bugs](#unfixed-bugs)
 
 - [Deployment](#deployment)
+    - [PostgreSQL from Code Institute](#postgresql-from-code-institute)
+    - [Heroku Deployment](#heroku-deployment)
+        - [Preparation](#preparation)
+        - [Deployment](#deployment-1)
+    - [Amazon - AWS Hosting](#amazon---aws-hosting)
+        - [S3 Bucket](#s3-bucket)
+        - [IAM](#iam)
+        - [Final Setup](#final-setup)
+    - [Stripe](#stripe)
 
 - [Development](#development)
     - [Fork](#fork)
@@ -883,6 +892,8 @@ A live version of the site is deployed to [Heroku](https://www.heroku.com/) and 
 - All the dependencies were stored in the requirements.txt file with the command `pip3 freeze --local > requirements.txt`.
 - The start command for the application `web: gunicorn cooktopia.wsgi:application` was stored in a Procfile.
 
+[Back to Top](#table-of-contents)
+
 
 #### Deployment
 
@@ -1081,12 +1092,49 @@ Once on the IAM page, follow these steps:
 #### Final Setup
 
 - The `DISABLE_COLLECTSTATIC` within Heroku Config Vars can be removed now, as AWS will handle the static files from now on.
-- Back within **S3**, create a new folder called: `media`.
+- Within you **S3** Bucket, create a new folder called: `media`.
 - Select any existing media images for your project to prepare them for being uploaded into the new folder.
 - Under **Manage Public Permissions**, select **Grant public read access to this object(s)**.
-- No further settings are required, so click **Upload**.
+- No further settings are required, so click `Upload`.
 
 [Back to Top](#table-of-contents)
+
+### Stripe
+
+- Stripe's API is used to handle payments. To setup Stripe follow next steps:
+
+  - Create if you don't have and Log In to a Stripe account.
+  - In the Stripe Dashboard -> **Get your test API keys.**
+  - Add your `STRIPE_PUBLIC_KEY` and `STRIPE_SECRET_KEY` to your env.py, connect to your settings.py using your environment variables and then enter them into your project's Heroku Config Vars.
+  - Including Stripe's Webhooks creates a failsafe if a customer exits the page during payment authorisation. In Stripe's Dashboard -> **Developers** -> **Webhooks** -> **Add Endpoint**: 'herokuapp url/checkout/wh'
+  -  Choose **Retrieve all events** -> **Add Endpoint**.
+  -  Add new key **STRIPE_WH_SECRET** to env.py, settings.py and Heroku Config Vars as before.
+
+[Back to Top](#table-of-contents)
+
+### Google Mail API
+
+- Setup a Gmail Account that will be used to hold and store the emails for your project.
+- Log In and navigate to **Settings** -> **See All Settings** -> **Accounts and Import** -> **Other Google Account settings**
+- Activate 2-Step Verification
+- Once verified access **App Passwords** -> **Other** -> enter a name for the password.
+- Click **Create** -> copy the 16 digit password that is generated.
+- In your `settings.py` add the following Email Settings:
+````
+# Sending Emails
+if 'DEVELOPMENT' in os.environ:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+    DEFAULT_FROM_EMAIL = 'cooktopia@example.com'
+else:
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+    EMAIL_USE_TLS = True
+    EMAIL_PORT = 587
+    EMAIL_HOST = 'smtp.gmail.com'
+    EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+    EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
+    DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
+````  
+- Add `EMAIL_HOST_PASS`, `EMAIL_HOST_USER` to your Heroku Config Vars.
 
 ## Development
 
