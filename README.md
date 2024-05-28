@@ -808,3 +808,53 @@ The custom models made for this project were:
 - [Privacy Policy Generator](https://www.privacypolicygenerator.info/) used to create policy
 
 [Back to Top](#table-of-contents)
+
+## Testing
+
+## Deployment
+
+A live version of the site is deployed to [Heroku](https://www.heroku.com/) and can be found here: [CookTopia](https://cooktopia-3a5b4620860d.herokuapp.com/).
+
+### PostgreSQL from Code Institute
+
+- Since the recent change at ElephantSQL, I've decided to go with the database CI provided for us.
+- To make the database for the project, the steps are next:
+- First go to [PostgreSQL from Code Institute](https://dbs.ci-dbs.net/), enter your e-mail address and click submit.
+
+  <details>
+    <summary>Step 1
+    </summary>
+
+    ![Step 1](static/images/ci-postgresql/step-1.png)
+  </details>
+
+- Your database will get generated automatically and you will receive an e-mail with the info about your database.
+
+  <details>
+    <summary>Step 2
+    </summary>
+
+    ![Step 2](static/images/ci-postgresql/step-2.png)
+  </details>
+
+- Within the e-mail, you will have a link to your database dashboard. Here you can see all of the needed information about your database or delete them if you'd like to.
+
+  <details>
+    <summary>Step 3
+    </summary>
+
+    ![Step 3](static/images/ci-postgresql/step-3.png)
+  </details>
+
+- After you click the `Info` button, a list with all the needed information will pop up.
+
+  <details>
+    <summary>Step 4
+    </summary>
+
+    ![Step 4](static/images/ci-postgresql/step-4.png)
+  </details>
+
+## Development
+
+## Credits
