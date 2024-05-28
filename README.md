@@ -1178,3 +1178,23 @@ else:
 [Back to Top](#table-of-contents)
 
 ## Credits
+
+### Code
+
+- The main guide for this project was the CI walkthrough project [BoutiqueAdo](https://github.com/Code-Institute-Solutions/boutique_ado_v1/tree/933797d5e14d6c3f072df31adf0ca6f938d02218).
+- [Sportswear](https://github.com/CodeWizard-1/e-commerce?tab=readme-ov-file) was used as inspiration for `README.md` file.
+- [Chirpy Chooks](https://github.com/Kay-ddggxh/chirpy_chooks?tab=readme-ov-file#source-credits) was used as inspiration for `README.md` file.
+- [Everneed](https://github.com/amylour/everneed/blob/main/README.md#google-mail-setup) was used as inspiration for `README.md` file, as well as inspiration for the wishlist feature.
+- [Perplexity.ai](https://www.perplexity.ai/) was used for debugging during development process.
+- [Review and Rating System](https://www.youtube.com/watch?v=3KCBN7WJXMY&list=PLFNQLcwO1GaY3dy2i6F5vQ60YGDRUD-bX), this video was used for inspiration to create review section within the project.
+- Many code bugs were solved thanks to CI Slack channels.
+
+### Media
+
+- Images used for this project are from [Unsplash](https://unsplash.com/).
+
+### Acknowledgements
+
+- I want to say to my wife:"Thank you for all your love and support. <3"
+- I want to thank to my mentor Mitko Bachvarov for tips and suggestions.
+- I want to thank to our tutors at CI Tutor Support for all their help.
