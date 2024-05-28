@@ -855,6 +855,111 @@ A live version of the site is deployed to [Heroku](https://www.heroku.com/) and 
     ![Step 4](static/images/ci-postgresql/step-4.png)
   </details>
 
+[Back to Top](#table-of-contents)
+
+### Heroku Deployment
+
+#### Preparation
+
+- Before the deployment, the following steps were taken to prepare the application for the deployment on Heroku:
+
+- The setting `DEBUG` in the settings.py has to be set to `FALSE`. 
+- It was achieved by the next lines:
+- Within `settings.py`:
+    ````
+      import os
+      import dj_database_url
+      if os.path.isfile('env.py'):
+          import env
+    ````
+    ````
+      DEBUG = 'DEVELOPMENT' in os.environ
+    ````
+- Within `env.py`:
+    ````
+      os.environ["DEVELOPMENT"] = 'False'
+    ````
+- All the dependencies were stored in the requirements.txt file with the command `pip3 freeze --local > requirements.txt`.
+- The start command for the application `web: gunicorn cooktopia.wsgi:application` was stored in a Procfile.
+
+
+#### Deployment
+
+1. Go to [Heroku](https://id.heroku.com/login), create account if you don't have and log in.
+
+2. Head to your dashboard and click `New`, then `Create new app`
+
+    <details>
+    <summary>New/CreateNewApp
+    </summary>
+              
+    ![New/CreateNewApp](static/images/heroku/step1-create-new-app.png)
+    </details>
+
+3. Next step is to give your app a name and to choose region. After that click on `Create app`.
+
+    <details>
+    <summary>Name/Region/Create
+    </summary>
+              
+    ![Name/Region/Create](static/images/heroku/step2-create-app.png)
+    </details>
+
+4. After that head to `Settings` tab which you can find on top of your Heroku page and under the `Config Vars` set your Key/Value Pairs.
+
+    <details>
+    <summary>Config Vars
+    </summary>
+              
+    ![Config Vars](static/images/heroku/step3-config-vars.png)
+    </details>
+
+5. Then in the `Buildpacks` section you will need to add buildpacks. In this case `Heroku/Python` was already set, so I didn't need to change anything.
+
+    <details>
+    <summary>Buildpacks
+    </summary>
+              
+    ![Buildpacks](static/images/heroku/step8-buildpacks.png)
+    </details>
+
+6. Then head to the `Deployment` tab which you can also find on top of your Heroku page and under `Deployment method` click on `GitHub`(in my case that's where my repository is).
+
+    <details>
+    <summary>GitHub
+    </summary>
+              
+    ![GitHub](static/images/heroku/step4-deployment-method.png)
+    </details>
+
+7. After that, just under the `Deployment method` section is `Connect to GitHub` section where you need to find your repository and then click on `Connect`.
+
+    <details>
+    <summary>Connect
+    </summary>
+              
+    ![Connect](static/images/heroku/step5-connect-to-github-repo.png)
+    </details>
+
+8. Just under `Connect to GitHub` section is `Automatic deploys` section where you can click on `Enable Automatic Deploys` if that's what you want and just under is `Manual Deploy` section, where you need to click on `Deploy Manually`.
+
+    <details>
+    <summary>Enable Automatic Deploys
+    </summary>
+              
+    ![EnableAutomaticDeploys](static/images/heroku/step6-automatic-deployments.png)
+    </details>
+
+    <details>
+    <summary>Deploy Manually
+    </summary>
+              
+    ![EnableAutomaticDeploys](static/images/heroku/step7-deploy.png)
+    </details>
+
+[Back to Top](#table-of-contents)
+
+
 ## Development
 
 ## Credits
