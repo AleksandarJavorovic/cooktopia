@@ -13,9 +13,13 @@
         </div>
         <div class="row">
           <ul>
-            <li><a href="#">Contact us</a></li>
-            <li><a href="https://www.termsfeed.com/live/4d50635f-714e-4687-b731-5e059e685ac4" target="_blank">Privacy Policy</a></li>
-            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'products' %}">All Products</a></li>
+            <li><a href="{% url 'products' %}?category=chefs_knife,meat_choppers,knife_sets">Knives</a></li>
+            <li><a href="{% url 'products' %}?category=cast_iron_pans,stainless_steel_pans">Pans</a></li>
+            <li><a href="{% url 'products' %}?category=cast_iron_pots,stainless_steel_pots">Pots</a></li>
+            <li><a href="{% url 'products' %}?category=cutting_boards,honing_steels">Accessories</a></li>
+            <li><a href="{% url 'privacy_policy' %}">Privacy Policy</a></li>
           </ul>
         </div> 
         <div class="row">
