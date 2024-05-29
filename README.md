@@ -59,11 +59,11 @@ Our target customers are anyone in need of functional, modern, high-quality prod
     - [Tools](#tools)
 
 - [Testing](#testing)
-    - [Test Guide](#test-guide)
-    - [Validator Testing](#validator-testing)
+    - [Manual Testing](#manual-testing)
+    - [Validations](#validations)
     - [Browser Testing](#browser-testing)
     - [Fixed Bugs](#fixed-bugs)
-    - [Unfixed Bugs](#unfixed-bugs)
+    - [Present Bugs](#present-bugs)
 
 - [Deployment](#deployment)
     - [PostgreSQL from Code Institute](#postgresql-from-code-institute)
@@ -821,6 +821,26 @@ The custom models made for this project were:
 
 ## Testing
 
+### Manual Testing
+
+- For complete manual testings head to: [TESTING.md](TESTING.md)
+
+### Validations
+
+### Browser Testing
+
+- Complete functionality and layout of the site was tested across next browsers:
+
+  | Browser     | Layout      | Functionality |
+  | :---------: | :----------:| :-----------: |
+  | Brave       | ✔          | ✔             |
+  | Edge        | ✔          | ✔             |
+  |  Opera GX   | ✔          | ✔             |
+
+### Fixed Bugs
+
+### Present Bugs
+
 ## Deployment
 
 A live version of the site is deployed to [Heroku](https://www.heroku.com/) and can be found here: [CookTopia](https://cooktopia-3a5b4620860d.herokuapp.com/).
@@ -1203,6 +1223,7 @@ else:
 
 - I want to say to my wife:"Thank you for all your love and support. <3"
 - I want to thank to my mentor Mitko Bachvarov for tips and suggestions.
-- I want to thank to our tutors at CI Tutor Support for all their help.
+- I want to thank to tutors at CI Tutor Support for all their help.
+- I want to thank to CI Student Support for their understaing and help.
 
 [Back to Top](#table-of-contents)
