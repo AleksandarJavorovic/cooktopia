@@ -1188,6 +1188,7 @@ else:
 - [Perplexity.ai](https://www.perplexity.ai/) was used for debugging during development process.
 - [Review and Rating System](https://www.youtube.com/watch?v=3KCBN7WJXMY&list=PLFNQLcwO1GaY3dy2i6F5vQ60YGDRUD-bX), this video was used for inspiration to create review section within the project.
 - Many code bugs were solved thanks to CI Slack channels.
+- [Simple website footer example](https://codepen.io/alvarotrigo/pen/ZExxeRz), used as inspiration for the footer.
 
 [Back to Top](#table-of-contents)
 
