@@ -206,4 +206,7 @@ def submit_review(request, product_id):
                 data.save()
                 messages.success(request, 'Thank you! Your review has been submitted.')
                 return redirect(url)
+            else:
+                messages.error(request, 'Review form is not valid!')
+                return redirect(url)
                 
