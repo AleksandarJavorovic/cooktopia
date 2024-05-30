@@ -6,7 +6,7 @@ import sys
 
 def main():
     """Run administrative tasks."""
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'cooktopia.settings')
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "cooktopia.settings")
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
@@ -18,7 +18,7 @@ def main():
     execute_from_command_line(sys.argv)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
 
-SECRET_KEY = 'gh@=%!d_52gvy!me9pf!mlq#srx+9jpbq1)#b0al9#os-91^d+'
+SECRET_KEY = "gh@=%!d_52gvy!me9pf!mlq#srx+9jpbq1)#b0al9#os-91^d+"

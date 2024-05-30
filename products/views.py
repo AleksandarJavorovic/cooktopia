@@ -17,9 +17,9 @@ User = get_user_model()
 
 
 def all_products(request):
-    '''
+    """
     A view to render all of the products, sorting and search queries
-    '''
+    """
 
     products = Product.objects.all()
     query = None
@@ -29,52 +29,52 @@ def all_products(request):
 
     if request.GET:
 
-        if 'sort' in request.GET:
-            sortkey = request.GET['sort']
+        if "sort" in request.GET:
+            sortkey = request.GET["sort"]
             sort = sortkey
-            if sortkey == 'name':
-                sortkey = 'lower_name'
-                products = products.annotate(lower_name=Lower('name'))
-            if sortkey == 'category':
-                sortkey = 'category__name'
+            if sortkey == "name":
+                sortkey = "lower_name"
+                products = products.annotate(lower_name=Lower("name"))
+            if sortkey == "category":
+                sortkey = "category__name"
 
-        if 'direction' in request.GET:
-            direction = request.GET['direction']
-            if direction == 'desc':
-                sortkey = f'-{sortkey}'
+        if "direction" in request.GET:
+            direction = request.GET["direction"]
+            if direction == "desc":
+                sortkey = f"-{sortkey}"
             products = products.order_by(sortkey)
 
-
-
-        if 'category' in request.GET:
-            categories = request.GET['category'].split(',')
+        if "category" in request.GET:
+            categories = request.GET["category"].split(",")
             products = products.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
 
-    
-        if 'q' in request.GET:
-            query = request.GET['q']
+        if "q" in request.GET:
+            query = request.GET["q"]
             if not query:
-                messages.error(request, "You didn't enter any search criteria!")
-                return redirect(reverse('products'))
-            
-            queries = Q(name__icontains=query) | Q(description__icontains=query) | Q(brand__icontains=query)
+                messages.error(request,
+                               "You didn't enter any search criteria!")
+                return redirect(reverse("products"))
+
+            queries = (
+                Q(name__icontains=query)
+                | Q(description__icontains=query)
+                | Q(brand__icontains=query)
+            )
             products = products.filter(queries)
 
-    current_sorting = f'{sort}_{direction}'
-
+    current_sorting = f"{sort}_{direction}"
 
     context = {
-        'products': products,
-        'search_term': query,
-        'current_categories': categories,
-        'current_sorting': current_sorting,
+        "products": products,
+        "search_term": query,
+        "current_categories": categories,
+        "current_sorting": current_sorting,
     }
-    
-    return render(request, 'products/products.html', context)
 
+    return render(request, "products/products.html", context)
 
-    return render(request, 'products/product_detail.html', context)
+    return render(request, "products/product_detail.html", context)
 
 
 def product_detail(request, product_id):
@@ -87,51 +87,55 @@ def product_detail(request, product_id):
     already_commented = False
 
     if request.user.is_authenticated:
-        already_commented = ReviewRating.objects.filter(product_id=product_id, user=request.user).exists()
-    
-    # all_items = OrderLineItem.objects.filter(order__user_profile__user=request.user)
+        already_commented = ReviewRating.objects.filter(
+            product_id=product_id, user=request.user
+        ).exists()
+
     all_items = []
-    
+
     if not isinstance(request.user, AnonymousUser):
-        all_items = OrderLineItem.objects.filter(order__user_profile__user=request.user)
+        all_items = OrderLineItem.objects.filter(
+            order__user_profile__user=request.user)
 
     already_bought = False
     for item in all_items:
         if product == item.product:
             already_bought = True
-    
+
     context = {
-        'product': product,
-        'reviews': reviews,
-        'already_commented': already_commented,
-        'already_bought': already_bought,
+        "product": product,
+        "reviews": reviews,
+        "already_commented": already_commented,
+        "already_bought": already_bought,
     }
 
-    return render(request, 'products/product_detail.html', context)
+    return render(request, "products/product_detail.html", context)
 
 
 @login_required
 def add_product(request):
-    """ Add a product to the store """
+    """Add a product to the store"""
 
     if not request.user.is_superuser:
-        messages.error(request, 'No, no, no, only store owners can do that!:)')
-        return redirect(reverse('home'))
+        messages.error(request, "No, no, no, only store owners can do that!:)")
+        return redirect(reverse("home"))
 
-    if request.method == 'POST':
+    if request.method == "POST":
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
             product = form.save()
-            messages.success(request, 'Successfully added product!')
-            return redirect(reverse('product_detail', args=[product.id]))
+            messages.success(request, "Successfully added product!")
+            return redirect(reverse("product_detail", args=[product.id]))
         else:
-            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+            messages.error(
+                request, "Failed to add product. The form is invalid."
+            )
     else:
         form = ProductForm()
-        
-    template = 'products/add_product.html'
+
+    template = "products/add_product.html"
     context = {
-        'form': form,
+        "form": form,
     }
 
     return render(request, template, context)
@@ -139,29 +143,31 @@ def add_product(request):
 
 @login_required
 def edit_product(request, product_id):
-    """ Edit a product in the store """
+    """Edit a product in the store"""
 
     if not request.user.is_superuser:
-        messages.error(request, 'No, no, no, only store owners can do that!:)')
-        return redirect(reverse('home'))
+        messages.error(request, "No, no, no, only store owners can do that!:)")
+        return redirect(reverse("home"))
 
     product = get_object_or_404(Product, pk=product_id)
-    if request.method == 'POST':
+    if request.method == "POST":
         form = ProductForm(request.POST, request.FILES, instance=product)
         if form.is_valid():
             form.save()
-            messages.success(request, f'Successfully updated {product.name}!')
-            return redirect(reverse('product_detail', args=[product.id]))
+            messages.success(request, f"Successfully updated {product.name}!")
+            return redirect(reverse("product_detail", args=[product.id]))
         else:
-            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+            messages.error(
+                request, "Failed to add product. The form is invalid."
+            )
     else:
         form = ProductForm(instance=product)
-        messages.info(request, f'You are editing {product.name}')
+        messages.info(request, f"You are editing {product.name}")
 
-    template = 'products/edit_product.html'
+    template = "products/edit_product.html"
     context = {
-        'form': form,
-        'product': product,
+        "form": form,
+        "product": product,
     }
 
     return render(request, template, context)
@@ -169,44 +175,46 @@ def edit_product(request, product_id):
 
 @login_required
 def delete_product(request, product_id):
-    """ Delete a product from the store """
+    """Delete a product from the store"""
 
     if not request.user.is_superuser:
-        messages.error(request, 'No, no, no, only store owners can do that!:)')
-        return redirect(reverse('home'))
+        messages.error(request, "No, no, no, only store owners can do that!:)")
+        return redirect(reverse("home"))
 
     product = get_object_or_404(Product, pk=product_id)
     product.delete()
-    messages.success(request, f'Product:{product.name} has been deleted!')
-    return redirect(reverse('products'))
+    messages.success(request, f"Product:{product.name} has been deleted!")
+    return redirect(reverse("products"))
+
 
 @login_required
 def submit_review(request, product_id):
-    '''
+    """
     A view to submit the review/rating
-    '''
-    url = request.META.get('HTTP_REFERER')
-    if request.method == 'POST':
+    """
+    url = request.META.get("HTTP_REFERER")
+    if request.method == "POST":
         try:
-            reviews = ReviewRating.objects.get(user__id=request.user.id, product__id=product_id)
+            reviews = ReviewRating.objects.get(
+                user__id=request.user.id, product__id=product_id
+            )
             form = ReviewRatingForm(request.POST, instance=reviews)
             form.save()
-            messages.success(request, 'Thank you! Your review has been updated.')
+            messages.success(request, "Thanks! Your review has been updated.")
             return redirect(url)
         except ReviewRating.DoesNotExist:
             form = ReviewRatingForm(request.POST)
             if form.is_valid():
                 data = ReviewRating()
-                data.subject = form.cleaned_data['subject']
-                data.rating = form.cleaned_data['rating']
-                data.review = form.cleaned_data['review']
+                data.subject = form.cleaned_data["subject"]
+                data.rating = form.cleaned_data["rating"]
+                data.review = form.cleaned_data["review"]
                 data.product_id = product_id
                 data.user_id = request.user.id
                 data.already_commented = True
                 data.save()
-                messages.success(request, 'Thank you! Your review has been submitted.')
+                messages.success(request, "Thank you! Review submitted.")
                 return redirect(url)
             else:
-                messages.error(request, 'Review form is not valid!')
+                messages.error(request, "Review form is not valid!")
                 return redirect(url)
-                

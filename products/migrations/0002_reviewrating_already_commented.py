@@ -6,13 +6,13 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('products', '0001_initial'),
+        ("products", "0001_initial"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='reviewrating',
-            name='already_commented',
+            model_name="reviewrating",
+            name="already_commented",
             field=models.BooleanField(default=False),
         ),
     ]
