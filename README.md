@@ -419,6 +419,7 @@ The custom models made for this project were:
 - The Footer is pretty simple and self explanatory.
 - The Footer is present at every page.
 - The Links towards the social networks are being opened within the new tab as good UX practices.
+- Privacy Policy also opens an independent page where the Policy is.
 
 [Back to Top](#table-of-contents)
 
