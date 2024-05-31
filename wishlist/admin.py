@@ -3,16 +3,13 @@ from .models import Wishlist
 
 
 class WishlistAdmin(admin.ModelAdmin):
-    '''
+    """
     wishlist for Admins
-    '''
+    """
 
     model = Wishlist
-    fields = ('user_profile', 'product')
-    list_display = (
-        'pk', 'user_profile',
-        'product'
-    )
+    fields = ("user_profile", "product")
+    list_display = ("pk", "user_profile", "product")
 
 
 admin.site.register(Wishlist, WishlistAdmin)

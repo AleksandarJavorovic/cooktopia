@@ -8,5 +8,4 @@ def create_wishlist_on_first_item_added(sender, instance, created, **kwargs):
     if created:
         user_profile = instance.user_profile
         if not user_profile.user_wishlist.exists():
-            Wishlist.objects.create(
-                user_profile=user_profile, product=instance.product)
+            Wishlist.objects.create(user_profile=user_profile, product=instance.product)

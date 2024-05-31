@@ -9,17 +9,18 @@ from .models import Wishlist
 from profiles.models import UserProfile
 
 
-@login_required
 def wishlist(request):
     """
     A view to render a wishlist
     """
+    if not request.user.is_authenticated:
+        messages.error(request, "Sorry, you must be logged in to view your Wishlist.")
+        return redirect(reverse("account_login"))
 
     user_profile = UserProfile.objects.get(user=request.user)
     user_wishlist = Wishlist.objects.filter(user_profile=user_profile)
 
-    return render(request, "wishlist/wishlist.html",
-                  {"user_wishlist": user_wishlist})
+    return render(request, "wishlist/wishlist.html", {"user_wishlist": user_wishlist})
 
 
 def add_to_wishlist(request, product_id):
@@ -31,10 +32,8 @@ def add_to_wishlist(request, product_id):
 
     if request.user.is_authenticated:
         user_profile = UserProfile.objects.get(user=request.user)
-        if Wishlist.objects.filter(
-               user_profile=user_profile, product=product).exists():
-            Wishlist.objects.get(
-                user_profile=user_profile, product=product).delete()
+        if Wishlist.objects.filter(user_profile=user_profile, product=product).exists():
+            Wishlist.objects.get(user_profile=user_profile, product=product).delete()
             messages.success(
                 request, f"{product.name} has been removed from your Wishlist."
             )
@@ -43,8 +42,7 @@ def add_to_wishlist(request, product_id):
                 user_profile=user_profile, product=product
             )
             messages.success(
-                request, (
-                    f"{wishlist_item.product.name} added to Wishlist!")
+                request, (f"{wishlist_item.product.name} added to Wishlist!")
             )
         return HttpResponseRedirect(request.META["HTTP_REFERER"])
     else:
