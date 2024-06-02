@@ -98,8 +98,18 @@
                         </div>
                         <!-- Add to Wishlist Small -->
                         <div class="btn d-md-none">
+                            {% if user_wishlist is not None %}
+                            {% if product_in_wishlist %}
+                            <a href="{% url 'add_to_wishlist' product.id %}" class="btn" role="button"
+                                aria-disabled="true"><i class="fa-solid fa-heart fa-lg text-black"></i></a>
+                            {% else %}
                             <a href="{% url 'add_to_wishlist' product.id %}" class="btn" role="button"
                                 aria-disabled="true"><i class="fa-regular fa-heart fa-lg text-black"></i></a>
+                            {% endif %}
+                            {% else %}
+                            <a href="{% url 'add_to_wishlist' product.id %}" class="btn" role="button"
+                                aria-disabled="true"><i class="fa-regular fa-heart fa-lg text-black"></i></a>
+                            {% endif %}
                         </div>
                         <div class="col-12">
                             <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 mt-2">
@@ -111,8 +121,18 @@
                             <input type="submit" class="btn btn-red rounded-0 text-uppercase mt-2" value="Add to Bag">
                             <!-- Add to Wishlist Medium+ -->
                             <div class="btn d-none d-md-inline">
+                                {% if user_wishlist is not None %}
+                                {% if product_in_wishlist %}
+                                <a href="{% url 'add_to_wishlist' product.id %}" class="btn" role="button"
+                                    aria-disabled="true"><i class="fa-solid fa-heart fa-lg text-black"></i></a>
+                                {% else %}
                                 <a href="{% url 'add_to_wishlist' product.id %}" class="btn" role="button"
                                     aria-disabled="true"><i class="fa-regular fa-heart fa-lg text-black"></i></a>
+                                {% endif %}
+                                {% else %}
+                                <a href="{% url 'add_to_wishlist' product.id %}" class="btn" role="button"
+                                    aria-disabled="true"><i class="fa-regular fa-heart fa-lg text-black"></i></a>
+                                {% endif %}
                             </div>
                         </div>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">

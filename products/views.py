@@ -9,6 +9,7 @@ from .forms import ProductForm, ReviewRatingForm
 
 from checkout.models import Order, OrderLineItem
 from profiles.models import UserProfile
+from wishlist.models import Wishlist
 from django.contrib.auth.models import User, AnonymousUser
 
 from django.contrib.auth import get_user_model
@@ -26,6 +27,7 @@ def all_products(request):
     categories = None
     sort = None
     direction = None
+    product_in_wishlist = False
 
     if request.GET:
 
@@ -52,8 +54,7 @@ def all_products(request):
         if "q" in request.GET:
             query = request.GET["q"]
             if not query:
-                messages.error(request,
-                               "You didn't enter any search criteria!")
+                messages.error(request, "You didn't enter any search criteria!")
                 return redirect(reverse("products"))
 
             queries = (
@@ -85,19 +86,29 @@ def product_detail(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     reviews = ReviewRating.objects.filter(product_id=product_id).all()
     already_commented = False
+    all_items = []
+    already_bought = False
+    product_in_wishlist = False
+
+    # logic for displaying wishlist button
+    if request.user.is_authenticated:
+        user_profile = UserProfile.objects.get(user=request.user)
+        user_wishlist = Wishlist.objects.filter(user_profile=user_profile)
+        wishlists = Wishlist.objects.filter(product=product)
+        for wishlist in wishlists:
+            if wishlist.user_profile == user_profile:
+                product_in_wishlist = True
+    else:
+        user_wishlist = None
 
     if request.user.is_authenticated:
         already_commented = ReviewRating.objects.filter(
             product_id=product_id, user=request.user
         ).exists()
 
-    all_items = []
-
     if not isinstance(request.user, AnonymousUser):
-        all_items = OrderLineItem.objects.filter(
-            order__user_profile__user=request.user)
+        all_items = OrderLineItem.objects.filter(order__user_profile__user=request.user)
 
-    already_bought = False
     for item in all_items:
         if product == item.product:
             already_bought = True
@@ -107,6 +118,8 @@ def product_detail(request, product_id):
         "reviews": reviews,
         "already_commented": already_commented,
         "already_bought": already_bought,
+        "product_in_wishlist": product_in_wishlist,
+        "user_wishlist": user_wishlist,
     }
 
     return render(request, "products/product_detail.html", context)
@@ -127,9 +140,7 @@ def add_product(request):
             messages.success(request, "Successfully added product!")
             return redirect(reverse("product_detail", args=[product.id]))
         else:
-            messages.error(
-                request, "Failed to add product. The form is invalid."
-            )
+            messages.error(request, "Failed to add product. The form is invalid.")
     else:
         form = ProductForm()
 
@@ -157,9 +168,7 @@ def edit_product(request, product_id):
             messages.success(request, f"Successfully updated {product.name}!")
             return redirect(reverse("product_detail", args=[product.id]))
         else:
-            messages.error(
-                request, "Failed to add product. The form is invalid."
-            )
+            messages.error(request, "Failed to add product. The form is invalid.")
     else:
         form = ProductForm(instance=product)
         messages.info(request, f"You are editing {product.name}")

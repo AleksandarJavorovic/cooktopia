@@ -14,7 +14,8 @@ def wishlist(request):
     A view to render a wishlist
     """
     if not request.user.is_authenticated:
-        messages.error(request, "Sorry, you must be logged in to view your Wishlist.")
+        error_msg = "Sorry, you must log in to view your Wishlist."
+        messages.error(request, error_msg)
         return redirect(reverse("account_login"))
 
     user_profile = UserProfile.objects.get(user=request.user)
@@ -47,4 +48,4 @@ def add_to_wishlist(request, product_id):
         return HttpResponseRedirect(request.META["HTTP_REFERER"])
     else:
         messages.error(request, "Log in to add to Wishlist!")
-        return HttpResponseRedirect(request.META["HTTP_REFERER"])
+        return redirect(reverse("account_login"))

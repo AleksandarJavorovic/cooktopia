@@ -35,6 +35,7 @@ class Product(models.Model):
     diametar = models.CharField(max_length=254, null=True, blank=True)
     volume = models.CharField(max_length=254, null=True, blank=True)
     country_of_origin = models.CharField(max_length=254, null=True, blank=True)
+    product_in_wishlist = models.BooleanField(default=False)
 
     def __str__(self):
         return self.name
