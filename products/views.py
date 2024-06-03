@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from django.db.models import Q, Avg
+from django.db.models import Q, Avg, Case, When, Value, IntegerField
 from django.db.models.functions import Lower
 from .models import Product, Category, ReviewRating
 
@@ -22,7 +22,14 @@ def all_products(request):
     A view to render all of the products, sorting and search queries
     """
 
-    products = Product.objects.annotate(avg_rating=Avg('reviews__rating')).all()
+    products = Product.objects.annotate(
+        avg_rating=Avg("reviews__rating"),
+        rating_order=Case(
+            When(avg_rating=None, then=Value(0)),
+            default="avg_rating",
+            output_field=IntegerField(),
+        ),
+    ).all()
     query = None
     categories = None
     sort = None
@@ -39,6 +46,8 @@ def all_products(request):
                 products = products.annotate(lower_name=Lower("name"))
             if sortkey == "category":
                 sortkey = "category__name"
+            elif sortkey == "rating":
+                sortkey = "rating_order"
 
         if "direction" in request.GET:
             direction = request.GET["direction"]
@@ -83,7 +92,9 @@ def product_detail(request, product_id):
     A view to render product details and handle review submission
     """
 
-    product = get_object_or_404(Product.objects.annotate(avg_rating=Avg('reviews__rating')), pk=product_id)
+    product = get_object_or_404(
+        Product.objects.annotate(avg_rating=Avg("reviews__rating")), pk=product_id
+    )
     reviews = ReviewRating.objects.filter(product_id=product_id).all()
     already_commented = False
     all_items = []
