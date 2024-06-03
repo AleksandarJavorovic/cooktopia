@@ -144,6 +144,7 @@
     <!-- Review/Rating Section -->
     <div class="row">
         <div class="container col-12 col-md-9 text-black">
+            <hr class="w-100 mt-0">
             <form action="{% url 'submit_review' product.id %}" id="reviewForm" method="POST">
                 {% csrf_token %}
                 <header>
@@ -203,7 +204,8 @@
             <div class="w-md-75 mt-3">
                 <div class=" d-flex justify-content-between pl-3">
                     <div class="pt-1 pb-1">
-                        <span class="font-weight-bold h6">@{{ review.user}}: {{ review.subject }}</span>
+                        <span class="font-weight-bold h6">@{{ review.user}}: <span
+                                class="font-weight-normal font-italic">{{ review.subject }}</span></span>
                         {% if already_commented == True %}
                         <span class="text-muted font-italic text-mini">{{ review.updated_on}}</span>
                         {% else %}
