@@ -42,11 +42,11 @@ class Product(models.Model):
 
 
 class ReviewRating(models.Model):
-    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, related_name='reviews', on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     subject = models.CharField(max_length=100, blank=True)
     review = models.TextField(max_length=500, blank=True)
-    rating = models.FloatField()
+    rating = models.IntegerField()
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
     already_commented = models.BooleanField(default=False)
