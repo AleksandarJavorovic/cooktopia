@@ -150,7 +150,7 @@
                     <h3 class="text-uppercase">Leave your review</h3>
                 </header>
                 <div>
-                    Rate the product:
+                    Rating:
                     <!-- Rating stars -->
                     <br>
                     <div class="rate">
@@ -166,11 +166,11 @@
                             title="1"></label>
                     </div>
                     <br>
-                    Review Title:
+                    Title:
                     <input type="text" class="form-control rounded-0 border-black" name="subject"
                         placeholder="e.g. The best Product ever :D..." required>
                     <br>
-                    Review:
+                    Comment:
                     <textarea name="review" rows="4" class="form-control rounded-0 border-black"
                         placeholder="Write something about the product..." required></textarea>
                     <br>
@@ -210,7 +210,12 @@
                         <span class="text-muted font-italic text-mini">{{ review.created_on}}</span>
                         {% endif %}
                     </div>
-                    <div class="pr-3 pt-1">Rating: {{ review.rating }}/5</div>
+                    <div class="pr-3 pt-1">
+                        <span class="text-muted text-black">
+                            <i class="fas fa-star mr-1" style="color: #FFD43B;"></i>
+                            {{ review.rating|floatformat:2 }} / 5
+                        </span>
+                    </div>
                 </div>
                 <div class="pl-3">
                     <p>
@@ -220,7 +225,7 @@
             </div>
             {% endfor %}
             {% else %}
-            <p class="">There are no reviews for this product yet.</p>
+            <p class="text-muted">There are no reviews for this product yet.</p>
             {% endif %}
         </div>
     </div>
