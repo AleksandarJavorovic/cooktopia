@@ -70,6 +70,9 @@ def all_products(request):
                 Q(name__icontains=query)
                 | Q(description__icontains=query)
                 | Q(brand__icontains=query)
+                | Q(material__icontains=query)
+                | Q(country_of_origin__icontains=query)
+                | Q(category__name__icontains=query)
             )
             products = products.filter(queries)
 
