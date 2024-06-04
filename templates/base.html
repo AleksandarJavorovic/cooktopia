@@ -10,8 +10,10 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Cooktopia is a website that sells modern, functional kitchenware. The place where quality meets passion.">
-  <meta name="keywords" content="cooktopia, high-quality kitchenware, cooking, stainless steel, cast iron, kitchen knives, pots, pans, honing iron, cutting boards">
+  <meta name="description"
+    content="Cooktopia is a website that sells modern, functional kitchenware. The place where quality meets passion.">
+  <meta name="keywords"
+    content="cooktopia, high-quality kitchenware, cooking, stainless steel, cast iron, kitchen knives, pots, pans, honing iron, cutting boards">
   {% endblock %}
 
   {% block extra_meta %}
@@ -28,7 +30,6 @@
   <!-- CSS -->
   <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
   <style type="text/css">
-
     /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
            We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
   </style>
@@ -79,8 +80,7 @@
       <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
         <form method="GET" action="{% url 'products' %}">
           <div class="input-group w-100">
-            <input class="form-control border-top-0 border-black rounded-0" type="text" name="q"
-              placeholder="Search...">
+            <input class="form-control border-top-0 border-black rounded-0" type="text" name="q" placeholder="Search">
             <div class="input-group-append">
               <button class="form-control btn btn-black border border-black rounded-0" type="submit">
                 <span class="icon">
@@ -145,7 +145,9 @@
       </div>
     </div>
     <div class="row bg-white">
-      <nav class="navbar navbar-expand-lg navbar-light w-100 justify-content-around">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-light w-100 justify-content-between">
+        <!-- Burger Button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
           aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
           <i class="fa-solid fa-bars fa-lg text-black"></i>

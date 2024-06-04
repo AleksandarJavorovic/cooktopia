@@ -1,85 +1,60 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
-        <!-- Navbar Icons -->
-        <li class="d-flex justify-content-around">
-            <ul class="pl-0 d-lg-none">
-                <li class="list-inline-item">
-                    <a class="text-black nav-link d-block d-lg-none" href="#" id="mobile-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <div class="text-center">
-                            <div><i class="fas fa-search fa-lg"></i></div>
-                            <p class="my-0">Search</p>
-                        </div>
-                    </a>
-                    <div class="dropdown-menu border-0 w-100 p-3 rounded-0 my-0" aria-labelledby="mobile-search">
-                        <form class="form" method="GET" action="{% url 'products' %}">
-                            <div class="input-group w-100">
-                                <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search...">
-                                <div class="input-group-append">
-                                    <button class="form-control form-control btn btn-black border border-black rounded-0" type="submit">
-                                        <span class="icon">
-                                            <i class="fas fa-search"></i>
-                                        </span>
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </li>
-                <!-- My Account -->
-                <li class="list-inline-item dropdown">
-                    <a class="text-black nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <div class="text-center">
-                            <div><i class="fas fa-user fa-lg"></i></div>
-                            <p class="my-0">My Account</p>
-                        </div>
-                    </a>
-                    <div class="dropdown-menu border-0" aria-labelledby="user-options">
-                        {% if request.user.is_authenticated %}
-                            {% if request.user.is_superuser %}
-                                <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
-                            {% endif %}
-                            <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-                            <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                        {% else %}
-                            <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                            <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-                        {% endif %}
-                    </div>
-                </li>
-                <!-- Wishlist -->
-                <li class="list-inline-item">
-                    <a href="{% url 'wishlist' %}" class="text-black nav-link d-block d-lg-none">
-                        <div class="text-center">
-                            <i class="fas fa-heart fa-lg text-black"></i>
-                            <p class="my-0">Wishlist</p>
-                        </div>
-                    </a>
-                </li>
-                <!-- Shopping Bag -->
-                <li class="list-inline-item">
-                    <a class="{% if grand_total %} bag-state font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none" href="{% url 'view_shopping_bag' %}">
-                        <div class="text-center btn-gray">
-                            <div><i class="fa fa-shopping-bag fa-lg"></i></div>
-                            <p class="my-0">
-                                {% if grand_total %}
-                                    ${{ grand_total|floatformat:2 }}
-                                {% else %}
-                                    €0.00
-                                {% endif %}
-                            </p>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-        </li>
+        <!-- Search Bar -->
+        <form class="form d-lg-none" method="GET" action="{% url 'products' %}">
+            <div class="input-group w-100">
+                <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search">
+                <div class="input-group-append">
+                    <button class="form-control btn btn-black border border-black rounded-0" type="submit">
+                        <span class="icon">
+                            <i class="fas fa-search"></i>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </form>
         <!-- Home button on smaller screens -->
-        <li class="nav-item d-block d-md-none">
-            <a class="logo-font font-weight-bold nav-link mr-5 text-black btn-gray" href="{% url 'home' %}" id="home-link">
+        <li class="nav-item d-block d-lg-none">
+            <a class="logo-font font-weight-bold nav-link mr-5 text-black btn-gray" href="{% url 'home' %}"
+                id="home-link">
                 Home
             </a>
         </li>
+        <!-- My Account -->
+        <li class="nav-item dropdown d-lg-none">
+            <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                <div class="text-center">
+                    <div>
+                        <p class="my-0 logo-font font-weight-bold text-left btn-gray">My Account</p>
+                    </div>
+                </div>
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                {% if request.user.is_authenticated %}
+                {% if request.user.is_superuser %}
+                <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
+                {% endif %}
+                <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                {% else %}
+                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                {% endif %}
+            </div>
+        </li>
+        <!-- Wishlist -->
+        <li class="nav-item dropdown d-lg-none">
+            <a href="{% url 'wishlist' %}" class="text-black nav-link btn-gray">
+                <div class="text-center">
+                    <p class="my-0 logo-font font-weight-bold text-left">Wishlist</p>
+                </div>
+            </a>
+        </li>
+        <!-- All Products -->
         <li class="nav-item dropdown btn-gray">
-            <a class="logo-font font-weight-bold nav-link mr-5 text-black btn-gray" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link mr-5 text-black btn-gray" href="#" id="all-products-link"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 All Products
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
@@ -90,47 +65,55 @@
                 <a href="{% url 'products' %}?sort=brand&direction=asc" class="dropdown-item ">By Brand</a>
             </div>
         </li>
-
+        <!-- Knives -->
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link mr-5 text-black btn-gray" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link mr-5 text-black btn-gray" href="#" id="all-products-link"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Knives
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="{% url 'products' %}?category=chefs_knife,meat_choppers,knife_sets" class="dropdown-item">All Knives</a>
+                <a href="{% url 'products' %}?category=chefs_knife,meat_choppers,knife_sets" class="dropdown-item">All
+                    Knives</a>
                 <a href="{% url 'products' %}?category=chefs_knife" class="dropdown-item">Chef's Knife</a>
                 <a href="{% url 'products' %}?category=meat_choppers" class="dropdown-item ">Meat Choppers</a>
                 <a href="{% url 'products' %}?category=knife_sets" class="dropdown-item ">Knife Sets</a>
             </div>
         </li>
-
+        <!-- Pans -->
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link mr-5 text-black btn-gray" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link mr-5 text-black btn-gray" href="#" id="all-products-link"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Pans
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="{% url 'products' %}?category=cast_iron_pans,stainless_steel_pans" class="dropdown-item">All Pans</a>
+                <a href="{% url 'products' %}?category=cast_iron_pans,stainless_steel_pans" class="dropdown-item">All
+                    Pans</a>
                 <a href="{% url 'products' %}?category=cast_iron_pans" class="dropdown-item">Cast Iron</a>
                 <a href="{% url 'products' %}?category=stainless_steel_pans" class="dropdown-item ">Stainless Steel</a>
             </div>
         </li>
-
+        <!-- Pots -->
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link mr-5 text-black btn-gray" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link mr-5 text-black btn-gray" href="#" id="all-products-link"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Pots
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="{% url 'products' %}?category=cast_iron_pots,stainless_steel_pots" class="dropdown-item">All Pots</a>
+                <a href="{% url 'products' %}?category=cast_iron_pots,stainless_steel_pots" class="dropdown-item">All
+                    Pots</a>
                 <a href="{% url 'products' %}?category=cast_iron_pots" class="dropdown-item">Cast Iron</a>
                 <a href="{% url 'products' %}?category=stainless_steel_pots" class="dropdown-item ">Stainless Steel</a>
             </div>
         </li>
-
+        <!-- Accessories -->
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link mr-5 text-black btn-gray" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link mr-5 text-black btn-gray" href="#" id="all-products-link"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Accessories
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="{% url 'products' %}?category=cutting_boards,honing_steels" class="dropdown-item">All Accessories</a>
+                <a href="{% url 'products' %}?category=cutting_boards,honing_steels" class="dropdown-item">All
+                    Accessories</a>
                 <a href="{% url 'products' %}?category=cutting_boards" class="dropdown-item">Cutting Boards</a>
                 <a href="{% url 'products' %}?category=honing_steels" class="dropdown-item ">Honing Steel</a>
             </div>
