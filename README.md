@@ -398,11 +398,11 @@ The custom models made for this project were:
 - Navbar is fully responsive. Here we can find:
   - Logo, which acts as a Home button
   - Search Bar
-  - My Account Icon
-  - Wishlist Icon
-  - Shopping Bag Icon, with total amount under it
+  - My Account, with Icon for bigger screens
+  - Wishlist, with Icon for bigger screens
+  - Shopping Bag Icon, with the total amount under it
   - Burger Icon on small and medium screens
-  - Home button for smaller and medium screens
+  - Home button for small and medium screens
 
 [Back to Top](#table-of-contents)
 
@@ -558,7 +558,6 @@ The custom models made for this project were:
   - Edit/Delte Buttons (only for admins)
   - Add To Bag button
   - Quantity Button
-  - Heart Icon, acting as add to wishlist button
 
 ![All Products Page Closed Up View](static/images/features/23-closeup-view-allproducts.png)
 
@@ -680,6 +679,8 @@ The custom models made for this project were:
 
 - The sales page could be used to introduce the discount possibilities.
 
+- Add wishlist button to the All Products Page to improve UX.
+
 [Back to Top](#table-of-contents)
 
 ### Business Model
@@ -758,7 +759,7 @@ The custom models made for this project were:
 
 #### Robots.txt
 
-- I created robots.txt file.
+- I created a robots.txt file within my root directory.
 
   <details>
   <summary>Robots.txt
@@ -837,10 +838,64 @@ The custom models made for this project were:
   | Brave       | ✔          | ✔             |
   | Edge        | ✔          | ✔             |
   |  Opera GX   | ✔          | ✔             |
+  |    Safari   | ✔          | ✔             |
+
+[Back to Top](#table-of-contents)
 
 ### Fixed Bugs
 
+ - #### Bug 1 - Shopping Bag Quantity Button
+   - Before fixing, users were able to press the "-" button even after 1(going to 0, -1, -2, and so on). The "+" button was disabled when the number hit 99, but users could enter numbers bigger than 99 by keyboard, so this needed fixing too, as the idea was to set 99 as the biggest possible amount to choose.
+
+ - #### Fix 1
+   <details>
+   <summary>Quantity Button Fix
+   </summary>
+
+   ![Quantity Button Fix](static/images/bugs/qty-button-fix.png)
+   </details>
+
+- #### Bug 2 - Server Error (500)
+  - In the case of non-authenticated user, when the user wanted to open a product_detail page, a 500 Server Error was prompted.
+    <details>
+    <summary>Server Error (500)
+    </summary>
+
+    ![Server Error 500](static/images/bugs/500-server-error.png)
+    </details>
+
+- #### Fix 2
+   <details>
+   <summary>Server Error (500) Fix
+   </summary>
+
+   ![500 Server Error Fix](static/images/bugs/500-server-error-fix.png)
+   </details>
+
+- #### Bug 3 - Footer
+  - In the case of a page with no or little content, the footer was jumping up.
+    <details>
+    <summary>Footer Bug
+    </summary>
+
+    ![Footer Bug](static/images/bugs/footer-bug.png)
+    </details>
+
+- #### Fix 3
+  - This issue was fixed by setting:
+    - min-height: 100vh;(body)
+    - flex-grow: 1;(main container on the page)
+    - margin-top: auto;(footer)
+
+    <details>
+    <summary>Footer Fix
+    </summary>
+
+    ![Footer Fix](static/images/bugs/footer-fix.png)
+    </details>
+
 ### Present Bugs
+ - There are no known bugs.
 
 ## Deployment
 
