@@ -1,10 +1,17 @@
 [Back to README.md](/README.md#manual-testing)
 
-## Table of Contents
+# Table of Contents
 
 - [User Story Testing](#user-story-testing)
+- [Validations](#validations)
+    - [HTML Validation](#html-validation)
+    - [CSS Validation](#css-validation)
+    - [JavaScript Validation](#javascript-validation)
+    - [Python Validation](#python-validation)
+    - [Lighthouse Scores](#lighthouse-scores)
+    - [Wave Accessibility Score](#wave-accessibility-score)
 
-### User Story Testing
+## User Story Testing
 
 | User Story | Features | Status |
 |------------|------------------|------------|
@@ -23,8 +30,26 @@
 | As a ***customer***, I can ***view my profile***, so that ***I can view my order history and save/update shipping/paying information***. | Given the My Profile page where both Delivery Information and Order History sections are the authenticated user can do both things easily. | ✔ |
 | As a ***customer***, I can ***receive the confirmation email***, so that ***I can be sure everything went well and keep it for just in case***. | Given the developed mailing system, after successful checkout, the user gets an email with all of those information. | ✔ |
 | As a ***customer***, I can ***receive email confirmation after filling in the register form***, so that ***I can verify my account registration was successful***. | After successfully registering at CookTopia, the user gets an confirmation e-mail with confirmation link within. | ✔ |
-| As a ***customer***, I can ***add items to wishlist***, so that ***I don't need to search for them all over again when I decide to buy them***. | Given the Wishlist page, and Heart buttons under the image of the product at All Products page as well at Product Detail page, this is easily achievable. | ✔ |
+| As a ***customer***, I can ***add items to wishlist***, so that ***I don't need to search for them all over again when I decide to buy them***. | Given the Wishlist page, and Heart button at Product Detail page, this is easily achievable. | ✔ |
 | As a ***customer***, I can ***recover my password***, so that ***I can get access to my account in case I forget my password***. | Given the Forgot Password? button under the Home and Sign In buttons at  Sign In page, user can easily retrieve forgotten password. | ✔ |
 | As a ***customer***, I can ***rate the product I already bought***, so that ***I can leave positive/negative feedback***. | Given the Review section at the Product Detail page, and form with options to rate and write a comment, this is easily achievable. | ✔ |
 | As a ***admin***, I can ***perform CRUD operations***, so that ***I can manipulate the site as desired***. | Given the Edit and Delete buttons both under the image of the product at the All Products page, as well at Product Detail page, the admins can perform CRUD operations. This is also achievable from the Django Admin Page.| ✔ |
 | As a ***customer***, I can ***see if there are any special offers/deals***, so that ***I can enjoy the discounted price and save some money***. | At this point I've decided to skip on this feature. | ❌ |
+
+[Back to Top](#table-of-contents)
+
+## Validations
+
+### HTML Validation
+
+- For my HTML files validation I have used [HTML W3C Validator](https://validator.w3.org/).
+
+### CSS Validation
+
+### JS Validation
+
+### Python Validation
+
+### Lighthouse Score
+
+### Wave Accessibility Score

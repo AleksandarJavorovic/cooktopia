@@ -1262,14 +1262,14 @@ else:
 ### Code
 
 - The main guide for this project was the CI walkthrough project [BoutiqueAdo](https://github.com/Code-Institute-Solutions/boutique_ado_v1/tree/933797d5e14d6c3f072df31adf0ca6f938d02218).
-- [Sportswear](https://github.com/CodeWizard-1/e-commerce?tab=readme-ov-file) was used as inspiration for `README.md` file.
-- [Chirpy Chooks](https://github.com/Kay-ddggxh/chirpy_chooks?tab=readme-ov-file#source-credits) was used as inspiration for `README.md` file.
-- [Everneed](https://github.com/amylour/everneed/blob/main/README.md#google-mail-setup) was used as inspiration for `README.md` file, as well as inspiration for the wishlist feature.
+- [Sportswear](https://github.com/CodeWizard-1/e-commerce?tab=readme-ov-file) was used as inspiration for the `README.md` file.
+- [Chirpy Chooks](https://github.com/Kay-ddggxh/chirpy_chooks?tab=readme-ov-file#source-credits) was used as inspiration for the `README.md` file.
+- [Everneed](https://github.com/amylour/everneed/blob/main/README.md#google-mail-setup) was used as inspiration for the `README.md` file, as well as inspiration for the wishlist feature.
 - [Perplexity.ai](https://www.perplexity.ai/) was used for debugging during development process.
 - [Review and Rating System](https://www.youtube.com/watch?v=3KCBN7WJXMY&list=PLFNQLcwO1GaY3dy2i6F5vQ60YGDRUD-bX), this video was used for inspiration to create review section within the project.
 - Many code bugs were solved thanks to CI Slack channels.
 - [Simple website footer example](https://codepen.io/alvarotrigo/pen/ZExxeRz), used as inspiration for the footer.
-- [Average for Ratings in Django](https://stackoverflow.com/questions/60602349/average-for-ratings-in-django), helped with calculating average ratings of a product
+- [Average for Ratings in Django](https://stackoverflow.com/questions/60602349/average-for-ratings-in-django), helped with calculating average ratings of a product.
 
 [Back to Top](#table-of-contents)
 

@@ -1,18 +1,20 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
         <!-- Search Bar -->
-        <form class="form d-lg-none" method="GET" action="{% url 'products' %}">
-            <div class="input-group w-100">
-                <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search">
-                <div class="input-group-append">
-                    <button class="form-control btn btn-black border border-black rounded-0" type="submit">
-                        <span class="icon">
-                            <i class="fas fa-search"></i>
-                        </span>
-                    </button>
+        <li>
+            <form class="form d-lg-none" method="GET" action="{% url 'products' %}">
+                <div class="input-group w-100">
+                    <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search">
+                    <div class="input-group-append">
+                        <button class="form-control btn btn-black border border-black rounded-0" type="submit">
+                            <span class="icon">
+                                <i class="fas fa-search"></i>
+                            </span>
+                        </button>
+                    </div>
                 </div>
-            </div>
-        </form>
+            </form>
+        </li>
         <!-- Home button on smaller screens -->
         <li class="nav-item d-block d-lg-none">
             <a class="logo-font font-weight-bold nav-link mr-5 text-black btn-gray" href="{% url 'home' %}"
@@ -22,7 +24,7 @@
         </li>
         <!-- My Account -->
         <li class="nav-item dropdown d-lg-none">
-            <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
+            <a class="text-black nav-link" href="#" id="user-options-1" data-toggle="dropdown" aria-haspopup="true"
                 aria-expanded="false">
                 <div class="text-center">
                     <div>
@@ -30,7 +32,7 @@
                     </div>
                 </div>
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="user-options">
+            <div class="dropdown-menu border-0" aria-labelledby="user-options-1">
                 {% if request.user.is_authenticated %}
                 {% if request.user.is_superuser %}
                 <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
@@ -67,7 +69,7 @@
         </li>
         <!-- Knives -->
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link mr-5 text-black btn-gray" href="#" id="all-products-link"
+            <a class="logo-font font-weight-bold nav-link mr-5 text-black btn-gray" href="#" id="knives-link"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Knives
             </a>
@@ -81,7 +83,7 @@
         </li>
         <!-- Pans -->
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link mr-5 text-black btn-gray" href="#" id="all-products-link"
+            <a class="logo-font font-weight-bold nav-link mr-5 text-black btn-gray" href="#" id="pans-link"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Pans
             </a>
@@ -94,7 +96,7 @@
         </li>
         <!-- Pots -->
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link mr-5 text-black btn-gray" href="#" id="all-products-link"
+            <a class="logo-font font-weight-bold nav-link mr-5 text-black btn-gray" href="#" id="pots-link"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Pots
             </a>
@@ -107,7 +109,7 @@
         </li>
         <!-- Accessories -->
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link mr-5 text-black btn-gray" href="#" id="all-products-link"
+            <a class="logo-font font-weight-bold nav-link mr-5 text-black btn-gray" href="#" id="accessories-link"
                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Accessories
             </a>
