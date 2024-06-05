@@ -884,7 +884,7 @@ The custom models made for this project were:
 - #### Fix 3
   - This issue was fixed by setting:
     - min-height: 100vh;(body)
-    - flex-grow: 1;(main container on the page)
+    - flex-grow: 1;(allowing main container on the page to take all extra space)
     - margin-top: auto;(footer)
 
     <details>
@@ -894,8 +894,12 @@ The custom models made for this project were:
     ![Footer Fix](static/images/bugs/footer-fix.png)
     </details>
 
+[Back to Top](#table-of-contents)
+
 ### Present Bugs
  - There are no known bugs.
+
+[Back to Top](#table-of-contents)
 
 ## Deployment
 
@@ -1265,6 +1269,14 @@ else:
 - [Review and Rating System](https://www.youtube.com/watch?v=3KCBN7WJXMY&list=PLFNQLcwO1GaY3dy2i6F5vQ60YGDRUD-bX), this video was used for inspiration to create review section within the project.
 - Many code bugs were solved thanks to CI Slack channels.
 - [Simple website footer example](https://codepen.io/alvarotrigo/pen/ZExxeRz), used as inspiration for the footer.
+- [Average for Ratings in Django](https://stackoverflow.com/questions/60602349/average-for-ratings-in-django), helped with calculating average ratings of a product
+
+[Back to Top](#table-of-contents)
+
+### Media
+
+- Images used for this project are from [Unsplash](https://unsplash.com/).
+- [XXXLutz](https://www.xxxlutz.de/) was used as inspiration while planning
 
 [Back to Top](#table-of-contents)
 
@@ -1278,7 +1290,8 @@ else:
 ### Acknowledgements
 
 - I want to say to my wife:"Thank you for all your love and support. <3"
-- I want to thank to my mentor Mitko Bachvarov for tips and suggestions.
+- I want to thank my mentor Mitko Bachvarov for tips and suggestions.
+- I want to thank our facilitator Kristyna, as well as our cohort members for advices and moral support during the course.
 - I want to thank to tutors at CI Tutor Support for all their help.
 - I want to thank to CI Student Support for their understaing and help.
 
