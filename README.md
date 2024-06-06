@@ -366,7 +366,7 @@ The database model or so-called ERD(entity relationship diagram) was created to 
 ### Custom Models
 
 The custom models made for this project were:
- - Product(extended BoutiqueAdo's model)
+ - Product
  - ReviewRating
  - Wishlist
 
@@ -425,13 +425,19 @@ The custom models made for this project were:
 
 ### My Account
 
-- Not Authenticated
+#### Not Authenticated
 
 ![My Account Not Authenticated](static/images/features/7-my-account-logedout.png)
 
-- Authenticated
+#### Authenticated
+
+- Admin
 
 ![My Account Authenticated](static/images/features/8-my-account-logedin.png)
+
+- User
+
+![My Account Authenticated Customer](static/images/features/88-my-account-logedin-customer.png)
 
 - My Account section is a drop-down with few different options for the authenticated and not authenticated user as well as Product Managment Tab for the admins.
 
