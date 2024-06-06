@@ -84,8 +84,9 @@
                         <div class="card-body pb-0">
                             <div class="d-flex justify-content-between">
                                 <p class="mb-0 text-black font-weight-bold">{{ item.product.name }}</p>
-                                <a href="{% url 'add_to_wishlist' item.product.id %}" class="btn pt-0" role="button"
-                                    aria-disabled="true"><i class="fa-solid fa-heart fa-lg text-black"></i></a>
+                                <a href="{% url 'add_to_wishlist' item.product.id %}" class="btn pt-0" role="button">
+                                    <i class="fa-solid fa-heart fa-lg text-black"></i>
+                                </a>
                             </div>
                             <p class="mb-0">{{ item.product.brand }}</p>
                         </div>
