@@ -14,6 +14,8 @@ from django.contrib.auth.models import User, AnonymousUser
 
 from django.contrib.auth import get_user_model
 
+import uuid
+
 User = get_user_model()
 
 
