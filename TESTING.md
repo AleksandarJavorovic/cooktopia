@@ -90,6 +90,16 @@
 
 - For JS file validation I have used a Static Code Analysis Tool [JS Hint](https://jshint.com/).
 
+| File | Screenshot | No Errors/Note |
+| --- | --- | --- |
+| shopping-bag(postloadjs) | ![Shopping Bag](static/images/validation-images/js-validation/1-shopping-bag-js.png) | ✔ |
+| countryfield.js | ![Countryfield](static/images/validation-images/js-validation/2-countryfield-js.png) | ✔ |
+| add_product.html(postloadjs) | ![Add Product](static/images/validation-images/js-validation/3-add-product-js.png) | ✔ |
+| edit_product.html(postloadjs) | ![Edit Product](static/images/validation-images/js-validation/4-edit-product-js.png) | ✔ |
+| quantity-input-script.html(script) | ![Quantity Input Script](static/images/validation-images/js-validation/5-quantity-input-script-js.png) | ✔ |
+| sort_and_button.html(script) | ![Sort and Button Script](static/images/validation-images/js-validation/6-sort-and-button-js.png) | ✔ |
+| stripe_elements.js | ![Stripe Elements](static/images/validation-images/js-validation/7-stripe-elements-js.png) | One undefined variable |
+
 ### Python Validation
 
 - For Python file validation I have used [CI Python Linter](https://pep8ci.herokuapp.com/).
