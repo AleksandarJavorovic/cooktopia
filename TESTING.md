@@ -48,6 +48,32 @@
 
 - For my HTML file validation I have used [HTML W3C Validator](https://validator.w3.org/).
 
+| Page | Screenshot | No Errors |
+| --- | --- | --- |
+| Home | ![Home](static/images/validation-images/html-validation/1-home-page-validation.png) | ✔ |
+| Sign Up | ![Register](static/images/validation-images/html-validation/1-home-page-validation.png) | ✔ |
+| Sign In | ![Sign In](static/images/validation-images/html-validation/1-home-page-validation.png) | ✔ |
+| Empty Wishlist | ![Empty Wishlist](static/images/validation-images/html-validation/1-home-page-validation.png) | ✔ |
+| Wishlist | ![Wishlist](static/images/validation-images/html-validation/1-home-page-validation.png) | ✔ |
+| Empty Shopping Bag | ![Empty Shopping Bag](static/images/validation-images/html-validation/1-home-page-validation.png) | ✔ |
+| Shopping Bag | ![Shopping Bag](static/images/validation-images/html-validation/1-home-page-validation.png) | ✔ |
+| All Products | ![All Products](static/images/validation-images/html-validation/1-home-page-validation.png) | ✔ |
+| All Knives | ![All Knives](static/images/validation-images/html-validation/1-home-page-validation.png) | ✔ |
+| All Pans | ![All Pans](static/images/validation-images/html-validation/1-home-page-validation.png) | ✔ |
+| All Pots | ![All Pots](static/images/validation-images/html-validation/1-home-page-validation.png) | ✔ |
+| Accessories | ![Accessories](static/images/validation-images/html-validation/1-home-page-validation.png) | ✔ |
+| Product Detail | ![Product Detail](static/images/validation-images/html-validation/1-home-page-validation.png) | ✔ |
+| My Profile | ![My Profile](static/images/validation-images/html-validation/1-home-page-validation.png) | ✔ |
+| Privacy Policy | ![Privacy Policy](static/images/validation-images/html-validation/1-home-page-validation.png) | ✔ |
+| Checkout | ![Checkout](static/images/validation-images/html-validation/1-home-page-validation.png) | ✔ |
+| Thank You | ![Thank You](static/images/validation-images/html-validation/1-home-page-validation.png) | ✔ |
+| Product Management | ![Product Management](static/images/validation-images/html-validation/1-home-page-validation.png) | ✔ |
+| Edit | ![Edit](static/images/validation-images/html-validation/1-home-page-validation.png) | ✔ |
+| 404 | ![404](static/images/validation-images/html-validation/1-home-page-validation.png) | ✔ |
+| Password Reset | ![Password Reset](static/images/validation-images/html-validation/1-home-page-validation.png) | ✔ |
+| Sign Out | ![Sign Out](static/images/validation-images/html-validation/1-home-page-validation.png) | ✔ |
+
+
 ### CSS Validation
 
 - For CSS file validation I have used [CSS Jigsaw W3C Validator](https://jigsaw.w3.org/css-validator/).
