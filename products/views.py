@@ -65,7 +65,9 @@ def all_products(request):
         if "q" in request.GET:
             query = request.GET["q"]
             if not query:
-                messages.error(request, "You didn't enter any search criteria!")
+                messages.error(
+                    request, "You didn't enter any search criteria!"
+                )
                 return redirect(reverse("products"))
 
             queries = (
@@ -98,7 +100,9 @@ def product_detail(request, product_id):
     """
 
     product = get_object_or_404(
-        Product.objects.annotate(avg_rating=Avg("reviews__rating")), pk=product_id
+        Product.objects.annotate(
+            avg_rating=Avg("reviews__rating")),
+        pk=product_id
     )
     reviews = ReviewRating.objects.filter(product_id=product_id).all()
     already_commented = False
@@ -123,7 +127,9 @@ def product_detail(request, product_id):
         ).exists()
 
     if not isinstance(request.user, AnonymousUser):
-        all_items = OrderLineItem.objects.filter(order__user_profile__user=request.user)
+        all_items = OrderLineItem.objects.filter(
+            order__user_profile__user=request.user
+        )
 
     for item in all_items:
         if product == item.product:
@@ -156,7 +162,9 @@ def add_product(request):
             messages.success(request, "Successfully added product!")
             return redirect(reverse("product_detail", args=[product.id]))
         else:
-            messages.error(request, "Failed to add product. The form is invalid.")
+            messages.error(
+                request, "Failed to add product. The form is invalid."
+            )
     else:
         form = ProductForm()
 
@@ -184,7 +192,9 @@ def edit_product(request, product_id):
             messages.success(request, f"Successfully updated {product.name}!")
             return redirect(reverse("product_detail", args=[product.id]))
         else:
-            messages.error(request, "Failed to add product. The form is invalid.")
+            messages.error(
+                request, "Failed to add product. The form is invalid."
+            )
     else:
         form = ProductForm(instance=product)
         messages.info(request, f"You are editing {product.name}")
