@@ -47,6 +47,7 @@
 ### HTML Validation
 
 - For my HTML file validation I have used [HTML W3C Validator](https://validator.w3.org/).
+- Since all of the pages had no errors and all of the screenshots are the same, I have included only one.
 
 | Page | Screenshot | No Errors |
 | --- | --- | --- |
@@ -77,6 +78,13 @@
 ### CSS Validation
 
 - For CSS file validation I have used [CSS Jigsaw W3C Validator](https://jigsaw.w3.org/css-validator/).
+
+| File | Screenshot | No Errors |
+| --- | --- | --- |
+| base.css | ![Base](static/images/validation-images/css-validation/base-css.png) | ✔ |
+| checkout.css | ![Checkout](static/images/validation-images/css-validation/checkout-css.png) | ✔ |
+| profile.css | ![Profile](static/images/validation-images/css-validation/profile-css.png) | ✔ |
+| rating.css | ![Rating](static/images/validation-images/css-validation/rating-css.png) | ✔ |
 
 ### JS Validation
 
