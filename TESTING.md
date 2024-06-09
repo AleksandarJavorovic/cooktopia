@@ -10,6 +10,10 @@
     - [Python Validation](#python-validation)
     - [Lighthouse Scores](#lighthouse-scores)
     - [Wave Accessibility Score](#wave-accessibility-score)
+- [Manual Testing](#manual-testing)
+- [Browser Testing](#browser-testing)
+- [Fixed Bugs](#fixed-bugs)
+- [Present Bugs](#present-bugs)
 
 ## User Story Testing
 
@@ -42,14 +46,94 @@
 
 ### HTML Validation
 
-- For my HTML files validation I have used [HTML W3C Validator](https://validator.w3.org/).
+- For my HTML file validation I have used [HTML W3C Validator](https://validator.w3.org/).
 
 ### CSS Validation
 
+- For CSS file validation I have used [CSS Jigsaw W3C Validator](https://jigsaw.w3.org/css-validator/).
+
 ### JS Validation
 
+- For JS file validation I have used a Static Code Analysis Tool [JS Hint](https://jshint.com/).
+
 ### Python Validation
+
+- For Python file validation I have used [CI Python Linter](https://pep8ci.herokuapp.com/).
 
 ### Lighthouse Score
 
 ### Wave Accessibility Score
+
+## Manual Testing
+
+## Browser Testing
+
+- Complete functionality and layout of the site was tested across next browsers:
+
+  | Browser     | Layout      | Functionality |
+  | :---------: | :----------:| :-----------: |
+  | Brave       | ✔          | ✔             |
+  | Edge        | ✔          | ✔             |
+  |  Opera GX   | ✔          | ✔             |
+  |    Safari   | ✔          | ✔             |
+
+[Back to Top](#table-of-contents)
+
+### Fixed Bugs
+
+ - #### Bug 1 - Shopping Bag Quantity Button
+   - Before fixing, users were able to press the "-" button even after 1(going to 0, -1, -2, and so on). The "+" button was disabled when the number hit 99, but users could enter numbers bigger than 99 by keyboard, so this needed fixing too, as the idea was to set 99 as the biggest possible amount to choose.
+
+ - #### Fix 1
+   <details>
+   <summary>Quantity Button Fix
+   </summary>
+
+   ![Quantity Button Fix](static/images/bugs/qty-button-fix.png)
+   </details>
+
+- #### Bug 2 - Server Error (500)
+  - In the case of non-authenticated user, when the user wanted to open a product_detail page, a 500 Server Error was prompted.
+    <details>
+    <summary>Server Error (500)
+    </summary>
+
+    ![Server Error 500](static/images/bugs/500-server-error.png)
+    </details>
+
+- #### Fix 2
+   <details>
+   <summary>Server Error (500) Fix
+   </summary>
+
+   ![500 Server Error Fix](static/images/bugs/500-server-error-fix.png)
+   </details>
+
+- #### Bug 3 - Footer
+  - In the case of a page with no or little content, the footer was jumping up.
+    <details>
+    <summary>Footer Bug
+    </summary>
+
+    ![Footer Bug](static/images/bugs/footer-bug.png)
+    </details>
+
+- #### Fix 3
+  - This issue was fixed by setting:
+    - min-height: 100vh;(body)
+    - flex-grow: 1;(allowing main container on the page to take all extra space)
+    - margin-top: auto;(footer)
+
+    <details>
+    <summary>Footer Fix
+    </summary>
+
+    ![Footer Fix](static/images/bugs/footer-fix.png)
+    </details>
+
+[Back to Top](#table-of-contents)
+
+### Present Bugs
+ - There are no known bugs.
+
+[Back to Top](#table-of-contents)

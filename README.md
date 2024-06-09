@@ -59,11 +59,6 @@ Our target customers are anyone in need of functional, modern, high-quality prod
     - [Tools](#tools)
 
 - [Testing](#testing)
-    - [Manual Testing](#manual-testing)
-    - [Validations](#validations)
-    - [Browser Testing](#browser-testing)
-    - [Fixed Bugs](#fixed-bugs)
-    - [Present Bugs](#present-bugs)
 
 - [Deployment](#deployment)
     - [PostgreSQL from Code Institute](#postgresql-from-code-institute)
@@ -829,81 +824,7 @@ The custom models made for this project were:
 
 ## Testing
 
-### Manual Testing
-
-- For complete manual testings head to: [TESTING.md](TESTING.md)
-
-### Validations
-
-### Browser Testing
-
-- Complete functionality and layout of the site was tested across next browsers:
-
-  | Browser     | Layout      | Functionality |
-  | :---------: | :----------:| :-----------: |
-  | Brave       | ✔          | ✔             |
-  | Edge        | ✔          | ✔             |
-  |  Opera GX   | ✔          | ✔             |
-  |    Safari   | ✔          | ✔             |
-
-[Back to Top](#table-of-contents)
-
-### Fixed Bugs
-
- - #### Bug 1 - Shopping Bag Quantity Button
-   - Before fixing, users were able to press the "-" button even after 1(going to 0, -1, -2, and so on). The "+" button was disabled when the number hit 99, but users could enter numbers bigger than 99 by keyboard, so this needed fixing too, as the idea was to set 99 as the biggest possible amount to choose.
-
- - #### Fix 1
-   <details>
-   <summary>Quantity Button Fix
-   </summary>
-
-   ![Quantity Button Fix](static/images/bugs/qty-button-fix.png)
-   </details>
-
-- #### Bug 2 - Server Error (500)
-  - In the case of non-authenticated user, when the user wanted to open a product_detail page, a 500 Server Error was prompted.
-    <details>
-    <summary>Server Error (500)
-    </summary>
-
-    ![Server Error 500](static/images/bugs/500-server-error.png)
-    </details>
-
-- #### Fix 2
-   <details>
-   <summary>Server Error (500) Fix
-   </summary>
-
-   ![500 Server Error Fix](static/images/bugs/500-server-error-fix.png)
-   </details>
-
-- #### Bug 3 - Footer
-  - In the case of a page with no or little content, the footer was jumping up.
-    <details>
-    <summary>Footer Bug
-    </summary>
-
-    ![Footer Bug](static/images/bugs/footer-bug.png)
-    </details>
-
-- #### Fix 3
-  - This issue was fixed by setting:
-    - min-height: 100vh;(body)
-    - flex-grow: 1;(allowing main container on the page to take all extra space)
-    - margin-top: auto;(footer)
-
-    <details>
-    <summary>Footer Fix
-    </summary>
-
-    ![Footer Fix](static/images/bugs/footer-fix.png)
-    </details>
-
-[Back to Top](#table-of-contents)
-
-### Present Bugs
- - There are no known bugs.
+- For complete testings head to: [TESTING.md](TESTING.md)
 
 [Back to Top](#table-of-contents)
 
