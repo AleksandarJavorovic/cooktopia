@@ -74,6 +74,7 @@
 | Password Reset | ![Password Reset](static/images/validation-images/html-validation/1-home-page-validation.png) | ✔ |
 | Sign Out | ![Sign Out](static/images/validation-images/html-validation/1-home-page-validation.png) | ✔ |
 
+[Back to Top](#table-of-contents)
 
 ### CSS Validation
 
@@ -85,6 +86,8 @@
 | checkout.css | ![Checkout](static/images/validation-images/css-validation/checkout-css.png) | ✔ |
 | profile.css | ![Profile](static/images/validation-images/css-validation/profile-css.png) | ✔ |
 | rating.css | ![Rating](static/images/validation-images/css-validation/rating-css.png) | ✔ |
+
+[Back to Top](#table-of-contents)
 
 ### JS Validation
 
@@ -100,9 +103,13 @@
 | sort_and_button.html(script) | ![Sort and Button Script](static/images/validation-images/js-validation/6-sort-and-button-js.png) | ✔ |
 | stripe_elements.js | ![Stripe Elements](static/images/validation-images/js-validation/7-stripe-elements-js.png) | One undefined variable |
 
+[Back to Top](#table-of-contents)
+
 ### Python Validation
 
 - For Python file validation I have used [CI Python Linter](https://pep8ci.herokuapp.com/).
+
+[Back to Top](#table-of-contents)
 
 ### Lighthouse Score
 
