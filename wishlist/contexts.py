@@ -3,7 +3,7 @@ from .models import Wishlist
 
 
 def wishlist_items(request):
-    """ Wishlist items context processor """
+    """Wishlist items context processor"""
     wishlist_items = []
 
     if request.user.is_authenticated:
@@ -11,5 +11,5 @@ def wishlist_items(request):
         wishlist_items = Wishlist.objects.filter(user_profile=user_profile)
 
     return {
-        'user_wishlist': wishlist_items,
+        "user_wishlist": wishlist_items,
     }

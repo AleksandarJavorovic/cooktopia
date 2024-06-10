@@ -21,7 +21,13 @@ def wishlist(request):
     user_profile = UserProfile.objects.get(user=request.user)
     user_wishlist = Wishlist.objects.filter(user_profile=user_profile)
 
-    return render(request, "wishlist/wishlist.html", {"user_wishlist": user_wishlist})
+    return render(
+        request,
+        "wishlist/wishlist.html",
+        {
+            "user_wishlist": user_wishlist
+        }
+    )
 
 
 def add_to_wishlist(request, product_id):
@@ -33,8 +39,14 @@ def add_to_wishlist(request, product_id):
 
     if request.user.is_authenticated:
         user_profile = UserProfile.objects.get(user=request.user)
-        if Wishlist.objects.filter(user_profile=user_profile, product=product).exists():
-            Wishlist.objects.get(user_profile=user_profile, product=product).delete()
+        if Wishlist.objects.filter(
+            user_profile=user_profile,
+            product=product
+        ).exists():
+            Wishlist.objects.get(
+                user_profile=user_profile,
+                product=product
+            ).delete()
             messages.success(
                 request, f"{product.name} has been removed from your Wishlist."
             )

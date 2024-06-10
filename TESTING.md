@@ -182,6 +182,10 @@
     ![Footer Fix](static/images/bugs/footer-fix.png)
     </details>
 
+- #### Bug 4 - Minus Qty Button
+
+- ### Fix 4 - Deleted redundant lines of code to fix the issue
+
 [Back to Top](#table-of-contents)
 
 ### Present Bugs
