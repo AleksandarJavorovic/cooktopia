@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY", "")
 DEBUG = "DEVELOPMENT" in os.environ
 
 ALLOWED_HOSTS = [
-    "8000-aleksandarjav-cooktopia-om0v2dch94o.ws-eu114.gitpod.io",
+    "8000-aleksandarjav-cooktopia-zuzyx7jw3ds.ws.codeinstitute-ide.net",
     "cooktopia-3a5b4620860d.herokuapp.com",
 ]
 
