@@ -109,6 +109,12 @@
 
 - For Python file validation I have used [CI Python Linter](https://pep8ci.herokuapp.com/).
 
+| django app | admin.py | apps.py |forms.py | models.py | urls.py | views.py | extra |
+|---------|----------|----------|-----------|---------|----------|-------|--------|
+| checkout | ![checkout](static/images/validation-images/python-validation/checkout/checkout-admin.png) | ![checkout](static/images/validation-images/python-validation/checkout/checkout-apps.png) | ![checkout](static/images/validation-images/python-validation/checkout/checkout-forms.png) | ![checkout](static/images/validation-images/python-validation/checkout/checkout-models.png) | ![checkout](static/images/validation-images/python-validation/checkout/checkout-urls.png) | ![checkout](static/images/validation-images/python-validation/checkout/checkout-views.png) | signals.py![checkout](static/images/validation-images/python-validation/checkout/checkout-signals.png) webhook_handler.py![checkout](static/images/validation-images/python-validation/checkout/checkout-webhook-handler.png) |
+| cooktopia | N/A | N/A | N/A | N/A | ![cooktopia](static/images/validation-images/python-validation/cooktopia/cooktopia-urls.png) | ![cooktopia](static/images/validation-images/python-validation/cooktopia/cooktopia-views.png) | N/A |
+| home | N/A | ![home](static/images/validation-images/python-validation/home/home-apps.png) | N/A | N/A | ![home](static/images/validation-images/python-validation/home/home-urls.png) | ![home](static/images/validation-images/python-validation/home/home-views.png) | N/A |
+
 [Back to Top](#table-of-contents)
 
 ### Lighthouse Score
