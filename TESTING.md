@@ -124,6 +124,23 @@
 
 ### Lighthouse Score
 
+- There is space for improvement on certain pages, especially when it comes to accessibility, things that can be fixed are next:
+  - Buttons do not have an accessible name
+  - Links do not have a discernible name
+  - Links rely on color to be distinguishable
+  - Background and foreground colors of the links do not have a sufficient contrast ratio
+- Lower performance score on certain pages is due to the use of a lot of external libraries
+
+| Page | Desktop | Mobile |
+| ---- | ----------------- | -------- |
+| Home | ![lighthouse](static/images/validation-images/lighthouse/desktop-home-page.png) | ![lighthouse](static/images/validation-images/lighthouse/mobile-home-page.png) |
+| All Products | ![lighthouse](static/images/validation-images/lighthouse/desktop-all-products.png) | ![lighthouse](static/images/validation-images/lighthouse/mobile-all-products.png) |
+| Single Product | ![lighthouse](static/images/validation-images/lighthouse/desktop-single-product.png) | ![lighthouse](static/images/validation-images/lighthouse/mobile-single-product.png) |
+| Shopping Bag | ![lighthouse](static/images/validation-images/lighthouse/desktop-shopping-bag.png) | ![lighthouse](static/images/validation-images/lighthouse/mobile-shopping-bag.png) |
+| Privacy Policy | ![lighthouse](static/images/validation-images/lighthouse/desktop-privacy-policy.png) | ![lighthouse](static/images/validation-images/lighthouse/mobile-privacy-policy.png) |
+
+[Back to Top](#table-of-contents)
+
 ### Wave Accessibility Score
 
 ## Manual Testing
