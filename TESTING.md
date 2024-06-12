@@ -128,7 +128,8 @@
   - Links do not have a discernible name
   - Links rely on color to be distinguishable
   - Background and foreground colors of the links do not have a sufficient contrast ratio
-- Lower performance score on certain pages is due to the use of a lot of external libraries
+- Lower performance scores on certain pages are due to the use of a lot of external libraries
+- Due to time constraints at the moment it will stay as it is
 
 | Page | Desktop | Mobile |
 | ---- | ----------------- | -------- |
@@ -169,6 +170,8 @@
 | Server Error (500) | In the case of a non-authenticated user, when the user wanted to open a product_detail page, a 500 Server Error was prompted. | ![500 Server Error Fix](static/images/bugs/500-server-error-fix.png) |
 | Footer Bug | In the case of a page with no or little content, the footer was jumping up. | This issue was fixed by setting: min-height: 100vh;(body), flex-grow: 1;(allowing main container on the page to take all extra space), margin-top: auto;(footer) |
 | Minus Qty Button | Minus Qty button within shopping bag wasn't functioning | Deleted redundant lines of code within quantity_input_script.html to fix the issue |
+| Stripe 401 Error | After making the purchase I was getting 401 Error on Stripe | I made my development address public |
+| Stripe 400 Error | After making the purchase I was getting 400 Error on Stripe | Had to adjust Stripe WH Secret |
 
 [Back to Top](#table-of-contents)
 
