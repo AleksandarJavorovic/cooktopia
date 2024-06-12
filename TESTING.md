@@ -9,7 +9,6 @@
     - [JavaScript Validation](#javascript-validation)
     - [Python Validation](#python-validation)
     - [Lighthouse Scores](#lighthouse-scores)
-    - [Wave Accessibility Score](#wave-accessibility-score)
 - [Manual Testing](#manual-testing)
 - [Browser Testing](#browser-testing)
 - [Fixed Bugs](#fixed-bugs)
@@ -141,9 +140,11 @@
 
 [Back to Top](#table-of-contents)
 
-### Wave Accessibility Score
-
 ## Manual Testing
+
+
+
+[Back to Top](#table-of-contents)
 
 ## Browser Testing
 
@@ -160,59 +161,14 @@
 
 ### Fixed Bugs
 
- - #### Bug 1 - Shopping Bag Quantity Button
-   - Before fixing, users were able to press the "-" button even after 1(going to 0, -1, -2, and so on). The "+" button was disabled when the number hit 99, but users could enter numbers bigger than 99 by keyboard, so this needed fixing too, as the idea was to set 99 as the biggest possible amount to choose.
+- Some of the stubborn bugs can be found in the table under.
 
- - #### Fix 1
-   <details>
-   <summary>Quantity Button Fix
-   </summary>
-
-   ![Quantity Button Fix](static/images/bugs/qty-button-fix.png)
-   </details>
-
-- #### Bug 2 - Server Error (500)
-  - In the case of non-authenticated user, when the user wanted to open a product_detail page, a 500 Server Error was prompted.
-    <details>
-    <summary>Server Error (500)
-    </summary>
-
-    ![Server Error 500](static/images/bugs/500-server-error.png)
-    </details>
-
-- #### Fix 2
-   <details>
-   <summary>Server Error (500) Fix
-   </summary>
-
-   ![500 Server Error Fix](static/images/bugs/500-server-error-fix.png)
-   </details>
-
-- #### Bug 3 - Footer
-  - In the case of a page with no or little content, the footer was jumping up.
-    <details>
-    <summary>Footer Bug
-    </summary>
-
-    ![Footer Bug](static/images/bugs/footer-bug.png)
-    </details>
-
-- #### Fix 3
-  - This issue was fixed by setting:
-    - min-height: 100vh;(body)
-    - flex-grow: 1;(allowing main container on the page to take all extra space)
-    - margin-top: auto;(footer)
-
-    <details>
-    <summary>Footer Fix
-    </summary>
-
-    ![Footer Fix](static/images/bugs/footer-fix.png)
-    </details>
-
-- #### Bug 4 - Minus Qty Button
-
-- ### Fix 4 - Deleted redundant lines of code to fix the issue
+| Bug | Detail | Fix |
+| -------- | -------- | -------- |
+| Shopping Bag Quantity Button | Before fixing, users could press the "-" button even after 1(going to 0, -1, -2, and so on). The "+" button was disabled when the number hit 99, but users could enter numbers bigger than 99 by keyboard, so this needed fixing too, as the idea was to set 99 as the biggest possible amount to choose. | quantity_input_script.html was updated to fix those issues |
+| Server Error (500) | In the case of a non-authenticated user, when the user wanted to open a product_detail page, a 500 Server Error was prompted. | ![500 Server Error Fix](static/images/bugs/500-server-error-fix.png) |
+| Footer Bug | In the case of a page with no or little content, the footer was jumping up. | This issue was fixed by setting: min-height: 100vh;(body), flex-grow: 1;(allowing main container on the page to take all extra space), margin-top: auto;(footer) |
+| Minus Qty Button | Minus Qty button within shopping bag wasn't functioning | Deleted redundant lines of code within quantity_input_script.html to fix the issue |
 
 [Back to Top](#table-of-contents)
 
