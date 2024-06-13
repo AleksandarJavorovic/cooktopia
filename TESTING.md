@@ -18,6 +18,9 @@
   - [My Account/ Product My Profile](#my-account--my-profile)
   - [My Account/ Product Logout](#my-account--logout)
   - [Wishlist](#wishlist)
+  - [Shopping Bag](#shopping-bag)
+  - [Checkout](#checkout)
+  - [Products](#products)
 - [Browser Testing](#browser-testing)
 - [Fixed Bugs](#fixed-bugs)
 - [Present Bugs](#present-bugs)
@@ -213,7 +216,7 @@
 
 | Feature | Action             | Expected Result                 | Pass |
 | ----- | -----------------| ------------------------------| ---------- |
-| Sign Up/Invalid Form | Click | A small message will pop up depending on the scenario, saying: "Pleas fill out this field.", "Please lengthen this text to 4 characters or more(you are currently using x characters).", "" | ✔ |
+| Sign Up/Invalid Form | Click | A small message will pop up depending on the scenario, saying: "Pleas fill out this field.", "Please lengthen this text to 4 characters or more(you are currently using x characters)." | ✔ |
 | Sign Up/Form Valid/E-mail in use already | Click | A message pops up saying: "A user is already registered with this e-mail address." | ✔ |
 | Sign Up/Form Valid | Click | User is redirected to the VERIFY YOUR E-MAIL ADDRESS page and small toast message pops up saying: "Confirmation e-mail sent to testmail@test.com." | ✔ |
 | Confirmation Emial/Confirmation Link | Click | User is redirected to the CONFIRM E-MAIL ADDRESS page. There is a confirm button to click  | ✔ |
@@ -323,6 +326,25 @@
 | Scroll Down | Scroll | User scrolls down the page, Back to the top Button appears | ✔ |
 | Back to the Top Button | Click | The Page gets scrolled back to the top | ✔ |
 
+[Back to Top](#table-of-contents)
+
+### Product Detail
+
+| Feature | Action             | Expected Result                 | Pass |
+| ----- | -----------------| ------------------------------| ---------- |
+| Product Detail Page/ Arrow back Button(⬅) | Click | User gets redirected to the previous page | ✔ |
+| Product Image | Click | New tab opens with the S3 bucket address | ✔ |
+| Badge Icon under the pricture | Click | User gets redirected to the Products page but rendered items are those of the clicked badge(category)  | ✔ |
+| Edit Button(Admins Only) | Click | Admin gets redirected to the Product Management Page, a small toast alert message pops up saying: "You are editing Product Name" | ✔ |
+| Delete Button(Admins Only) | Click | The Products page is re-loaded and small toast message pops up saying: "Product:Product Name has been deleted!" | ✔ |
+| Keep Shopping Button | Click | User gets redirected to the All Products Page | ✔ |
+| Add to Bag Button | Click | The Page gets refreshed and a small toast message pops up saying: "Added Product Name to your bag" | ✔ |
+| Heart Icon | Click | The Products is added to the Wishlist, a small toast message pops up saying: "Product Name added to Wishlist!" | ✔ |
+| Login to review Link/Non-Authenticated User | Click | User gets redirected to the Sign In Page | ✔ |
+| Submit Review Button/Review Form Invalid | Click | A small field message pops up saying: "Please fill out this field" | ✔ |
+| Submit Review Button/Review Form Valid | Click | A small toast message pops up saying: "Thank you! Review submitted." | ✔ |
+| Update Review Button/Review Form Invalid | Click | A small field message pops up saying: "Please fill out this field" | ✔ |
+| Update Review Button/Review Form Valid | Click | A small toast message pops up saying: "Thanks! Your review has been updated." | ✔ |
 
 [Back to Top](#table-of-contents)
 
