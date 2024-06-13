@@ -21,6 +21,9 @@
   - [Shopping Bag](#shopping-bag)
   - [Checkout](#checkout)
   - [Products](#products)
+  - [Product Detail](#product-detail)
+  - [Privacy Policy](#privacy-policy)
+  - [Special Cases](#special-cases)
 - [Browser Testing](#browser-testing)
 - [Fixed Bugs](#fixed-bugs)
 - [Present Bugs](#present-bugs)
@@ -345,6 +348,28 @@
 | Submit Review Button/Review Form Valid | Click | A small toast message pops up saying: "Thank you! Review submitted." | ✔ |
 | Update Review Button/Review Form Invalid | Click | A small field message pops up saying: "Please fill out this field" | ✔ |
 | Update Review Button/Review Form Valid | Click | A small toast message pops up saying: "Thanks! Your review has been updated." | ✔ |
+
+[Back to Top](#table-of-contents)
+
+### Privacy Policy
+
+| Feature | Action             | Expected Result                 | Pass |
+| ----- | -----------------| ------------------------------| ---------- |
+| Privacy Policy Page/Back to Home Page Button | Click | User gets redirected to the Home Page | ✔ |
+| Privacy Policy Page/Privacy Policy Generator Link | Click | User gets redirected to the: https://www.termsfeed.com/privacy-policy-generator/ | ✔ |
+| Privacy Policy/TermsFeed website Link | Click | User gets redirected to the: https://www.termsfeed.com/blog/cookies/#What_Are_Cookies | ✔ |
+| Privacy Policy Page/https://cooktopia-3a5b4620860d.herokuapp.com/ Link | Click | User gets redirected to the Home Page of CookTopia site | ✔ |
+
+[Back to Top](#table-of-contents)
+
+### Special Cases
+
+| Feature | Action             | Expected Result                 | Pass |
+| ----- | -----------------| ------------------------------| ---------- |
+| Non-Admin User inserts /delete/ before the product number in the address bar | Enter | User gets redirected to the Home Page, and a small toast message pops up saying: "No, no, no, only store owners can do that!:)" | ✔ |
+| Non-Admin User inserts /edit/ before the product number in the address bar | Enter | User gets redirected to the Home Page, and a small toast message pops up saying: "No, no, no, only store owners can do that!:)" | ✔ |
+| User adds /404 or any non-existing page to the end of the address | Enter | 404 Page loads with the next text: "SORRY, BUT IT LOOKS LIKE THE PAGE YOU ARE LOOKING FOR ISN'T AVAILABLE. ¯\_(ツ)_/¯", and the Return to Shop Button | ✔ |
+| Return to Shop Button | Click | User gets redirected to the All Products Page | ✔ |
 
 [Back to Top](#table-of-contents)
 
