@@ -166,12 +166,34 @@
 | All Products > Any available option | Click | User is redirected to the products page sorted according to the chosen option | ✔ |
 | Knives | Click | Drop-down menu opens with the available options | ✔ |
 | Knives > Any available option | Click | User is redirected to the products page sorted according to the chosen option | ✔ |
-|  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
+| Pans | Click | Drop-down menu opens with the available options | ✔ |
+| Pans > Any available option | Click | User is redirected to the products page sorted according to the chosen option | ✔ |
+| Pots | Click | Drop-down menu opens with the available options | ✔ |
+| Pots > Any available option | Click | User is redirected to the products page sorted according to the chosen option | ✔ |
+| Accessories | Click | Drop-down menu opens with the available options | ✔ |
+| Accessories > Any available option | Click | User is redirected to the products page sorted according to the chosen option | ✔ |
+
+### Home Page / Main Section
+
+| Feature | Action             | Expected Result                 | Pass |
+| ----- | -----------------| ------------------------------| ---------- |
+| Shop Now Button | Click | User is redirected to the All Products page | ✔ |
+| Mail Subscribe/No Entry | Click | A small info message pops up saying: "This field is required." | ✔ |
+| Mail Subscribe/Invalid Entry | Click | A small info message pops up saying: "Please enter a valid email address." | ✔ |
+| Mail Subscribe/Valid Entry | Click | A small info message pops up saying: "Thank you for subscribing!" | ✔ |
+
+### Home Page / Footer
+
+| Feature | Action             | Expected Result                 | Pass |
+| ----- | -----------------| ------------------------------| ---------- |
+| Social Network Icons | Click | New tab opens and the user is redirected to the chosen site | ✔ |
+| Home | Click | User is redirected to the Home page | ✔ |
+| All Products | Click | User is redirected to the All products page | ✔ |
+| Knives | Click | User is redirected to the Knives page | ✔ |
+| Pans | Click | User is redirected to the Pans page | ✔ |
+| Pots | Click | User is redirected to the Pots page| ✔ |
+| Accessories | Click | User is redirected to the Accessories page | ✔ |
+| Privacy Policy | Click | User is redirected to the Privacy Policy page | ✔ |
 
 [Back to Top](#table-of-contents)
 
