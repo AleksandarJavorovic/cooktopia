@@ -173,6 +173,8 @@
 | Accessories | Click | Drop-down menu opens with the available options | ✔ |
 | Accessories > Any available option | Click | User is redirected to the products page sorted according to the chosen option | ✔ |
 
+[Back to Top](#table-of-contents)
+
 ### Home Page / Main Section
 
 | Feature | Action             | Expected Result                 | Pass |
@@ -181,6 +183,8 @@
 | Mail Subscribe/No Entry | Click | A small info message pops up saying: "This field is required." | ✔ |
 | Mail Subscribe/Invalid Entry | Click | A small info message pops up saying: "Please enter a valid email address." | ✔ |
 | Mail Subscribe/Valid Entry | Click | A small info message pops up saying: "Thank you for subscribing!" | ✔ |
+
+[Back to Top](#table-of-contents)
 
 ### Home Page / Footer
 
@@ -194,6 +198,31 @@
 | Pots | Click | User is redirected to the Pots page| ✔ |
 | Accessories | Click | User is redirected to the Accessories page | ✔ |
 | Privacy Policy | Click | User is redirected to the Privacy Policy page | ✔ |
+
+[Back to Top](#table-of-contents)
+
+### Authentication
+
+| Feature | Action             | Expected Result                 | Pass |
+| ----- | -----------------| ------------------------------| ---------- |
+| Sign Up/Invalid Form | Click | A small message will pop up depending on the scenario, saying: "Pleas fill out this field.", "Please lengthen this text to 4 characters or more(you are currently using x characters).", "" | ✔ |
+| Sign Up/Form Valid/E-mail in use already | Click | A message pops up saying: "A user is already registered with this e-mail address." | ✔ |
+| Sign Up/Form Valid | Click | User is redirected to the VERIFY YOUR E-MAIL ADDRESS page and small toast message pops up saying: "Confirmation e-mail sent to testmail@test.com." | ✔ |
+| Confirmation Emial/Confirmation Link | Click | User is redirected to the CONFIRM E-MAIL ADDRESS page. There is a confirm button to click  | ✔ |
+| Confirm Button | Click | User gets redirected to the Sign In page and a small toast message pops up saying: "You have confirmed testmail@test.com." | ✔ |
+| Sign Up Page/Back to Login Button | Click | User gets redirected to the Sign In Page | ✔ |
+| Sign Up Page/Sign In Link | Click | User gets redirected to the Sign In Page | ✔ |
+| Sign In Page/Sign Up Link | Click | User gets redirected to the Sign Up Page | ✔ |
+| Sign in Page/ Home button | Click | User gets redirected to the Home Page | ✔ |
+| Sign In/Form Invalid/Sign In Button | Click | A small message pops up saying: "The e-mail address and/or password you specified are not correct." | ✔ |
+| Sign In/Form Valid/Sign In Button | Click | User gets redirected to the Home page and toast message pops up saying: "Successfully signed in as XXX." | ✔ |
+| Sign In Page/Forgot Password Link | Click | User gets redirected to the Password Reset Page | ✔ |
+| Password Reset Page/Back to Login Button | Click | User gets redirected to the Sign In Page | ✔ |
+| Password Reset Page/Form Empty/Reset My Password Button | Click | A small message pops up saying: "Pleas fill out this field." | ✔ |
+| Password Reset Page/Form(E-Mail) Invalid/Reset My Password Button | Click | A small message pops up saying: "The e-mail address is not assigned to any user account" | ✔ |
+| Password Reset Page/Form Valid/Reset My Password Button | Click | Password Reset Page is rendered with the message: "We have sent you an e-mail. Please contact us if you do not receive it within a few minutes." | ✔ |
+| Sign Out Page/Cancel Button | Click | User gets redirected to the Home page | ✔ |
+| Sign Out Page/Sign Out Button | Click | User gets redirected to the Home page and a small toast message pops up saying: "You have signed out." | ✔ |
 
 [Back to Top](#table-of-contents)
 
