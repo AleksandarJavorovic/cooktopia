@@ -10,6 +10,14 @@
     - [Python Validation](#python-validation)
     - [Lighthouse Scores](#lighthouse-scores)
 - [Manual Testing](#manual-testing)
+  - [Home Page / Navbar](#home-page--navbar)
+  - [Home Page / Main Section](#home-page--main-section)
+  - [Home Page / Footer](#home-page--footer)
+  - [Authentication](#authentication)
+  - [My Account/ Product Menagement](#my-account--product-management)
+  - [My Account/ Product My Profile](#my-account--my-profile)
+  - [My Account/ Product Logout](#my-account--logout)
+  - [Wishlist](#wishlist)
 - [Browser Testing](#browser-testing)
 - [Fixed Bugs](#fixed-bugs)
 - [Present Bugs](#present-bugs)
@@ -148,7 +156,7 @@
 
 | Feature | Action             | Expected Result                 | Pass |
 | ----- | -----------------| ------------------------------| ---------- |
-| CookTopia | User heads to https://cooktopia-3a5b4620860d.herokuapp.com/ | CookTopia Home Page is loaded | ✔ |
+| CookTopia | User heads to: https://cooktopia-3a5b4620860d.herokuapp.com/ | CookTopia Home Page is loaded | ✔ |
 | CookTopia Logo | Click | User is redirected to the Home Page | ✔ |
 | Search bar | Click on the button while search bar is empty | User is redirected to All Products page, all products are rendered and toast message:"You didn't enter any search criteria!", appears | ✔ |
 | Search bar | Click on the button while: "aaa" within search bar | User is redirected to Products page while none of products is rendered but small message:"0 Products found for "aaa"" | ✔ |
@@ -266,6 +274,32 @@
 | Sort By Filtering... | Click | The products presented in the Wishlist are getting sorted according to the chosen filter | ✔ |
 | Black Heart Icon | Click | The Product gets removed from the Wishlist and a small toast message pops up saying: "Product name has been removed from your Wishlist." | ✔ |
 | Badge | Click | The user is redirected to the clicked badge category page | ✔ |
+
+[Back to Top](#table-of-contents)
+
+### Shopping Bag
+
+| Feature | Action             | Expected Result                 | Pass |
+| ----- | -----------------| ------------------------------| ---------- |
+| Shopping Bag Icon In Navbar | Click | User is redirected to the Shopping Bag Page | ✔ |
+| Shopping Bag Icon/Page Empty | Click | The page is rendered with a message: "Your bag is empty." | ✔ |
+| Qty Button Minus/Number of item is 1 | Click | The (-) button is disabled as the number of items is 1 | ✔ |
+| Arrow Down Button | Click | The (🔽) button is disabled as the number of items is 1 | ✔ |
+| Qty Button Plus/Number of item is 99 | Click | The (+) button is disabled as the number of items is 99 | ✔ |
+| Arrow Up Button | Click | The (🔼) button is disabled as the number of items is 99 | ✔ |
+| Qty Button Minus or Plus/Number of items from 2-98 | Click | The (-) and (+) buttons are decreasing/increasing the number of items | ✔ |
+| Arrow Down or Up Buttons/Number of items from 2-98 | Click | The (🔽) and (🔼) buttons are decreasing/increasing the number of items | ✔ |
+| Update Button | Click | The Shopping Bag Page gets refreshed, number of items updated, and a small toast message pops up saying: "Updated Product Name quantity to 1" | ✔ |
+| Remove Button | Click | The Shopping Bag page gets refreshed, the desired item is removed, and a small toast message pops up saying: "Removed Product Name from your bag" | ✔ |
+| Keep Shopping Button | Click | User gets redirected to the All Products Page | ✔ |
+| Secure Checkout Button | Click | User gets redirected to the Checkout Page | ✔ |
+
+[Back to Top](#table-of-contents)
+
+### Checkout
+
+| Feature | Action             | Expected Result                 | Pass |
+| ----- | -----------------| ------------------------------| ---------- |
 
 [Back to Top](#table-of-contents)
 
