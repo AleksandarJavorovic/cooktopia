@@ -143,7 +143,35 @@
 
 ## Manual Testing
 
+### Home Page / Navbar
 
+
+| Feature | Action             | Expected Result                 | Pass |
+| ----- | -----------------| ------------------------------| ---------- |
+| CookTopia | User heads to https://cooktopia-3a5b4620860d.herokuapp.com/ | CookTopia Home Page is loaded | ✔ |
+| CookTopia Logo | Click | User is redirected to the Home Page | ✔ |
+| Search bar | Click on the button while search bar is empty | User is redirected to All Products page, all products are rendered and toast message:"You didn't enter any search criteria!", appears | ✔ |
+| Search bar | Click on the button while: "aaa" within search bar | User is redirected to Products page while none of products is rendered but small message:"0 Products found for "aaa"" | ✔ |
+| Search bar | Click on the button while "knife" is present in the search bar | User is redirected to Products page, while 3 products are rendered as they have word knife present in: name, description, brand, material, country of origin, or category fields of the product, as well as small message saying: "3 Products found for "knife"" | ✔ |
+| Search bar | Click on the button while any word in the: name, description, brand, material, country of origin, or category fields of the product is present in the search bar | User is redirected to the Products page and the product/s are rendered, with apropriate small message | ✔ |
+| My Account/Not-Authenticated | Click | Drop down menu opens with 2 options: Register and Login | ✔ |
+| My Account/Authenticated/User | Click | Drop down menu opens with 2 options: My Profile and Logout | ✔ |
+| My Account/Authenticated/Admin | Click | Drop down menu opens with 3 options: Product Management, My Profile, and Logout | ✔ |
+| Wishlist/Not-Authenticated | Click | User is redirected to Login Page and small toast message pops up, saying:"Sorry, you must log in to view your Wishlist." | ✔ |
+| Wishlist/Authenticated/Not-Empty | Click | User is redirected to the wishlist page and products are rendered | ✔ |
+| Wishlist/Authenticated/Empty | Click | User is redirected to the wishlist page, and message:"Your wishlist is empty at the moment. Click the 🤍 to add a product or 🖤 to remove the product from the wishlist.", is being rendered | ✔ |
+| Shopping Bag/Not-Empty | Click | User is redirected to the shopping bag page and products present in the shopping bag are rendered | ✔ |
+| Shopping Bag/Empty | Click | User is redirected to the shopping bag page and small message:"Your bag is empty." is rendered | ✔ |
+| All Products | Click | Drop-down menu opens with the available options | ✔ |
+| All Products > Any available option | Click | User is redirected to the products page sorted according to the chosen option | ✔ |
+| Knives | Click | Drop-down menu opens with the available options | ✔ |
+| Knives > Any available option | Click | User is redirected to the products page sorted according to the chosen option | ✔ |
+|  |  |  |  |
+|  |  |  |  |
+|  |  |  |  |
+|  |  |  |  |
+|  |  |  |  |
+|  |  |  |  |
 
 [Back to Top](#table-of-contents)
 
