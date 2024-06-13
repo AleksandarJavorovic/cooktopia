@@ -98,16 +98,10 @@
                                     {% if item.product.category %}
                                     <p class="small mt-1 mb-0">
                                         <a class="text-muted text-black"
-                                            href="{% url 'products' %}?category={{ product.category.name }}">
+                                            href="{% url 'products' %}?category={{ item.product.category.name }}">
                                             <i class="fas fa-tag mr-1"></i>{{ item.product.category.display_name }}
                                         </a>
                                     </p>
-                                    {% endif %}
-                                    {% if item.product.rating %}
-                                    <small class=" text-black"><i class="fas fa-star mr-1"
-                                            style="color: #FFD43B;"></i>{{ item.product.rating }} / 5</small>
-                                    {% else %}
-                                    <small class="text-muted">No Rating</small>
                                     {% endif %}
                                 </div>
                             </div>

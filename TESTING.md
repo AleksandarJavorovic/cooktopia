@@ -256,6 +256,19 @@
 | ----- | -----------------| ------------------------------| ---------- |
 | My Account/Logout | Click | User gets redirected to the Sign Out Page | ✔ |
 
+[Back to Top](#table-of-contents)
+
+### Wishlist
+
+| Feature | Action             | Expected Result                 | Pass |
+| ----- | -----------------| ------------------------------| ---------- |
+| Wishlist Icon In Navbar | Click | User gets redirected to the Wishlist Page | ✔ |
+| Sort By Filtering... | Click | The products presented in the Wishlist are getting sorted according to the chosen filter | ✔ |
+| Black Heart Icon | Click | The Product gets removed from the Wishlist and a small toast message pops up saying: "Product name has been removed from your Wishlist." | ✔ |
+| Badge | Click | The user is redirected to the clicked badge category page | ✔ |
+
+[Back to Top](#table-of-contents)
+
 ## Browser Testing
 
 - Complete functionality and layout of the site was tested across next browsers:
@@ -281,6 +294,7 @@
 | Minus Qty Button | Minus Qty button within shopping bag wasn't functioning | Deleted redundant lines of code within quantity_input_script.html to fix the issue |
 | Stripe 401 Error | After making the purchase I was getting 401 Error on Stripe | I made my development address public |
 | Stripe 400 Error | After making the purchase I was getting 400 Error on Stripe | Had to adjust Stripe WH Secret |
+| Wishlist Badge URL | When clicked on the badge representing the group of items under the product image at Wishlistpage, the user wasn't redirected to the expected page | Django templating had to be fixed: {{item.product.category.name}}, to target the category correctly |
 
 [Back to Top](#table-of-contents)
 
