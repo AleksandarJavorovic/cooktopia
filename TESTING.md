@@ -226,6 +226,36 @@
 
 [Back to Top](#table-of-contents)
 
+### My Account / Product Management
+
+- This feature is available only for admins.
+
+| Feature | Action             | Expected Result                 | Pass |
+| ----- | -----------------| ------------------------------| ---------- |
+| My Account/Product Management | Click | User gets redirected to the Product Management Page | ✔ |
+| Product Management Page/Cancel Button | Click | User gets redirected to the All Products Page | ✔ |
+| Product Management Page/Form Invalid/Add Product Button | Click | A small message will pop up saying: "Please fill out this field." | ✔ |
+| Product Management Page/Form Valid/Add Product Button | Click | User gets redirected to the added product page and a small toast message pops up saying: "Successfully added product!" | ✔ |
+
+[Back to Top](#table-of-contents)
+
+### My Account / My Profile
+
+| Feature | Action             | Expected Result                 | Pass |
+| ----- | -----------------| ------------------------------| ---------- |
+| My Account/My Profile | Click | User gets redirected to the My Profile page | ✔ |
+| My Profile Page/Edit Any field/Update Information Button | Click | User gets redirected to the same page and a small toast message pops up saying: "Profile updated successfully" | ✔ |
+| My Profile Page/Order History/Order Number | Click | User gets redirected to the Thank You page and a small toast message pops up saying: "This is a past confirmation for order number 8EE535DB88A34A9788FB10A15176B1AF.A confirmation email was sent on the order date." | ✔ |
+| Thank You Page/Back to Profile Button | Click | User gets redirected to the My Profile Page | ✔ |
+
+[Back to Top](#table-of-contents)
+
+### My Account / Logout
+
+| Feature | Action             | Expected Result                 | Pass |
+| ----- | -----------------| ------------------------------| ---------- |
+| My Account/Logout | Click | User gets redirected to the Sign Out Page | ✔ |
+
 ## Browser Testing
 
 - Complete functionality and layout of the site was tested across next browsers:
