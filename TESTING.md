@@ -300,6 +300,29 @@
 
 | Feature | Action             | Expected Result                 | Pass |
 | ----- | -----------------| ------------------------------| ---------- |
+| Checkout Page/Form Invalid/Complete Order Button | Click | A small field message pops up saying: "Please fill out this field." | ✔ |
+|Checkout Page/Form Valid But Payment Details/Complete Order Button  | Click | A small message will pop up saying: "Your card number is incomplete.", "Your card's expiration date is incomplete.", "Your card's expiration date is in the past.", "Your card's security code is incomplete.", "Your postal code is incomplete." | ✔ |
+| Checkout Page/Form Valid and Payment Details/Complete Order Button | Click | User gets redirected to the Thank You Page, a small toast message pops up saying: "Order successfully processed! Your order number is ECD47E184D034C10BA9D3162AC5C033B. A confirmation email will be sent to test@gmail.com." | ✔ |
+| Thank You Page/Checkout Other Products Button | Click | User gets redirected to the All Products Page | ✔ |
+| Checkout Page/Not-Authenticated User/Create an account Link | Click | User gets redirected to the Sign Up Page | ✔ |
+| Checkout Page/Not-Authenticated User/Login Link | Click | User gets redirected to the Sign In Page | ✔ |
+| Checkout Page/Save this delivery information to my profile Checked/Complete Order Button | Click | User Personal details and Delivery details are getting saved to user My Profile Page | ✔ |
+
+[Back to Top](#table-of-contents)
+
+### Products
+
+| Feature | Action             | Expected Result                 | Pass |
+| ----- | -----------------| ------------------------------| ---------- |
+| Sort by Filtering... | Click | The page gets re-loaded and sorted as desired and clicked | ✔ |
+| Image of the product | Click | User gets redirected to the Product Detail Page | ✔ |
+| Badge Icon under the pricture | Click | User gets redirected to the Products page but rendered items are those of the clicked badge(category)  | ✔ |
+| Add to Bag Button | Click | The Page gets refreshed and a small toast message pops up saying: "Added Product Name to your bag" | ✔ |
+| Edit Button(Admins Only) | Click | Admin gets redirected to the Product Management Page, a small toast alert message pops up saying: "You are editing Product Name" | ✔ |
+| Delete Button(Admins Only) | Click | The Products page is re-loaded and small toast message pops up saying: "Product:Product Name has been deleted!" | ✔ |
+| Scroll Down | Scroll | User scrolls down the page, Back to the top Button appears | ✔ |
+| Back to the Top Button | Click | The Page gets scrolled back to the top | ✔ |
+
 
 [Back to Top](#table-of-contents)
 
