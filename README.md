@@ -720,6 +720,13 @@ The custom models made for this project were:
   ![Mailchimp Marketing](static/images/features/35-mailchimp-successfull.png)
   </details>
 
+  <details>
+  <summary>Subscribed Mails
+  </summary>
+
+  ![Mailchimp Marketing](static/images/subscribed-mails.png)
+  </details>
+
 [Back to Top](#table-of-contents)
 
 ### Search Engine Optimization
