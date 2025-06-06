@@ -14,12 +14,11 @@ import os
 import dj_database_url
 from pathlib import Path
 
-if os.path.exists("env.py"):
-    import env
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+if os.path.exists("env.py"):
+    import env
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
@@ -33,6 +32,7 @@ DEBUG = "DEVELOPMENT" in os.environ
 ALLOWED_HOSTS = [
     "8000-aleksandarjav-cooktopia-zuzyx7jw3ds.ws.codeinstitute-ide.net",
     "cooktopia-3a5b4620860d.herokuapp.com",
+    "127.0.0.1",
 ]
 
 
@@ -190,11 +190,14 @@ if "USE_AWS" in os.environ:
     }
 
     # Bucket Config
-    AWS_STORAGE_BUCKET_NAME = "cooktopia2024"
-    AWS_S3_REGION_NAME = "eu-north-1"
+    AWS_STORAGE_BUCKET_NAME = "cooktopia"
+    # AWS_S3_REGION_NAME = "eu-north-1"
     AWS_ACCESS_KEY_ID = os.environ.get("AWS_ACCESS_KEY_ID")
     AWS_SECRET_ACCESS_KEY = os.environ.get("AWS_SECRET_ACCESS_KEY")
-    AWS_S3_CUSTOM_DOMAIN = f"{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com"
+    # AWS_S3_CUSTOM_DOMAIN = f"{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com"
+    AWS_S3_CUSTOM_DOMAIN = f"{AWS_STORAGE_BUCKET_NAME}.r2.cloudflarestorage.com"
+    AWS_S3_SIGNATURE_VERSION = "s3v4"
+    AWS_S3_ENDPOINT_URL = os.environ.get("AWS_S3_ENDPOINT_URL")
 
     # Static and media files
     STATICFILES_STORAGE = "custom_storages.StaticStorage"
